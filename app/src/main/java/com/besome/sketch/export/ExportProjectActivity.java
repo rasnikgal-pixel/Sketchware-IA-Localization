@@ -380,7 +380,7 @@ public class ExportProjectActivity extends BaseAppCompatActivity {
             confirmationDialog.setMessage(R.string.auto_str_0444);
             confirmationDialog.setIcon(R.drawable.ic_mtrl_info);
 
-            confirmationDialog.setPositiveButton("Understood", (v, which) -> {
+            confirmationDialog.setPositiveButton(R.string.auto_menu2_091, (v, which) -> {
                 showAabSigningDialog();
                 v.dismiss();
             });
@@ -526,7 +526,7 @@ public class ExportProjectActivity extends BaseAppCompatActivity {
                     use a 3rd-party tool (for now).""");
             confirmationDialog.setIcon(R.drawable.ic_mtrl_info);
 
-            confirmationDialog.setPositiveButton("Understood", (v, which) -> {
+            confirmationDialog.setPositiveButton(R.string.auto_menu2_091, (v, which) -> {
                 showApkSigningDialog();
                 v.dismiss();
             });

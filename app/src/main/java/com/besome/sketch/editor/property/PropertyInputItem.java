@@ -351,7 +351,7 @@ public class PropertyInputItem extends RelativeLayout implements View.OnClickLis
         });
 
         dialog.setNegativeButton(Helper.getResString(R.string.common_word_reset), null);
-        dialog.setNeutralButton("Custom", null);
+        dialog.setNeutralButton(R.string.auto_menu2_035, null);
 
         AlertDialog alertDialog = dialog.create();
 

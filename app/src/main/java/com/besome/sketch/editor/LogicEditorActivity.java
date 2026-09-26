@@ -1623,7 +1623,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         }
 
         dialog.setView(customView);
-        dialog.setNeutralButton("Code Editor", (v, which) -> {
+        dialog.setNeutralButton(R.string.auto_menu2_026, (v, which) -> {
             AsdDialog editor = new AsdDialog(this);
             editor.setContent(ss.getArgValue().toString());
             editor.show();

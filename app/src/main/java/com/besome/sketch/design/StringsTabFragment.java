@@ -183,7 +183,7 @@ public class StringsTabFragment extends Fragment {
         MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(requireActivity());
         ViewStringEditorAddBinding dialogBinding = ViewStringEditorAddBinding.inflate(getLayoutInflater());
         dialog.setTitle(R.string.auto_str_0112);
-        dialog.setPositiveButton("Create", (d, which) -> {
+        dialog.setPositiveButton(R.string.auto_menu2_032, (d, which) -> {
             String key = Objects.requireNonNull(dialogBinding.stringKeyInput.getText()).toString().trim();
             String value = Objects.requireNonNull(dialogBinding.stringValueInput.getText()).toString();
             String header = Objects.requireNonNull(dialogBinding.stringHeaderInput.getText()).toString().trim();
@@ -239,7 +239,7 @@ public class StringsTabFragment extends Fragment {
         }
 
         dialog.setTitle(R.string.auto_str_0159);
-        dialog.setPositiveButton("Save", (d, which) -> {
+        dialog.setPositiveButton(R.string.auto_menu2_079, (d, which) -> {
             String keyInput = Objects.requireNonNull(dialogBinding.stringKeyInput.getText()).toString().trim();
             String valueInput = Objects.requireNonNull(dialogBinding.stringValueInput.getText()).toString();
             if (keyInput.isEmpty() || valueInput.isEmpty()) {

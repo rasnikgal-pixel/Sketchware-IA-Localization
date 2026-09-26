@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="design_manager_lottie_description_guide_add_animation">Вы можете добавлять Lottie-анимации (JSON) из меню. Их можно использовать в LottieAnimationView.</string>
+    <string name="design_manager_lottie_title_apply_same_naming">Применить одинаковые имена к выбранным Lottie-файлам</string>
+</resources>

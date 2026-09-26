@@ -1764,7 +1764,7 @@ public class DesignActivity extends BaseAppCompatActivity implements View.OnClic
                         dialog.setMessage("A directory important for building is missing. " +
                                 "Sketchware Pro can try creating " + e.getMissingFile().getAbsolutePath() +
                                 " if you'd like to.");
-                        dialog.setNeutralButton("Create", (v, which) -> {
+                        dialog.setNeutralButton(R.string.auto_menu2_032, (v, which) -> {
                             v.dismiss();
                             if (!e.getMissingFile().mkdirs()) {
                                 SketchwareUtil.toastError("Failed to create directory / directories!");
@@ -1776,7 +1776,7 @@ public class DesignActivity extends BaseAppCompatActivity implements View.OnClic
                                 "Put the correct file back to " + e.getMissingFile().getAbsolutePath() +
                                 " and try building again.");
                     }
-                    dialog.setPositiveButton("Dismiss", null);
+                    dialog.setPositiveButton(R.string.auto_menu2_042, null);
                     dialog.show();
                 });
             } catch (zy zy) {

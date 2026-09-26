@@ -206,7 +206,7 @@ public class PropertyAttributesItem extends LinearLayout implements View.OnClick
                                                     SketchwareUtil.toastError("IllegalStateException : Circular dependencies cannot exist in RelativeLayout");
                                                 }
                                             })
-                                            .setNegativeButton("Cancel", (d2, which) -> d.dismiss())
+                                            .setNegativeButton(R.string.auto_menu2_022, (d2, which) -> d.dismiss())
                                             .show();
                                 } else {
                                     value.put(attr, "false");
@@ -215,7 +215,7 @@ public class PropertyAttributesItem extends LinearLayout implements View.OnClick
                                     adapter.submitList(new ArrayList<>(value.keySet()));
                                 }
                             })
-                    .setNegativeButton("Cancel", (d, which) -> d.dismiss())
+                    .setNegativeButton(R.string.auto_menu2_022, (d, which) -> d.dismiss())
                     .show();
         });
     }
@@ -292,14 +292,14 @@ public class PropertyAttributesItem extends LinearLayout implements View.OnClick
                                 if (valueChangeListener != null)
                                     valueChangeListener.a(key, value);
                             })
-                            .setNegativeButton("Cancel", (d, which) -> d.dismiss())
+                            .setNegativeButton(R.string.auto_menu2_022, (d, which) -> d.dismiss())
                             .show();
                 });
                 itemView.setOnLongClickListener(v -> {
                     MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(getContext());
                     dialog.setTitle(R.string.auto_str_0132);
                     dialog.setMessage("Are you sure you want to delete " + attr + "?");
-                    dialog.setPositiveButton("Yes", (view, which) -> {
+                    dialog.setPositiveButton(R.string.auto_menu2_097, (view, which) -> {
                         value.remove(attr);
                         if (valueChangeListener != null)
                             valueChangeListener.a(key, value);
@@ -335,7 +335,7 @@ public class PropertyAttributesItem extends LinearLayout implements View.OnClick
                     MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(getContext());
                     dialog.setTitle(R.string.auto_str_0132);
                     dialog.setMessage("Are you sure you want to delete " + attr + "?");
-                    dialog.setPositiveButton("Yes", (view, which) -> {
+                    dialog.setPositiveButton(R.string.auto_menu2_097, (view, which) -> {
                         value.remove(attr);
                         if (valueChangeListener != null)
                             valueChangeListener.a(key, value);

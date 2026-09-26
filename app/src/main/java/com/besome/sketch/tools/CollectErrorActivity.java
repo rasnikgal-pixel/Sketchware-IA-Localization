@@ -40,9 +40,9 @@ public class CollectErrorActivity extends BaseAppCompatActivity {
                     .setMessage("An error occurred while running Sketchware Pro. " +
                             "Do you want to report this error log so that we can fix it? " +
                             "No personal information will be included.")
-                    .setPositiveButton("Copy", null)
-                    .setNegativeButton("Cancel", (dialogInterface, which) -> finish())
-                    .setNeutralButton("Show error", null) // null to set proper onClick listeners later without dismissing the AlertDialog
+                    .setPositiveButton(R.string.auto_menu2_030, null)
+                    .setNegativeButton(R.string.auto_menu2_022, (dialogInterface, which) -> finish())
+                    .setNeutralButton(R.string.auto_menu2_084, null) // null to set proper onClick listeners later without dismissing the AlertDialog
                     .setCancelable(false)
                     .show();
 
