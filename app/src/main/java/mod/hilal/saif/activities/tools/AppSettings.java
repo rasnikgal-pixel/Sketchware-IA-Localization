@@ -96,23 +96,23 @@ public class AppSettings extends BaseAppCompatActivity {
         LibraryCategoryView managersCategory = new LibraryCategoryView(this);
         managersCategory.setTitle(getString(R.string.auto_str_0270));
 
-        managersCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_block, "Block manager", "Manage your own blocks to use in Logic Editor", new ActivityLauncher(new Intent(getApplicationContext(), BlocksManager.class))), true);
-        managersCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_pull_down, "Block selector menu manager", "Manage your own block selector menus", openSettingsActivity(SettingsActivity.BLOCK_SELECTOR_MANAGER_FRAGMENT)), true);
-        managersCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_component, "Component manager", "Manage your own components", new ActivityLauncher(new Intent(getApplicationContext(), ManageCustomComponentActivity.class))), true);
-        managersCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_list, "Event manager", "Manage your own events", openSettingsActivity(SettingsActivity.EVENTS_MANAGER_FRAGMENT)), true);
-        managersCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_box, "Local library manager", "Manage and download local libraries", new ActivityLauncher(new Intent(getApplicationContext(), ManageLocalLibraryActivity.class), new Pair<>("sc_id", "system"))), true);
+        managersCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_block, Helper.getResString(R.string.auto_settings_block_mgr), Helper.getResString(R.string.auto_settings_block_mgr_desc), new ActivityLauncher(new Intent(getApplicationContext(), BlocksManager.class))), true);
+        managersCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_pull_down, Helper.getResString(R.string.auto_settings_selector_mgr), Helper.getResString(R.string.auto_settings_selector_mgr_desc), openSettingsActivity(SettingsActivity.BLOCK_SELECTOR_MANAGER_FRAGMENT)), true);
+        managersCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_component, Helper.getResString(R.string.auto_settings_component_mgr), Helper.getResString(R.string.auto_settings_component_mgr_desc), new ActivityLauncher(new Intent(getApplicationContext(), ManageCustomComponentActivity.class))), true);
+        managersCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_list, Helper.getResString(R.string.auto_settings_event_mgr), Helper.getResString(R.string.auto_settings_event_mgr_desc), openSettingsActivity(SettingsActivity.EVENTS_MANAGER_FRAGMENT)), true);
+        managersCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_box, Helper.getResString(R.string.auto_settings_local_lib_mgr), Helper.getResString(R.string.auto_settings_local_lib_mgr_desc), new ActivityLauncher(new Intent(getApplicationContext(), ManageLocalLibraryActivity.class), new Pair<>("sc_id", "system"))), true);
         managersCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_article, Helper.getResString(R.string.design_drawer_menu_title_logcat_reader), Helper.getResString(R.string.design_drawer_menu_subtitle_logcat_reader), new ActivityLauncher(new Intent(getApplicationContext(), LogReaderActivity.class))), false);
 
         LibraryCategoryView generalCategory = new LibraryCategoryView(this);
         generalCategory.setTitle(getString(R.string.auto_str_0217));
 
-        generalCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_settings_applications, "App settings", "Change general app settings", new ActivityLauncher(new Intent(getApplicationContext(), ConfigActivity.class))), true);
+        generalCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_settings_applications, Helper.getResString(R.string.auto_settings_app_settings), Helper.getResString(R.string.auto_settings_app_settings_desc), new ActivityLauncher(new Intent(getApplicationContext(), ConfigActivity.class))), true);
         generalCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_palette, Helper.getResString(R.string.settings_appearance), Helper.getResString(R.string.settings_appearance_description), openSettingsActivity(SettingsActivity.SETTINGS_APPEARANCE_FRAGMENT)), true);
         generalCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_settings, Helper.getResString(R.string.ia_settings_title), Helper.getResString(R.string.ia_settings_subtitle), new ActivityLauncher(new Intent(getApplicationContext(), IaSettingsActivity.class))), true);
-        generalCategory.addLibraryItem(createPreference(R.drawable.ic_github, "GitHub Settings", "Manage GitHub API token for the AI agent", new ActivityLauncher(new Intent(getApplicationContext(), GithubSettingsActivity.class))), true);
-        generalCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_folder, "Open working directory", "Open Sketchware Pro's directory and edit files in it", v -> openWorkingDirectory()), true);
-        generalCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_apk_document, "Sign an APK file with testkey", "Sign an already existing APK file with testkey and signature schemes up to V4", v -> signApkFileDialog()), true);
-        generalCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_settings, Helper.getResString(R.string.main_drawer_title_system_settings), "Auto-save and vibrations", new ActivityLauncher(new Intent(getApplicationContext(), SystemSettingActivity.class))), false);
+        generalCategory.addLibraryItem(createPreference(R.drawable.ic_github, Helper.getResString(R.string.auto_settings_github), Helper.getResString(R.string.auto_settings_github_desc), new ActivityLauncher(new Intent(getApplicationContext(), GithubSettingsActivity.class))), true);
+        generalCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_folder, Helper.getResString(R.string.auto_settings_open_wd), Helper.getResString(R.string.auto_settings_open_wd_desc), v -> openWorkingDirectory()), true);
+        generalCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_apk_document, Helper.getResString(R.string.auto_settings_sign_apk), Helper.getResString(R.string.auto_settings_sign_apk_desc), v -> signApkFileDialog()), true);
+        generalCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_settings, Helper.getResString(R.string.main_drawer_title_system_settings), Helper.getResString(R.string.auto_settings_autosave), new ActivityLauncher(new Intent(getApplicationContext(), SystemSettingActivity.class))), false);
 
         // "Managers" card, then the ad between the two cards (never overlapping either),
         // then the "General" card below it.
