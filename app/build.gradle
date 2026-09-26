@@ -29,7 +29,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "pro.sketchware"
+        applicationId = "pro.sketchware.ia.localization"
         namespace = "pro.sketchware"
         //noinspection ExpiredTargetSdkVersion since we don't target getting Sketchware Pro on Google Play.
         targetSdk = 28
