@@ -3113,7 +3113,7 @@ Please try again later"</string>
     <string name="auto_str_0076">Choose an attributes</string>
     <string name="auto_str_0077">Choose an id</string>
     <string name="auto_str_0078">Class</string>
-    <string name="auto_str_0079">Classpath 'separated by :'</string>
+    <string name="auto_str_0079">Classpath \'separated by :\'</string>
     <string name="auto_str_0080">Clear</string>
     <string name="auto_str_0081">Click on Confirm to delete the selected Event.</string>
     <string name="auto_str_0082">Code</string>
@@ -3137,8 +3137,8 @@ Please try again later"</string>
     <string name="auto_str_0100">Copy</string>
     <string name="auto_str_0101">Core Team</string>
     <string name="auto_str_0102">Corners</string>
-    <string name="auto_str_0103">Couldn't get</string>
-    <string name="auto_str_0104">Couldn't load font</string>
+    <string name="auto_str_0103">Couldn\'t get</string>
+    <string name="auto_str_0104">Couldn\'t load font</string>
     <string name="auto_str_0105">Create</string>
     <string name="auto_str_0106">Create a new folder</string>
     <string name="auto_str_0107">Create a new palette</string>
@@ -3181,9 +3181,9 @@ Please try again later"</string>
     <string name="auto_str_0144">Directory inside /Internal storage/, e.g. .sketchware/backups</string>
     <string name="auto_str_0145">Dismiss</string>
     <string name="auto_str_0146">Distance</string>
-    <string name="auto_str_0147">Don't copy</string>
-    <string name="auto_str_0148">Don't include http-legacy-28.dex</string>
-    <string name="auto_str_0149">Don't show anymore</string>
+    <string name="auto_str_0147">Don\'t copy</string>
+    <string name="auto_str_0148">Don\'t include http-legacy-28.dex</string>
+    <string name="auto_str_0149">Don\'t show anymore</string>
     <string name="auto_str_0150">Download</string>
     <string name="auto_str_0151">Drag here to delete</string>
     <string name="auto_str_0152">Drag here to see the Actions</string>
@@ -3225,7 +3225,7 @@ Please try again later"</string>
     <string name="auto_str_0188">Entre no incrível mundo Dev!</string>
     <string name="auto_str_0189">Entre your custom attr</string>
     <string name="auto_str_0190">Error loading default manifest:</string>
-    <string name="auto_str_0191">Error: '%m' must be followed by '.param' at position</string>
+    <string name="auto_str_0191">Error: \'%m\' must be followed by \'.param\' at position</string>
     <string name="auto_str_0192">Event Details</string>
     <string name="auto_str_0193">Event Name</string>
     <string name="auto_str_0194">Event Properties</string>
@@ -3258,7 +3258,7 @@ Please try again later"</string>
     <string name="auto_str_0221">Hidden</string>
     <string name="auto_str_0222">Hide warnings in error log</string>
     <string name="auto_str_0223">Icon</string>
-    <string name="auto_str_0224">If you're creating a file, make sure to add an extension.</string>
+    <string name="auto_str_0224">If you\'re creating a file, make sure to add an extension.</string>
     <string name="auto_str_0225">Image</string>
     <string name="auto_str_0226">Import</string>
     <string name="auto_str_0227">Import Custom blocks to</string>
@@ -3300,7 +3300,7 @@ Please try again later"</string>
     <string name="auto_str_0263">Loading comments...</string>
     <string name="auto_str_0264">Loading default manifest...</string>
     <string name="auto_str_0265">Loading reviews...</string>
-    <string name="auto_str_0266">Logcat hasn't captured anything yet</string>
+    <string name="auto_str_0266">Logcat hasn\'t captured anything yet</string>
     <string name="auto_str_0267">Lottie Manage</string>
     <string name="auto_str_0268">Main activity cannot be deleted</string>
     <string name="auto_str_0269">Manage Block</string>
@@ -3446,7 +3446,7 @@ Please try again later"</string>
     <string name="auto_str_0409">Size</string>
     <string name="auto_str_0410">Skip</string>
     <string name="auto_str_0411">Slider</string>
-    <string name="auto_str_0412">Somehow couldn't get package info. Stack trace:\n</string>
+    <string name="auto_str_0412">Somehow couldn\'t get package info. Stack trace:\n</string>
     <string name="auto_str_0413">Sort by ID</string>
     <string name="auto_str_0414">Sort by Project Name</string>
     <string name="auto_str_0415">Sort options</string>
@@ -3478,14 +3478,14 @@ Please try again later"</string>
     <string name="auto_str_0441">Text</string>
     <string name="auto_str_0442">TextView</string>
     <string name="auto_str_0443">Textures</string>
-    <string name="auto_str_0444">The generated .aab file must be signed.\nCopy your keystore to /Internal storage/sketchware/keystore/release_key.jks and enter the alias' password.</string>
+    <string name="auto_str_0444">The generated .aab file must be signed.\nCopy your keystore to /Internal storage/sketchware/keystore/release_key.jks and enter the alias\' password.</string>
     <string name="auto_str_0445">This Block Menu was initially used to parse resource values, but was too I/O heavy and has been removed due to that. Please use the Code Editor instead.</string>
     <string name="auto_str_0446">This action cannot be undone.</string>
     <string name="auto_str_0447">This defines how SWB backup files get named.\n</string>
     <string name="auto_str_0448">This icon is available under the Apache Licence Version 2.0. Press to read more.</string>
     <string name="auto_str_0449">This is how your font looks like.</string>
     <string name="auto_str_0450">This library \</string>
-    <string name="auto_str_0451">This might break your project if you don't know what you're doing!</string>
+    <string name="auto_str_0451">This might break your project if you don\'t know what you\'re doing!</string>
     <string name="auto_str_0452">This will enable ViewBinding in your project. Note: Manual changes may be required for widgets used in ASD block</string>
     <string name="auto_str_0453">This will remove methods in files, like showMessage, getDip, etc.</string>
     <string name="auto_str_0454">This will replace e.g. Button with MaterialButton, be careful!</string>
@@ -3515,7 +3515,7 @@ Please try again later"</string>
     <string name="auto_str_0478">Visible</string>
     <string name="auto_str_0479">Void</string>
     <string name="auto_str_0480">Warning</string>
-    <string name="auto_str_0481">We've messed something up, sorry for the inconvenience!\n</string>
+    <string name="auto_str_0481">We\'ve messed something up, sorry for the inconvenience!\n</string>
     <string name="auto_str_0482">WebView</string>
     <string name="auto_str_0483">While you wait...</string>
     <string name="auto_str_0484">Widget</string>
@@ -3528,8 +3528,8 @@ Please try again later"</string>
     <string name="auto_str_0491">XML name(with .xml)</string>
     <string name="auto_str_0492">Yes</string>
     <string name="auto_str_0493">You can find the generated, signed AAB file at:\n</string>
-    <string name="auto_str_0494">You haven't used any custom blocks in this project</string>
-    <string name="auto_str_0495">Your device doesn't support the crop action!</string>
+    <string name="auto_str_0494">You haven\'t used any custom blocks in this project</string>
+    <string name="auto_str_0495">Your device doesn\'t support the crop action!</string>
     <string name="auto_str_0496">android:attr=\</string>
     <string name="auto_str_0497">attr</string>
     <string name="auto_str_0498">badge</string>

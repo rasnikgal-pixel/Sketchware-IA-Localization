@@ -3740,7 +3740,7 @@ url type (http://sketchware.io)"</string>
     <string name="auto_str_0076">Выберите атрибуты</string>
     <string name="auto_str_0077">Выберите id</string>
     <string name="auto_str_0078">Класс</string>
-    <string name="auto_str_0079">Classpath 'разделённый :'</string>
+    <string name="auto_str_0079">Classpath \'разделённый :\'</string>
     <string name="auto_str_0080">Очистить</string>
     <string name="auto_str_0081">Нажмите Подтвердить, чтобы удалить выбранное событие.</string>
     <string name="auto_str_0082">Код</string>
@@ -3852,7 +3852,7 @@ url type (http://sketchware.io)"</string>
     <string name="auto_str_0188">Войдите в удивительный мир разработки!</string>
     <string name="auto_str_0189">Введите ваш пользовательский атрибут</string>
     <string name="auto_str_0190">Ошибка загрузки манифеста по умолчанию:</string>
-    <string name="auto_str_0191">Ошибка: после '%m' должно следовать '.param' в позиции</string>
+    <string name="auto_str_0191">Ошибка: после \'%m\' должно следовать \'.param\' в позиции</string>
     <string name="auto_str_0192">Детали события</string>
     <string name="auto_str_0193">Имя события</string>
     <string name="auto_str_0194">Свойства события</string>
