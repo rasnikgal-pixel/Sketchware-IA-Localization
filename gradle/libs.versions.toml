@@ -1,6 +1,6 @@
 [versions]
 activity = "1.11.0"
-appcompat = "1.7.1"
+appcompat = "1.8.0"
 desugar_jdk_libs_nio = "2.1.5"
 firebaseBom = "34.3.0"
 sora-editor = "0.23.5"
