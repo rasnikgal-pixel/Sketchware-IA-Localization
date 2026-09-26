@@ -279,7 +279,7 @@ public class WidgetsCreatorManager {
                 FilePickerOptions options = new FilePickerOptions();
                 options.setMultipleSelection(true);
                 options.setExtensions(new String[]{"json"});
-                options.setTitle(getString(R.string.auto_str_0371));
+                options.setTitle(context.getString(R.string.auto_str_0371));
 
                 FilePickerCallback callback = new FilePickerCallback() {
                     @Override
