@@ -262,7 +262,7 @@ public class ExtraMenuBean {
                         }
                 }
 
-                dialog.setTitle("Select Permissions")
+                dialog.setTitle(R.string.auto_str_0378)
                 .setMultiChoiceItems(permission, checkedItems, (dialogInterface, which, isChecked) ->
                 checkedItems[which] = isChecked)
                 .setPositiveButton(R.string.common_word_select, (v, which) -> {
@@ -633,7 +633,7 @@ public class ExtraMenuBean {
                                 }
                                 if (!activityMenu.isEmpty()) {
                                         TextView txt = new TextView(logicEditor);
-                                        txt.setText("Custom Activities");
+                                        txt.setText(R.string.auto_str_0120);
                                         txt.setPadding((int) getDip(2), (int) getDip(4), (int) getDip(4), (int) getDip(4));
                                         txt.setTextSize(14f);
                                         viewGroup.addView(txt);
@@ -691,7 +691,7 @@ public class ExtraMenuBean {
                         case "ResAttr":
                         case "ResXml":
                         title = "Deprecated";
-                        dialog.setMessage("This Block Menu was initially used to parse resource values, but was too I/O heavy and has been removed due to that. Please use the Code Editor instead.");
+                        dialog.setMessage(R.string.auto_str_0445);
                         break;
 
                         case "AdUnit":
@@ -902,11 +902,11 @@ public class ExtraMenuBean {
                 mOptions.setSelectionMode(SelectionMode.BOTH);
                 String path = null;
                 if (menuName.equals("Assets")) {
-                        mOptions.setTitle("Select an Asset");
+                        mOptions.setTitle(R.string.auto_str_0383);
                         path = String.format(ASSETS_PATH, sc_id);
                         markedPath.add(0, path + ss.getArgValue().toString());
                 } else if (menuName.equals("NativeLib")) {
-                        mOptions.setTitle("Select a Native library");
+                        mOptions.setTitle(R.string.auto_str_0382);
                         path = String.format(NATIVE_PATH, sc_id);
                         markedPath.add(0, path + ss.getArgValue().toString());
                 }

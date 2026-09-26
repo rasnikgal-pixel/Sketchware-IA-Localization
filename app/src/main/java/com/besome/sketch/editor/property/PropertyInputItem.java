@@ -385,11 +385,11 @@ public class PropertyInputItem extends RelativeLayout implements View.OnClickLis
                     binding.sliderSection.setVisibility(View.GONE);
                     binding.tiInput.setVisibility(View.VISIBLE);
                     binding.edInput.requestFocus();
-                    customButton.setText("Slider");
+                    customButton.setText(R.string.auto_str_0411);
                 } else {
                     binding.sliderSection.setVisibility(View.VISIBLE);
                     binding.tiInput.setVisibility(View.GONE);
-                    customButton.setText("Custom");
+                    customButton.setText(R.string.auto_str_0119);
                 }
             });
 
@@ -922,7 +922,7 @@ public class PropertyInputItem extends RelativeLayout implements View.OnClickLis
                         dialog.dismiss();
                         var builder =
                                 new MaterialAlertDialogBuilder(getContext())
-                                        .setTitle("Delete")
+                                        .setTitle(R.string.auto_str_0132)
                                         .setMessage("Are you sure you want to delete " + attr + "?")
                                         .setPositiveButton(
                                                 R.string.common_word_yes,
@@ -961,7 +961,7 @@ public class PropertyInputItem extends RelativeLayout implements View.OnClickLis
 
     private void addNewAttribute(Map<String, String> attributes) {
         var builder = new MaterialAlertDialogBuilder(getContext());
-        builder.setTitle("Add new attribute");
+        builder.setTitle(R.string.auto_str_0026);
 
         PropertyPopupInputTextBinding binding =
                 PropertyPopupInputTextBinding.inflate(LayoutInflater.from(getContext()));
@@ -969,7 +969,7 @@ public class PropertyInputItem extends RelativeLayout implements View.OnClickLis
         var input = binding.edTiAutoCompleteInput;
         binding.tiInput.setVisibility(View.GONE);
         binding.tiAutoCompleteInput.setVisibility(View.VISIBLE);
-        binding.tiAutoCompleteInput.setHint("Enter new attribute");
+        binding.tiAutoCompleteInput.setHint(R.string.auto_str_0181);
         input.setAdapter(
                 new ArrayAdapter<>(
                         getContext(),

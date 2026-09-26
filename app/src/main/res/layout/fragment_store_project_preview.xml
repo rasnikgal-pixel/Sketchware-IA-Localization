@@ -327,7 +327,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Version"
+                            android:text="@string/auto_str_0469"
                             android:textColor="@color/chat_text_secondary"
                             android:textSize="12sp" />
 
@@ -353,7 +353,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Price"
+                            android:text="@string/auto_str_0325"
                             android:textColor="@color/chat_text_secondary"
                             android:textSize="12sp" />
 
@@ -379,7 +379,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Size"
+                            android:text="@string/auto_str_0409"
                             android:textColor="@color/chat_text_secondary"
                             android:textSize="12sp" />
 
@@ -405,7 +405,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Published"
+                            android:text="@string/auto_str_0328"
                             android:textColor="@color/chat_text_secondary"
                             android:textSize="12sp" />
 
@@ -431,7 +431,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Updated"
+                            android:text="@string/auto_str_0465"
                             android:textColor="@color/chat_text_secondary"
                             android:textSize="12sp" />
 
@@ -457,7 +457,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="License"
+                            android:text="@string/auto_str_0256"
                             android:textColor="@color/chat_text_secondary"
                             android:textSize="12sp" />
 
@@ -483,7 +483,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Category"
+                            android:text="@string/auto_str_0075"
                             android:textColor="@color/chat_text_secondary"
                             android:textSize="12sp" />
 
@@ -508,7 +508,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Language"
+                            android:text="@string/auto_str_0254"
                             android:textColor="@color/chat_text_secondary"
                             android:textSize="12sp" />
 
@@ -678,7 +678,7 @@
                 android:paddingHorizontal="16dp"
                 android:paddingTop="28dp"
                 android:paddingBottom="12dp"
-                android:text="Version history"
+                android:text="@string/auto_str_0471"
                 android:textColor="@color/chat_text_primary"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -696,7 +696,7 @@
                 android:paddingHorizontal="16dp"
                 android:paddingTop="28dp"
                 android:paddingBottom="8dp"
-                android:text="Reviews"
+                android:text="@string/auto_str_0352"
                 android:textColor="@color/chat_text_primary"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -746,7 +746,7 @@
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="16dp"
                 android:paddingTop="10dp"
-                android:text="No public reviews yet."
+                android:text="@string/auto_str_0304"
                 android:textColor="@color/chat_text_secondary"
                 android:textSize="13sp"
                 android:visibility="gone"
@@ -769,7 +769,7 @@
                 android:paddingHorizontal="16dp"
                 android:paddingTop="28dp"
                 android:paddingBottom="6dp"
-                android:text="Comments"
+                android:text="@string/auto_str_0091"
                 android:textColor="@color/chat_text_primary"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -779,7 +779,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="16dp"
-                android:text="No public comments yet."
+                android:text="@string/auto_str_0303"
                 android:textColor="@color/chat_text_secondary"
                 android:textSize="13sp"
                 android:visibility="gone"

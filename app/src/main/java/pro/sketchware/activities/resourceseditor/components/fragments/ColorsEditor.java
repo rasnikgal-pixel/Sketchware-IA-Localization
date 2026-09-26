@@ -157,10 +157,10 @@ public class ColorsEditor extends Fragment {
             dialogBinding.colorPreview.setBackgroundColor(PropertiesUtil.parseColor(colorsEditorManager.getColorValue(activity.getApplicationContext(), colorModel.getColorValue(), 3, isNightVariant)));
             dialogBinding.importantNote.setVisibility(defaultColors.containsKey(colorModel.getColorName()) ? View.VISIBLE : View.GONE);
 
-            dialog.setTitle("Edit color");
+            dialog.setTitle(R.string.auto_str_0158);
 
         } else {
-            dialog.setTitle("Create new color");
+            dialog.setTitle(R.string.auto_str_0110);
             dialogBinding.colorPreview.setBackgroundColor(0xFFFFFF);
         }
 

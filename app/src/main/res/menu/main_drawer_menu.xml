@@ -40,6 +40,11 @@
                 android:id="@+id/social_github"
                 android:icon="@drawable/ic_github"
                 android:title="GitHub" />
+
+            <item
+                android:id="@+id/social_rasnikgal"
+                android:icon="@drawable/ic_mtrl_team"
+                android:title="Локализация RasNikGal" />
         </menu>
     </item>
 

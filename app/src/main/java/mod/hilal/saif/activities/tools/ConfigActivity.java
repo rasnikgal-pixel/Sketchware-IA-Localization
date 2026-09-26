@@ -169,7 +169,7 @@ public class ConfigActivity extends BaseAppCompatActivity {
         var binding = PreferenceActivityBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.topAppBar.setTitle("App Settings");
+        binding.topAppBar.setTitle(R.string.auto_str_0036);
         binding.topAppBar.setNavigationOnClickListener(Helper.getBackPressedClickListener(this));
         var fragment = new PreferenceFragment();
         fragment.setSnackbarView(binding.getRoot());
@@ -223,8 +223,8 @@ public class ConfigActivity extends BaseAppCompatActivity {
                 binding.chipGroupTypes.setVisibility(View.GONE);
                 AlertDialog dialog = new MaterialAlertDialogBuilder(requireContext())
                         .setView(binding.getRoot())
-                        .setTitle("Backup directory")
-                        .setMessage("Directory inside /Internal storage/, e.g. .sketchware/backups")
+                        .setTitle(R.string.auto_str_0057)
+                        .setMessage(R.string.auto_str_0144)
                         .setNegativeButton(R.string.common_word_cancel, null)
                         .setPositiveButton(R.string.common_word_save, null)
                         .create();
@@ -268,7 +268,7 @@ public class ConfigActivity extends BaseAppCompatActivity {
 
                 AlertDialog dialog = new MaterialAlertDialogBuilder(requireContext())
                         .setView(binding.getRoot())
-                        .setTitle("Backup filename format")
+                        .setTitle(R.string.auto_str_0058)
                         .setMessage("This defines how SWB backup files get named.\n" +
                                 "Available variables:\n" +
                                 " - $projectName - Project name\n" +

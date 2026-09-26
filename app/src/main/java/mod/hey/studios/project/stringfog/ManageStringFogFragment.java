@@ -37,9 +37,9 @@ public class ManageStringFogFragment extends BottomSheetDialogFragment {
 
     private void setStringFogStatus(boolean enabled) {
         if (enabled) {
-            binding.swPgEnabled.setText("StringFog is enabled");
+            binding.swPgEnabled.setText(R.string.auto_str_0429);
         } else {
-            binding.swPgEnabled.setText("StringFog is disabled");
+            binding.swPgEnabled.setText(R.string.auto_str_0428);
         }
     }
 }

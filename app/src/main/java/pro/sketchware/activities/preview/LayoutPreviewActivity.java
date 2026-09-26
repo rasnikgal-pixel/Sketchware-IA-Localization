@@ -30,7 +30,7 @@ public class LayoutPreviewActivity extends BaseAppCompatActivity {
         setContentView(binding.getRoot());
         var toolbar = binding.toolbar;
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Layout Preview");
+        getSupportActionBar().setTitle(R.string.auto_str_0255);
         getSupportActionBar().setSubtitle(getIntent().getStringExtra("title"));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(true);

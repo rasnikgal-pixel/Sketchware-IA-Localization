@@ -129,7 +129,7 @@ public class PropertyResourceItem extends RelativeLayout implements View.OnClick
             }
         }
         c = str;
-        f.setText("NONE");
+        f.setText(R.string.auto_str_0283);
         g.setImageDrawable(null);
         g.setBackgroundColor(Color.WHITE);
     }

@@ -116,11 +116,11 @@ public class AddLottieCollectionActivity extends BaseDialogActivity implements V
         ed_input = findViewById(R.id.ed_input);
         ed_input_edittext = ed_input.getEditText();
         ed_input_edittext.setPrivateImeOptions("defaultInputmode=english;");
-        ed_input.setHint("Enter Lottie animation name");
+        ed_input.setHint(R.string.auto_str_0174);
         lottieNameValidator = new PB(this, ed_input.getTextInputLayout(), uq.b, getReservedLottieNames());
         lottieNameValidator.a(1);
         chk_collection.setText(xB.b().a(getApplicationContext(), R.string.design_manager_title_add_to_collection));
-        tv_add_lottie.setText("Add Lottie Animation");
+        tv_add_lottie.setText(R.string.auto_str_0020);
         preview.setOnClickListener(this);
         r.setOnClickListener(this);
         s.setOnClickListener(this);

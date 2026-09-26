@@ -120,8 +120,8 @@ public class ManageAssetsActivity extends BaseAppCompatActivity {
 
         var dialog = new MaterialAlertDialogBuilder(this)
                 .setView(dialogBinding.getRoot())
-                .setTitle("Create new")
-                .setMessage("If you're creating a file, make sure to add an extension.")
+                .setTitle(R.string.auto_str_0108)
+                .setMessage(R.string.auto_str_0224)
                 .setNegativeButton("Cancel", (dialogInterface, i) -> dialogInterface.dismiss())
                 .setPositiveButton("Create", null)
                 .create();
@@ -166,7 +166,7 @@ public class ManageAssetsActivity extends BaseAppCompatActivity {
         FilePickerOptions options = new FilePickerOptions();
         options.setSelectionMode(SelectionMode.BOTH);
         options.setMultipleSelection(true);
-        options.setTitle("Select an asset file");
+        options.setTitle(R.string.auto_str_0386);
 
         FilePickerCallback callback = new FilePickerCallback() {
             @Override

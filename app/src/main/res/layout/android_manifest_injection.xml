@@ -43,7 +43,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Manifest Mode"
+                    android:text="@string/auto_str_0271"
                     android:textAppearance="?attr/textAppearanceBodyMedium"
                     android:textColor="?attr/colorPrimary" />
 
@@ -58,14 +58,14 @@
                         android:id="@+id/radio_default"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Default Manifest" />
+                        android:text="@string/auto_str_0130" />
 
                     <RadioButton
                         android:id="@+id/radio_custom"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
-                        android:text="Custom Manifest" />
+                        android:text="@string/auto_str_0122" />
                 </RadioGroup>
 
                 <LinearLayout
@@ -79,7 +79,7 @@
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Paste full AndroidManifest.xml here">
+                        android:hint="@string/auto_str_0319">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/manifest_input"
@@ -103,7 +103,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Save" />
+                            android:text="@string/auto_str_0357" />
 
                         <Button
                             android:id="@+id/btn_load_default"
@@ -111,7 +111,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:layout_marginStart="4dp"
-                            android:text="Load Default" />
+                            android:text="@string/auto_str_0262" />
 
                         <Button
                             android:id="@+id/btn_reset_manifest"
@@ -119,7 +119,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:layout_marginStart="4dp"
-                            android:text="Reset" />
+                            android:text="@string/auto_str_0343" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -137,7 +137,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
-                    android:text="Activities"
+                    android:text="@string/auto_str_0012"
                     android:textAppearance="?attr/textAppearanceBodyMedium"
                     android:textColor="?attr/colorPrimary" />
 

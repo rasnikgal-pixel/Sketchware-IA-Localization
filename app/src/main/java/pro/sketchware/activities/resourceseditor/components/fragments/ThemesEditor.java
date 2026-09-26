@@ -123,7 +123,7 @@ public class ThemesEditor extends Fragment {
     public void showAddThemeDialog() {
         MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(activity);
         StyleEditorAddBinding binding = StyleEditorAddBinding.inflate(getLayoutInflater());
-        dialog.setTitle("Create new theme");
+        dialog.setTitle(R.string.auto_str_0114);
         dialog.setPositiveButton("Create", (d, which) -> {
             String themeName = Objects.requireNonNull(binding.styleName.getText()).toString();
             String parent = Objects.requireNonNull(binding.styleParent.getText()).toString();
@@ -160,7 +160,7 @@ public class ThemesEditor extends Fragment {
             binding.styleHeaderInput.setText(notesMap.get(position));
         }
 
-        dialog.setTitle("Edit theme");
+        dialog.setTitle(R.string.auto_str_0161);
         dialog.setPositiveButton("Edit", (d, which) -> {
             String themeName = Objects.requireNonNull(binding.styleName.getText()).toString();
             String parent = Objects.requireNonNull(binding.styleParent.getText()).toString();
@@ -183,7 +183,7 @@ public class ThemesEditor extends Fragment {
             hasUnsavedChanges = true;
         });
         dialog.setNeutralButton(Helper.getResString(R.string.common_word_delete), (d, which) -> new MaterialAlertDialogBuilder(requireContext())
-                .setTitle("Warning")
+                .setTitle(R.string.auto_str_0480)
                 .setMessage("Are you sure you want to delete " + theme.getStyleName() + "?")
                 .setPositiveButton(R.string.common_word_yes, (d2, w) -> {
                     themesList.remove(position);
@@ -220,7 +220,7 @@ public class ThemesEditor extends Fragment {
                     @Override
                     public void onItemLongClick(LinkedHashMap<String, String> attributes, String attr) {
                         new MaterialAlertDialogBuilder(requireContext())
-                                .setTitle("Warning")
+                                .setTitle(R.string.auto_str_0480)
                                 .setMessage("Are you sure you want to delete " + attr + "?")
                                 .setPositiveButton(R.string.common_word_yes, (d, w) -> {
                                     attributes.remove(attr);

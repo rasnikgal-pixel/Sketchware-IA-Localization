@@ -90,7 +90,7 @@
                         android:id="@+id/badge_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="badge"
+                        android:text="@string/auto_str_0498"
                         android:textColor="#ffffff"
                         android:textSize="11sp" />
 
@@ -154,7 +154,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:text="Background Type"
+                        android:text="@string/auto_str_0055"
                         android:textAppearance="?attr/textAppearanceBodyLarge"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -175,7 +175,7 @@
                             style="@style/Widget.Material3Expressive.Button.OutlinedButton"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="Color"
+                            android:text="@string/auto_str_0086"
                             android:layout_weight="1"/>
 
                         <com.google.android.material.button.MaterialButton
@@ -183,7 +183,7 @@
                             style="@style/Widget.Material3Expressive.Button.OutlinedButton"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:text="Gradient"
+                            android:text="@string/auto_str_0219"
                             android:layout_weight="1"/>
                     </com.google.android.material.button.MaterialButtonToggleGroup>
 
@@ -271,7 +271,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:padding="4dp"
-                            android:text="Gradient Direction"
+                            android:text="@string/auto_str_0220"
                             android:textAppearance="?attr/textAppearanceBodyLarge"
                             android:textSize="12sp" />
 
@@ -363,7 +363,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:text="Effects"
+                        android:text="@string/auto_str_0162"
                         android:textAppearance="?attr/textAppearanceBodyLarge"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -373,14 +373,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:checked="false"
-                        android:text="Score effect" />
+                        android:text="@string/auto_str_0360" />
 
                     <com.google.android.material.materialswitch.MaterialSwitch
                         android:id="@+id/texture_check"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:checked="false"
-                        android:text="Textures" />
+                        android:text="@string/auto_str_0443" />
 
                     <LinearLayout
                         android:id="@+id/texture_cont"
@@ -442,7 +442,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:padding="4dp"
-                            android:text="Color"
+                            android:text="@string/auto_str_0086"
                             android:textAppearance="?attr/textAppearanceBodyLarge"
                             android:textSize="12sp" />
 
@@ -468,7 +468,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:padding="4dp"
-                            android:text="Opacity"
+                            android:text="@string/auto_str_0308"
                             android:textAppearance="?attr/textAppearanceBodyLarge"
                             android:textSize="12sp" />
 
@@ -505,7 +505,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:padding="4dp"
-                            android:text="Scale"
+                            android:text="@string/auto_str_0359"
                             android:textAppearance="?attr/textAppearanceBodyLarge"
                             android:textSize="12sp" />
 
@@ -542,7 +542,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:padding="4dp"
-                            android:text="Rotation"
+                            android:text="@string/auto_str_0354"
                             android:textAppearance="?attr/textAppearanceBodyLarge"
                             android:textSize="12sp" />
 
@@ -601,7 +601,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:text="Corners"
+                        android:text="@string/auto_str_0102"
                         android:textAppearance="?attr/textAppearanceBodyLarge"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -659,7 +659,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:text="Image"
+                        android:text="@string/auto_str_0225"
                         android:textAppearance="?attr/textAppearanceBodyLarge"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -669,7 +669,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:padding="4dp"
-                        android:text="Color"
+                        android:text="@string/auto_str_0086"
                         android:textAppearance="?attr/textAppearanceBodyLarge"
                         android:textSize="12sp" />
 
@@ -696,7 +696,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:padding="4dp"
-                        android:text="Size"
+                        android:text="@string/auto_str_0409"
                         android:textAppearance="?attr/textAppearanceBodyLarge"
                         android:textSize="12sp" />
 
@@ -734,7 +734,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:padding="4dp"
-                        android:text="Vertical position"
+                        android:text="@string/auto_str_0474"
                         android:textAppearance="?attr/textAppearanceBodyLarge"
                         android:textSize="12sp" />
 
@@ -772,7 +772,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:padding="4dp"
-                        android:text="horizontal position"
+                        android:text="@string/auto_str_0506"
                         android:textAppearance="?attr/textAppearanceBodyLarge"
                         android:textSize="12sp" />
 
@@ -836,7 +836,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="10dp"
                             android:gravity="center_vertical"
-                            android:hint="Text"
+                            android:hint="@string/auto_str_0441"
                             android:importantForAutofill="noExcludeDescendants"
                             app:layout_constraintEnd_toStartOf="@+id/txt_color_preview_card"
                             app:layout_constraintStart_toStartOf="parent"
@@ -877,7 +877,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:padding="4dp"
-                        android:text="Size"
+                        android:text="@string/auto_str_0409"
                         android:textAppearance="?attr/textAppearanceBodyLarge"
                         android:textSize="12sp" />
 
@@ -914,7 +914,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:padding="4dp"
-                        android:text="Vertical position"
+                        android:text="@string/auto_str_0474"
                         android:textAppearance="?attr/textAppearanceBodyLarge"
                         android:textSize="12sp" />
 
@@ -952,7 +952,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:padding="4dp"
-                        android:text="horizontal position"
+                        android:text="@string/auto_str_0506"
                         android:textAppearance="?attr/textAppearanceBodyLarge"
                         android:textSize="12sp" />
 
@@ -1011,7 +1011,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:text="Other"
+                        android:text="@string/auto_str_0310"
                         android:textAppearance="?attr/textAppearanceBodyLarge"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -1028,7 +1028,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="10dp"
                             android:gravity="center_vertical"
-                            android:hint="Badge text"
+                            android:hint="@string/auto_str_0060"
                             android:importantForAutofill="noExcludeDescendants"
                             app:layout_constraintEnd_toStartOf="@+id/badge_txt_color_preview_card"
                             app:layout_constraintStart_toStartOf="parent"
@@ -1066,7 +1066,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="4dp"
-                        android:text="Badge background color"
+                        android:text="@string/auto_str_0059"
                         android:textAppearance="?attr/textAppearanceBodyLarge"
                         android:textSize="12sp" />
 
@@ -1093,7 +1093,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:checked="false"
-                        android:text="Adaptive Icon" />
+                        android:text="@string/auto_str_0019" />
 
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>

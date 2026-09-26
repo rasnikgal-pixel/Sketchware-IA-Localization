@@ -122,13 +122,13 @@ public class BlockSelectorDetailsFragment extends qA {
 
     private void showCreateEditDialog(boolean isEdit, int indexA) {
         DialogAddCustomActivityBinding dialogBinding = DialogAddCustomActivityBinding.inflate(LayoutInflater.from(requireContext()));
-        dialogBinding.activityNameInputLayout.setHint("Name");
+        dialogBinding.activityNameInputLayout.setHint(R.string.auto_str_0284);
         if (isEdit) {
             dialogBinding.activityNameInput.setText(selectors.get(index).getData().get(indexA));
         }
 
         MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(requireActivity());
-        dialog.setTitle("New Selector Item");
+        dialog.setTitle(R.string.auto_str_0292);
         dialog.setPositiveButton("Create", (v, which) -> {
             String newItem = Helper.getText(dialogBinding.activityNameInput);
             if (newItem != null && !newItem.isEmpty()) {
@@ -151,7 +151,7 @@ public class BlockSelectorDetailsFragment extends qA {
         DialogSelectorActionsBinding dialogBinding = DialogSelectorActionsBinding.inflate(LayoutInflater.from(requireContext()));
 
         AlertDialog dialog = new MaterialAlertDialogBuilder(requireActivity()).create();
-        dialog.setTitle("Actions");
+        dialog.setTitle(R.string.auto_str_0008);
         dialog.setView(dialogBinding.getRoot());
 
         dialogBinding.edit.setOnClickListener(v -> {
@@ -180,7 +180,7 @@ public class BlockSelectorDetailsFragment extends qA {
 
     private void showConfirmationDialog(String message, OnDialogClickListener onConfirm, OnDialogClickListener onCancel) {
         MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(requireActivity());
-        dialog.setTitle("Attention");
+        dialog.setTitle(R.string.auto_str_0052);
         dialog.setMessage(message);
         dialog.setPositiveButton("Yes", (v, which) -> onConfirm.onClick(v));
         dialog.setNegativeButton("Cancel", (v, which) -> onCancel.onClick(v));

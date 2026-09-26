@@ -66,7 +66,7 @@ public class BackupRestoreManager {
 
         MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(act);
         dialog.setIcon(R.drawable.ic_backup);
-        dialog.setTitle("Backup Options");
+        dialog.setTitle(R.string.auto_str_0056);
 
         LinearLayout checkboxContainer = new LinearLayout(act);
         checkboxContainer.setOrientation(LinearLayout.VERTICAL);
@@ -98,7 +98,7 @@ public class BackupRestoreManager {
 
         CheckBox includeLocalLibraries = new CheckBox(act);
         includeLocalLibraries.setTag(localLibrariesTag);
-        includeLocalLibraries.setText("Include used Local libraries");
+        includeLocalLibraries.setText(R.string.auto_str_0235);
         includeLocalLibraries.setLayoutParams(new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -107,7 +107,7 @@ public class BackupRestoreManager {
 
         CheckBox includeUsedCustomBlocks = new CheckBox(act);
         includeUsedCustomBlocks.setTag(customBlocksTag);
-        includeUsedCustomBlocks.setText("Include used Custom Blocks");
+        includeUsedCustomBlocks.setText(R.string.auto_str_0234);
         includeUsedCustomBlocks.setLayoutParams(new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -152,7 +152,7 @@ public class BackupRestoreManager {
                         boolean restoringMultipleBackups = files.size() > 1;
 
                         new MaterialAlertDialogBuilder(act)
-                                .setTitle("Warning")
+                                .setTitle(R.string.auto_str_0480)
                                 .setMessage(getRestoreIntegratedLocalLibrariesMessage(restoringMultipleBackups, i, files.size(),
                                         FileUtil.getFileNameNoExtension(backupFilePath)))
                                 .setPositiveButton("Copy", (dialog, which) -> doRestore(backupFilePath, true))
@@ -205,9 +205,9 @@ public class BackupRestoreManager {
         @Override
         protected void onPreExecute() {
             ProgressMsgBoxBinding loadingDialogBinding = ProgressMsgBoxBinding.inflate(LayoutInflater.from(activityWeakReference.get()));
-            loadingDialogBinding.tvProgress.setText("Creating backup...");
+            loadingDialogBinding.tvProgress.setText(R.string.auto_str_0117);
             dlg = new MaterialAlertDialogBuilder(activityWeakReference.get())
-                    .setTitle("Please wait")
+                    .setTitle(R.string.auto_str_0322)
                     .setCancelable(false)
                     .setView(loadingDialogBinding.getRoot())
                     .create();
@@ -254,9 +254,9 @@ public class BackupRestoreManager {
         @Override
         protected void onPreExecute() {
             ProgressMsgBoxBinding loadingDialogBinding = ProgressMsgBoxBinding.inflate(LayoutInflater.from(activityWeakReference.get()));
-            loadingDialogBinding.tvProgress.setText("Creating backup...");
+            loadingDialogBinding.tvProgress.setText(R.string.auto_str_0117);
             dlg = new MaterialAlertDialogBuilder(activityWeakReference.get())
-                    .setTitle("Please wait")
+                    .setTitle(R.string.auto_str_0322)
                     .setCancelable(false)
                     .setView(loadingDialogBinding.getRoot())
                     .create();
@@ -302,9 +302,9 @@ public class BackupRestoreManager {
         @Override
         protected void onPreExecute() {
             ProgressMsgBoxBinding loadingDialogBinding = ProgressMsgBoxBinding.inflate(LayoutInflater.from(activityWeakReference.get()));
-            loadingDialogBinding.tvProgress.setText("Restoring...");
+            loadingDialogBinding.tvProgress.setText(R.string.auto_str_0349);
             dlg = new MaterialAlertDialogBuilder(activityWeakReference.get())
-                    .setTitle("Please wait")
+                    .setTitle(R.string.auto_str_0322)
                     .setCancelable(false)
                     .setView(loadingDialogBinding.getRoot())
                     .create();
@@ -359,9 +359,9 @@ public class BackupRestoreManager {
         @Override
         protected void onPreExecute() {
             ProgressMsgBoxBinding loadingDialogBinding = ProgressMsgBoxBinding.inflate(LayoutInflater.from(activityWeakReference.get()));
-            loadingDialogBinding.tvProgress.setText("Restoring...");
+            loadingDialogBinding.tvProgress.setText(R.string.auto_str_0349);
             dlg = new MaterialAlertDialogBuilder(activityWeakReference.get())
-                    .setTitle("Please wait")
+                    .setTitle(R.string.auto_str_0322)
                     .setCancelable(false)
                     .setView(loadingDialogBinding.getRoot())
                     .create();

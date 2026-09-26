@@ -182,7 +182,7 @@ public class StringsTabFragment extends Fragment {
     private void showAddStringDialog() {
         MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(requireActivity());
         ViewStringEditorAddBinding dialogBinding = ViewStringEditorAddBinding.inflate(getLayoutInflater());
-        dialog.setTitle("Create new string");
+        dialog.setTitle(R.string.auto_str_0112);
         dialog.setPositiveButton("Create", (d, which) -> {
             String key = Objects.requireNonNull(dialogBinding.stringKeyInput.getText()).toString().trim();
             String value = Objects.requireNonNull(dialogBinding.stringValueInput.getText()).toString();
@@ -238,7 +238,7 @@ public class StringsTabFragment extends Fragment {
             dialogBinding.stringKeyInput.setEnabled(false);
         }
 
-        dialog.setTitle("Edit string");
+        dialog.setTitle(R.string.auto_str_0159);
         dialog.setPositiveButton("Save", (d, which) -> {
             String keyInput = Objects.requireNonNull(dialogBinding.stringKeyInput.getText()).toString().trim();
             String valueInput = Objects.requireNonNull(dialogBinding.stringValueInput.getText()).toString();

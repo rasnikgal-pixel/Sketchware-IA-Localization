@@ -33,9 +33,9 @@ public class ItemTabLayout extends TabLayout implements ItemView {
         setDrawingCacheEnabled(true);
         setClickable(false);
         setFocusable(false);
-        addTab(newTab().setText("Tab 1"), true);
-        addTab(newTab().setText("Tab 2"));
-        addTab(newTab().setText("Tab 3"));
+        addTab(newTab().setText(R.string.auto_str_0437), true);
+        addTab(newTab().setText(R.string.auto_str_0438));
+        addTab(newTab().setText(R.string.auto_str_0439));
     }
 
     @Override

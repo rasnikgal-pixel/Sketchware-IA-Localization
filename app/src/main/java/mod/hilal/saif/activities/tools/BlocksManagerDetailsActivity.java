@@ -103,7 +103,7 @@ public class BlocksManagerDetailsActivity extends BaseAppCompatActivity {
     public void openFileExplorerImport() {
         FilePickerOptions options = new FilePickerOptions();
         options.setExtensions(new String[]{"json"});
-        options.setTitle("Select a JSON file");
+        options.setTitle(R.string.auto_str_0381);
 
         FilePickerCallback callback = new FilePickerCallback() {
             @Override
@@ -219,13 +219,13 @@ public class BlocksManagerDetailsActivity extends BaseAppCompatActivity {
         blocks_path = getIntent().getStringExtra("dirB");
         _refreshLists();
         if (palette == -1) {
-            getSupportActionBar().setTitle("Recycle Bin");
+            getSupportActionBar().setTitle(R.string.auto_str_0331);
             fab_button.setVisibility(View.GONE);
         } else {
             Object paletteName = pallet_list.get(palette - 9).get("name");
 
             if (paletteName instanceof String) {
-                getSupportActionBar().setTitle("Manage Block");
+                getSupportActionBar().setTitle(R.string.auto_str_0269);
                 getSupportActionBar().setSubtitle((String) paletteName);
             }
         }
@@ -362,8 +362,8 @@ public class BlocksManagerDetailsActivity extends BaseAppCompatActivity {
 
                 case "Delete":
                     new MaterialAlertDialogBuilder(this)
-                            .setTitle("Delete block?")
-                            .setMessage("Are you sure you want to delete this block?")
+                            .setTitle(R.string.auto_str_0133)
+                            .setMessage(R.string.auto_str_0043)
                             .setPositiveButton("Recycle bin", (dialog, which) -> _moveToRecycleBin(position))
                             .setNegativeButton(R.string.common_word_cancel, null)
                             .setNeutralButton("Delete permanently", (dialog, which) -> _deleteBlock(position))
@@ -423,7 +423,7 @@ public class BlocksManagerDetailsActivity extends BaseAppCompatActivity {
                 .setNegativeButton(R.string.common_word_cancel, null);
         if (palette == -1) {
             AtomicInteger restoreToChoice = new AtomicInteger(-1);
-            builder.setTitle("Restore to")
+            builder.setTitle(R.string.auto_str_0348)
                     .setSingleChoiceItems(paletteNames.toArray(new String[0]), -1, (dialog, which) -> restoreToChoice.set(which))
                     .setPositiveButton("Restore", (dialog, which) -> {
                         if (restoreToChoice.get() != -1) {
@@ -435,7 +435,7 @@ public class BlocksManagerDetailsActivity extends BaseAppCompatActivity {
                     });
         } else {
             AtomicInteger moveToChoice = new AtomicInteger(palette - 9);
-            builder.setTitle("Move to")
+            builder.setTitle(R.string.auto_str_0282)
                     .setSingleChoiceItems(paletteNames.toArray(new String[0]), palette - 9, (dialog, which) -> moveToChoice.set(which))
                     .setPositiveButton("Move", (dialog, which) -> {
                         all_blocks_list.get(position).put("palette", String.valueOf(moveToChoice.get() + 9));
@@ -461,7 +461,7 @@ public class BlocksManagerDetailsActivity extends BaseAppCompatActivity {
                 }
             }
             MaterialAlertDialogBuilder import_dialog = new MaterialAlertDialogBuilder(this);
-            import_dialog.setTitle("Import blocks")
+            import_dialog.setTitle(R.string.auto_str_0229)
                     .setMultiChoiceItems(names.toArray(new CharSequence[0]), null, (dialog, which, isChecked) -> {
                         if (isChecked) {
                             toAdd.add(which);
@@ -570,7 +570,7 @@ public class BlocksManagerDetailsActivity extends BaseAppCompatActivity {
                 spec.setHint("");
             } else {
                 name.setText("");
-                name.setHint("(Invalid block name entry)");
+                name.setHint(R.string.auto_str_0001);
             }
 
             Object blockSpec = block.get("spec");
@@ -579,7 +579,7 @@ public class BlocksManagerDetailsActivity extends BaseAppCompatActivity {
                 spec.setHint("");
             } else {
                 spec.setText("");
-                spec.setHint("(Invalid block spec entry)");
+                spec.setHint(R.string.auto_str_0002);
             }
 
             Object blockType = block.get("type");

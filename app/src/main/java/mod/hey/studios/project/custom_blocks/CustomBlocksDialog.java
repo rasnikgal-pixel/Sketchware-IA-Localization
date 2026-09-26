@@ -107,7 +107,7 @@ public class CustomBlocksDialog {
 
             } else {
                 context.runOnUiThread(() -> {
-                    dialogBinding.subtitle.setText("You haven't used any custom blocks in this project");
+                    dialogBinding.subtitle.setText(R.string.auto_str_0494);
                     dialogBinding.progressIndicator.setVisibility(View.GONE);
                 });
             }
@@ -138,7 +138,7 @@ public class CustomBlocksDialog {
         AtomicInteger selectedPalette = new AtomicInteger(paletteList.size() - 1);
 
         new MaterialAlertDialogBuilder(context)
-                .setTitle("Import Custom blocks to")
+                .setTitle(R.string.auto_str_0227)
                 .setSingleChoiceItems(paletteNames.toArray(new String[0]), selectedPalette.get(), (dialog, which) -> selectedPalette.set(which))
                 .setNegativeButton("Create new palette", (dialog, which) -> {
                     showCreatePaletteDialog(context, paletteList, paletteDir, customBlocksManager, list, blocksList, allBlocksList, blocksDir);
@@ -184,7 +184,7 @@ public class CustomBlocksDialog {
 
         MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(context);
         dialog.setIcon(R.drawable.icon_style_white_96);
-        dialog.setTitle("Create a new palette");
+        dialog.setTitle(R.string.auto_str_0107);
 
         DialogPaletteBinding binding = DialogPaletteBinding.inflate(((Activity) context).getLayoutInflater());
 

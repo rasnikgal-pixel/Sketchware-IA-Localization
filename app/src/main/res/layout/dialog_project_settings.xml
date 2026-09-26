@@ -28,7 +28,7 @@
                 android:layout_marginEnd="24dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="12dp"
-                android:hint="Compile SDK version">
+                android:hint="@string/auto_str_0092">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_compile_sdk_version"
@@ -44,7 +44,7 @@
                 android:layout_marginEnd="24dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="12dp"
-                android:hint="Minimum SDK version">
+                android:hint="@string/auto_str_0277">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_minimum_sdk_version"
@@ -60,7 +60,7 @@
                 android:layout_marginEnd="24dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="12dp"
-                android:hint="Target SDK version">
+                android:hint="@string/auto_str_0440">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_target_sdk_version"
@@ -76,7 +76,7 @@
                 android:layout_marginEnd="24dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="12dp"
-                android:hint="Application class name">
+                android:hint="@string/auto_str_0039">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_application_class_name"
@@ -107,7 +107,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Enable ViewBinding"
+                        android:text="@string/auto_str_0167"
                         android:textAppearance="?attr/textAppearanceBodyLarge"
                         android:textColor="?attr/colorOnSurface" />
 
@@ -115,7 +115,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:text="This will enable ViewBinding in your project. Note: Manual changes may be required for widgets used in ASD block"
+                        android:text="@string/auto_str_0452"
                         android:textAppearance="?attr/textAppearanceBodyMedium"
                         android:textColor="?attr/colorOnSurfaceVariant" />
 
@@ -152,7 +152,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Remove old deprecated methods"
+                        android:text="@string/auto_str_0337"
                         android:textAppearance="?attr/textAppearanceBodyLarge"
                         android:textColor="?attr/colorOnSurface" />
 
@@ -160,7 +160,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:text="This will remove methods in files, like showMessage, getDip, etc."
+                        android:text="@string/auto_str_0453"
                         android:textAppearance="?attr/textAppearanceBodyMedium"
                         android:textColor="?attr/colorOnSurfaceVariant" />
 
@@ -197,7 +197,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Use MaterialComponents"
+                        android:text="@string/auto_str_0466"
                         android:textAppearance="?attr/textAppearanceBodyLarge"
                         android:textColor="?attr/colorOnSurface" />
 
@@ -205,7 +205,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
-                        android:text="This will replace e.g. Button with MaterialButton, be careful!"
+                        android:text="@string/auto_str_0454"
                         android:textAppearance="?attr/textAppearanceBodyMedium"
                         android:textColor="?attr/colorOnSurfaceVariant" />
 

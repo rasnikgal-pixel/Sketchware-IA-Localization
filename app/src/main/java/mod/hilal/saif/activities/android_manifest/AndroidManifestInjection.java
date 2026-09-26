@@ -321,7 +321,7 @@ public class AndroidManifestInjection extends BaseAppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("AndroidManifest Manager");
+        getSupportActionBar().setTitle(R.string.auto_str_0035);
         toolbar.setNavigationOnClickListener(view -> onBackPressed());
     }
 
@@ -376,7 +376,7 @@ public class AndroidManifestInjection extends BaseAppCompatActivity {
     }
 
     private void loadDefaultManifestIntoTextArea(TextInputEditText manifestInput) {
-        manifestInput.setText("Loading default manifest...");
+        manifestInput.setText(R.string.auto_str_0264);
         new Thread(() -> {
             try {
                 String defaultManifest = new yq(getApplicationContext(), sc_id).getDefaultManifestSrc(jC.b(sc_id), jC.a(sc_id), jC.c(sc_id));

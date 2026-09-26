@@ -132,7 +132,7 @@ import pro.sketchware.utility.TranslationFunction;
 
     private void setupUI() {
         binding.topAppBar.setNavigationOnClickListener(Helper.getBackPressedClickListener(this));
-        binding.topAppBar.setTitle("Java/Kotlin Manager");
+        binding.topAppBar.setTitle(R.string.auto_str_0245);
         binding.showOptionsButton.setOnClickListener(view -> hideShowOptionsButton(false));
         binding.closeButton.setOnClickListener(view -> hideShowOptionsButton(true));
         binding.createNewButton.setOnClickListener(v -> {
@@ -180,8 +180,8 @@ import pro.sketchware.utility.TranslationFunction;
 
         var dialog = new MaterialAlertDialogBuilder(this)
                 .setView(dialogBinding.getRoot())
-                .setTitle("Create new")
-                .setMessage("File extension will be added automatically based on the file type you select")
+                .setTitle(R.string.auto_str_0108)
+                .setMessage(R.string.auto_str_0204)
                 .setNegativeButton("Cancel", (dialogInterface, i) -> dialogInterface.dismiss())
                 .setPositiveButton("Create", null)
                 .create();
@@ -251,7 +251,7 @@ import pro.sketchware.utility.TranslationFunction;
         FilePickerOptions options = new FilePickerOptions();
         options.setMultipleSelection(true);
         options.setExtensions(new String[]{"java", "kt"});
-        options.setTitle("Select Java/Kotlin file(s)");
+        options.setTitle(R.string.auto_str_0374);
 
         FilePickerCallback callback = new FilePickerCallback() {
             @Override

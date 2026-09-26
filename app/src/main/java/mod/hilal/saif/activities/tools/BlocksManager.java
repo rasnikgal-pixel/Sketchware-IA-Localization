@@ -209,7 +209,7 @@ public class BlocksManager extends BaseAppCompatActivity {
     private void showBlockConfigurationDialog() {
         MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(this);
         dialog.setIcon(R.drawable.ic_folder_48dp);
-        dialog.setTitle("Block configuration");
+        dialog.setTitle(R.string.auto_str_0063);
 
         DialogBlockConfigurationBinding dialogBinding = DialogBlockConfigurationBinding.inflate(getLayoutInflater());
 
@@ -333,7 +333,7 @@ public class BlocksManager extends BaseAppCompatActivity {
 
     private void refreshCount() {
         if (pallet_listmap.isEmpty()) {
-            binding.paletteCount.setText("No palettes");
+            binding.paletteCount.setText(R.string.auto_str_0302);
         } else {
             binding.paletteCount.setText(pallet_listmap.size() + " Palettes");
         }
@@ -349,7 +349,7 @@ public class BlocksManager extends BaseAppCompatActivity {
         });
         view.setOnLongClickListener(v -> {
             new MaterialAlertDialogBuilder(this)
-                    .setTitle("Recycle bin")
+                    .setTitle(R.string.auto_str_0332)
                     .setMessage("Are you sure you want to empty the recycle bin? " +
                             "Blocks inside will be deleted PERMANENTLY, you CANNOT recover them!")
                     .setPositiveButton("Empty", (dialog, which) -> emptyRecyclebin())
@@ -598,7 +598,7 @@ public class BlocksManager extends BaseAppCompatActivity {
                         case delete:
                             new MaterialAlertDialogBuilder(BlocksManager.this)
                                     .setTitle(Objects.requireNonNull(pallet_listmap.get(pos).get("name")).toString())
-                                    .setMessage("Remove all blocks related to this palette?")
+                                    .setMessage(R.string.auto_str_0336)
                                     .setPositiveButton("Remove permanently", (dialog, which) -> {
                                         palettes.remove(pos);
                                         notifyItemRemoved(pos);

@@ -35,7 +35,7 @@
                 android:fontFamily="sans-serif-medium"
                 android:paddingHorizontal="6dp"
                 android:paddingVertical="2dp"
-                android:text="Ad"
+                android:text="@string/auto_str_0016"
                 android:textColor="@android:color/white"
                 android:textSize="11sp" />
 

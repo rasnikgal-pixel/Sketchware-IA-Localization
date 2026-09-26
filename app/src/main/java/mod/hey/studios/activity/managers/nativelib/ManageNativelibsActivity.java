@@ -102,15 +102,15 @@ public class ManageNativelibsActivity extends BaseAppCompatActivity implements V
 
     private void handleFab() {
         if (isInMainDirectory()) {
-            binding.showOptionsButton.setText("New folder");
+            binding.showOptionsButton.setText(R.string.auto_str_0295);
         } else {
-            binding.showOptionsButton.setText("Import library");
+            binding.showOptionsButton.setText(R.string.auto_str_0231);
         }
     }
 
     private void setupUI() {
         binding.topAppBar.setNavigationOnClickListener(Helper.getBackPressedClickListener(this));
-        binding.topAppBar.setTitle("Native Library Manager");
+        binding.topAppBar.setTitle(R.string.auto_str_0287);
 
         binding.showOptionsButton.setOnClickListener(view -> hideShowOptionsButton(false));
         binding.closeButton.setOnClickListener(view -> hideShowOptionsButton(true));
@@ -167,14 +167,14 @@ public class ManageNativelibsActivity extends BaseAppCompatActivity implements V
 
         var dialog = new MaterialAlertDialogBuilder(this)
                 .setView(dialogBinding.getRoot())
-                .setTitle("Create a new folder")
-                .setMessage("Enter the name of the new folder")
+                .setTitle(R.string.auto_str_0106)
+                .setMessage(R.string.auto_str_0185)
                 .setNegativeButton("Cancel", (dialogInterface, i) -> dialogInterface.dismiss())
                 .setPositiveButton("Create", null)
                 .create();
 
         dialogBinding.chipGroupTypes.setVisibility(View.GONE);
-        textInputLayout.setHint("Folder name");
+        textInputLayout.setHint(R.string.auto_str_0209);
 
         inputText.addTextChangedListener(new TextWatcher() {
             @Override
@@ -231,7 +231,7 @@ public class ManageNativelibsActivity extends BaseAppCompatActivity implements V
 
     private void setupDialog() {
         FilePickerOptions options = new FilePickerOptions();
-        options.setTitle("Import Native Libraries");
+        options.setTitle(R.string.auto_str_0228);
         options.setMultipleSelection(true);
         options.setExtensions(new String[]{"so"});
         FilePickerCallback callback = new FilePickerCallback() {
@@ -258,7 +258,7 @@ public class ManageNativelibsActivity extends BaseAppCompatActivity implements V
         var inputText = dialogBinding.inputText;
 
         var dialog = new MaterialAlertDialogBuilder(this)
-                .setTitle("Rename")
+                .setTitle(R.string.auto_str_0339)
                 .setView(dialogBinding.getRoot())
                 .setNegativeButton("Cancel", (dialogInterface, i) -> dialogInterface.dismiss())
                 .setPositiveButton("Rename", (dialogInterface, i) -> {

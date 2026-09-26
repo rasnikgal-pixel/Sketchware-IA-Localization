@@ -137,8 +137,8 @@ public class ManagePermissionActivity extends BaseAppCompatActivity {
 
     private void showResetDialog() {
         new MaterialAlertDialogBuilder(this)
-                .setTitle("Reset permissions")
-                .setMessage("Are you sure you want to reset all permissions?")
+                .setTitle(R.string.auto_str_0345)
+                .setMessage(R.string.auto_str_0047)
                 .setPositiveButton("Reset", (dialog, which) -> {
                     FileUtil.writeFile(new FilePathUtil().getPathPermission(numProj), "[]");
                     frc = new FileResConfig(numProj);

@@ -10,7 +10,7 @@
 		android:layout_height="wrap_content"
 		android:textColor="@color/studio_accent"
 		android:layout_width="wrap_content"
-		android:text="ViewGroups"
+		android:text="@string/auto_str_0476"
 		android:id="@+id/title"
 		android:textSize="18.0sp"/>
 

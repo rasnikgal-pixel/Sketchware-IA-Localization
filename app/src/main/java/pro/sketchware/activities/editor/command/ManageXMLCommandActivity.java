@@ -96,7 +96,7 @@ public class ManageXMLCommandActivity extends BaseAppCompatActivity {
         ManageXmlCommandBinding binding = ManageXmlCommandBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         setSupportActionBar(binding.toolbar);
-        getSupportActionBar().setTitle("XML Command Manager");
+        getSupportActionBar().setTitle(R.string.auto_str_0488);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         UI.addSystemWindowInsetToPadding(binding.list, false, false, false, true);
@@ -148,7 +148,7 @@ public class ManageXMLCommandActivity extends BaseAppCompatActivity {
                                     MaterialAlertDialogBuilder dialog =
                                             new MaterialAlertDialogBuilder(this);
                                     dialog.setTitle(R.string.common_word_delete);
-                                    dialog.setMessage("Are you sure you want to delete this item?");
+                                    dialog.setMessage(R.string.auto_str_0045);
                                     dialog.setPositiveButton(
                                             R.string.common_word_yes,
                                             (d, w) -> {
@@ -186,7 +186,7 @@ public class ManageXMLCommandActivity extends BaseAppCompatActivity {
         switch (item.getItemId()) {
             case 0 -> {
                 new MaterialAlertDialogBuilder(this)
-                        .setTitle("Select an XML")
+                        .setTitle(R.string.auto_str_0384)
                         .setAdapter(
                                 new ArrayAdapter<>(
                                         this, android.R.layout.simple_list_item_1, xmlFiles),
@@ -298,7 +298,7 @@ public class ManageXMLCommandActivity extends BaseAppCompatActivity {
 
     private void showConfirmationDialog() {
         MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(this);
-        dialog.setTitle("Confirmation");
+        dialog.setTitle(R.string.auto_str_0097);
         dialog.setMessage(
                 "Would you like to enable the new XML Command? It will speed up XML generation and compilation, but this change cannot be undone. Don’t worry, your previous changes with the XML Command Block will transfered here so it will remain unaffected.");
         dialog.setPositiveButton(

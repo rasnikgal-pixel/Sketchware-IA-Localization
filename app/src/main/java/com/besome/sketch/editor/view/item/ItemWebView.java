@@ -33,7 +33,7 @@ public class ItemWebView extends AppCompatTextView implements ItemView {
     public void initialize(Context context) {
         setGravity(Gravity.CENTER);
         setTypeface(null, Typeface.BOLD);
-        setText("WebView");
+        setText(R.string.auto_str_0482);
         dip = wB.a(context, 1.0f);
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setColor(0x9599d5d0);

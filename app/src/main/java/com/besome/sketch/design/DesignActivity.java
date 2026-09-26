@@ -301,7 +301,7 @@ public class DesignActivity extends BaseAppCompatActivity implements View.OnClic
             }
             fileName.setText(currentJavaFileName);
         } else if (viewPager.getCurrentItem() == 3) {
-            fileName.setText("strings.xml");
+            fileName.setText(R.string.auto_str_0515);
         }
     }
 
@@ -1760,7 +1760,7 @@ public class DesignActivity extends BaseAppCompatActivity implements View.OnClic
 
                     MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(activity);
                     if (isMissingDirectory) {
-                        dialog.setTitle("Missing directory detected");
+                        dialog.setTitle(R.string.auto_str_0278);
                         dialog.setMessage("A directory important for building is missing. " +
                                 "Sketchware Pro can try creating " + e.getMissingFile().getAbsolutePath() +
                                 " if you'd like to.");
@@ -1771,7 +1771,7 @@ public class DesignActivity extends BaseAppCompatActivity implements View.OnClic
                             }
                         });
                     } else {
-                        dialog.setTitle("Missing file detected");
+                        dialog.setTitle(R.string.auto_str_0279);
                         dialog.setMessage("A file needed for building is missing. " +
                                 "Put the correct file back to " + e.getMissingFile().getAbsolutePath() +
                                 " and try building again.");
@@ -1851,8 +1851,8 @@ public class DesignActivity extends BaseAppCompatActivity implements View.OnClic
 
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(activity, CHANNEL_ID)
                         .setSmallIcon(R.drawable.ic_mtrl_code)
-                        .setContentTitle("Building project")
-                        .setContentText("Starting build...")
+                        .setContentTitle(R.string.auto_str_0073)
+                        .setContentText(R.string.auto_str_0421)
                         .setOngoing(true)
                         .setProgress(0, 0, true)
                         .addAction(R.drawable.ic_cancel_white_96dp, "Cancel build", getCancelPendingIntent());
@@ -1868,7 +1868,7 @@ public class DesignActivity extends BaseAppCompatActivity implements View.OnClic
 
             NotificationCompat.Builder builder = new NotificationCompat.Builder(activity, CHANNEL_ID)
                     .setSmallIcon(R.drawable.ic_mtrl_code)
-                    .setContentTitle("Building project")
+                    .setContentTitle(R.string.auto_str_0073)
                     .setContentText(progress)
                     .setOngoing(true)
                     .setProgress(0, 0, true)

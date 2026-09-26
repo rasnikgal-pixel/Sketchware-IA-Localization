@@ -39,7 +39,7 @@
                 android:layout_weight="1"
                 android:ellipsize="marquee"
                 android:maxLines="2"
-                android:text="Random User"
+                android:text="@string/auto_str_0329"
                 android:textColor="@color/chat_text_primary"
                 android:textSize="14sp"
                 android:textStyle="bold" />

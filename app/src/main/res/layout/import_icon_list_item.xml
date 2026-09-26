@@ -29,7 +29,7 @@
         android:ellipsize="end"
         android:gravity="center"
         android:maxLines="2"
-        android:text="Title"
+        android:text="@string/auto_str_0455"
         android:textColor="@color/chat_text_secondary"
         android:textSize="11sp" />
 

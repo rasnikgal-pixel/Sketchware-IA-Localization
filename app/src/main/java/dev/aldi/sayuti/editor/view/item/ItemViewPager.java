@@ -32,7 +32,7 @@ public class ItemViewPager extends AppCompatTextView implements ItemView {
 
         setDrawingCacheEnabled(true);
         setTypeface(null, Typeface.BOLD);
-        setText("ViewPager");
+        setText(R.string.auto_str_0477);
         setGravity(Gravity.CENTER);
     }
 

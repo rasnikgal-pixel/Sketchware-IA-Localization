@@ -306,7 +306,7 @@ public class ProjectsFragment extends DA {
 
     private void showProjectSortingDialog() {
         MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(requireActivity());
-        dialog.setTitle("Sort options");
+        dialog.setTitle(R.string.auto_str_0415);
 
         SortProjectDialogBinding dialogBinding = SortProjectDialogBinding.inflate(LayoutInflater.from(requireActivity()));
         RadioButton sortByName = dialogBinding.sortByName;

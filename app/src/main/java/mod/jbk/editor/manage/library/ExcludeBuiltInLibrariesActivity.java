@@ -169,7 +169,7 @@ public class ExcludeBuiltInLibrariesActivity extends BaseAppCompatActivity {
         setSupportActionBar(binding.toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Exclude built-in libraries");
+        getSupportActionBar().setTitle(R.string.auto_str_0196);
         binding.toolbar.setNavigationOnClickListener(view -> onBackPressed());
 
         binding.tvEnable.setText(Helper.getResString(R.string.design_library_settings_title_enabled));
@@ -277,7 +277,7 @@ public class ExcludeBuiltInLibrariesActivity extends BaseAppCompatActivity {
         MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(this);
         dialog.setIcon(R.drawable.rollback_96);
         dialog.setTitle(Helper.getResString(R.string.common_word_reset));
-        dialog.setMessage("Reset excluded built-in libraries? This action cannot be undone.");
+        dialog.setMessage(R.string.auto_str_0344);
         dialog.setPositiveButton(Helper.getResString(R.string.common_word_reset), (v, which) -> {
             saveConfig(sc_id, false, Collections.emptyList());
             binding.libSwitch.setChecked(false);
@@ -293,7 +293,7 @@ public class ExcludeBuiltInLibrariesActivity extends BaseAppCompatActivity {
         DialogSelectLibrariesBinding binding = DialogSelectLibrariesBinding.inflate(getLayoutInflater());
 
         MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(this);
-        dialog.setTitle("Select built-in libraries");
+        dialog.setTitle(R.string.auto_str_0390);
 
         // magic to initialize scrollbars even without android:scrollbars defined in XML
         // https://stackoverflow.com/a/48698300/10929762

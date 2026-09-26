@@ -278,7 +278,7 @@ public class LibraryDownloaderDialogFragment extends BottomSheetDialogFragment {
         }
 
         new MaterialAlertDialogBuilder(requireContext())
-                .setTitle("Confirm Download")
+                .setTitle(R.string.auto_str_0096)
                 .setMessage(message)
                 .setPositiveButton("Download", (dialog, which) -> startDownloadProcess(group, artifact, version))
                 .setNegativeButton("Cancel", null)

@@ -128,7 +128,7 @@ public class StringsEditor extends Fragment {
     public void showAddStringDialog() {
         MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(requireActivity());
         ViewStringEditorAddBinding binding = ViewStringEditorAddBinding.inflate(getLayoutInflater());
-        dialog.setTitle("Create new string");
+        dialog.setTitle(R.string.auto_str_0112);
         binding.stringKeyInput.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

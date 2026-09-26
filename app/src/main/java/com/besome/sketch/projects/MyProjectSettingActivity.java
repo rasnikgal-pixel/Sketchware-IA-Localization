@@ -172,14 +172,14 @@ public class MyProjectSettingActivity extends BaseAppCompatActivity implements V
         }
         if (updatingExistingProject) {
             /* Set the dialog's title & save button label */
-            binding.toolbar.setTitle("Project Settings");
+            binding.toolbar.setTitle(R.string.auto_str_0326);
             HashMap<String, Object> metadata = lC.b(sc_id);
             projectKind = normalizeProjectKind(yB.c(metadata, lC.PROJECT_KIND_KEY));
             originalPackageName = yB.c(metadata, "my_sc_pkg_name");
             binding.etPackageName.setText(yB.c(metadata, "my_sc_pkg_name"));
             binding.etProjectName.setText(yB.c(metadata, "my_ws_name"));
             binding.etAppName.setText(yB.c(metadata, "my_app_name"));
-            binding.okButton.setText("Save changes");
+            binding.okButton.setText(R.string.auto_str_0358);
             projectVersionCode = parseInt(yB.c(metadata, "sc_ver_code"), 1);
             parseVersion(yB.c(metadata, "sc_ver_name"));
             binding.verCode.setText(yB.c(metadata, "sc_ver_code"));
@@ -202,7 +202,7 @@ public class MyProjectSettingActivity extends BaseAppCompatActivity implements V
                 newProjectPackageName = "com.my." + newProjectName.toLowerCase();
             }
             if (isAndroidStudioProject()) {
-                binding.toolbar.setTitle("New Android Studio Project");
+                binding.toolbar.setTitle(R.string.auto_str_0289);
             }
             originalPackageName = newProjectPackageName;
             binding.etPackageName.setText(newProjectPackageName);

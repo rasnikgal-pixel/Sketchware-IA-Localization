@@ -117,7 +117,7 @@ public class PropertyAttributesItem extends LinearLayout implements View.OnClick
                 ((TextView) findViewById(R.id.tv_title)).setText(Helper.getResString(identifier));
                 return;
             }
-            tvValue.setText("Configure parent attributes");
+            tvValue.setText(R.string.auto_str_0094);
             imgLeftIcon.setImageResource(icon);
         }
     }
@@ -188,13 +188,13 @@ public class PropertyAttributesItem extends LinearLayout implements View.OnClick
                 }
             }
             new MaterialAlertDialogBuilder(getContext())
-                    .setTitle("Choose an attributes")
+                    .setTitle(R.string.auto_str_0076)
                     .setAdapter(
                             new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, list), (d, w) -> {
                                 var attr = list.get(w);
                                 if (RELATIVE_IDS.contains(attr)) {
                                     new MaterialAlertDialogBuilder(getContext())
-                                            .setTitle("Choose an id")
+                                            .setTitle(R.string.auto_str_0077)
                                             .setAdapter(new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, ids), (d2, w2) -> {
                                                 var id = ids.get(w2);
                                                 if (new CircularDependencyDetector(beans, bean).isLegalAttribute(id, attr)) {
@@ -284,7 +284,7 @@ public class PropertyAttributesItem extends LinearLayout implements View.OnClick
                     var filteredIds = new ArrayList<>(ids);
                     filteredIds.remove(value.get(attr));
                     new MaterialAlertDialogBuilder(getContext())
-                            .setTitle("Choose an id")
+                            .setTitle(R.string.auto_str_0077)
                             .setAdapter(new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, filteredIds), (d, w) -> {
                                 var id = filteredIds.get(w);
                                 value.put(attr, id);
@@ -297,7 +297,7 @@ public class PropertyAttributesItem extends LinearLayout implements View.OnClick
                 });
                 itemView.setOnLongClickListener(v -> {
                     MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(getContext());
-                    dialog.setTitle("Delete");
+                    dialog.setTitle(R.string.auto_str_0132);
                     dialog.setMessage("Are you sure you want to delete " + attr + "?");
                     dialog.setPositiveButton("Yes", (view, which) -> {
                         value.remove(attr);
@@ -333,7 +333,7 @@ public class PropertyAttributesItem extends LinearLayout implements View.OnClick
                 });
                 itemView.setOnLongClickListener(v -> {
                     MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(getContext());
-                    dialog.setTitle("Delete");
+                    dialog.setTitle(R.string.auto_str_0132);
                     dialog.setMessage("Are you sure you want to delete " + attr + "?");
                     dialog.setPositiveButton("Yes", (view, which) -> {
                         value.remove(attr);

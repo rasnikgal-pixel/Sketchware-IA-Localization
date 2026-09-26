@@ -132,7 +132,7 @@ public class ManageImageWebSearchActivity extends AppCompatActivity {
     private void doSearch(String query) {
         String trimmedQuery = query == null ? "" : query.trim();
         if (TextUtils.isEmpty(trimmedQuery)) {
-            Toast.makeText(this, "Enter search term", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.auto_str_0183, Toast.LENGTH_SHORT).show();
             return;
         }
         setLoading(true);
@@ -151,7 +151,7 @@ public class ManageImageWebSearchActivity extends AppCompatActivity {
                     setLoading(false);
                     resultUrls.clear();
                     adapter.notifyDataSetChanged();
-                    Toast.makeText(this, "Search failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.auto_str_0364, Toast.LENGTH_SHORT).show();
                     updateEmptyState();
                 });
             }

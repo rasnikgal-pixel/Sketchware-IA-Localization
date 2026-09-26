@@ -1418,7 +1418,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
         linearLayout.addView(name);
         TextView preview = new TextView(this);
         preview.setLayoutParams(layoutParams);
-        preview.setText("Preview");
+        preview.setText(R.string.auto_str_0324);
 
         Typeface typeface;
         if (fontName.equalsIgnoreCase("default_font")) {
@@ -1430,7 +1430,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
                 crashlytics.log("Loading font preview");
                 crashlytics.recordException(e);
                 typeface = Typeface.DEFAULT;
-                preview.setText("Couldn't load font");
+                preview.setText(R.string.auto_str_0104);
             }
         }
 
@@ -2014,7 +2014,7 @@ public class LogicEditorActivity extends BaseAppCompatActivity implements View.O
             LogicSyntaxChecker.SyntaxResult result = (LogicSyntaxChecker.SyntaxResult) v.getTag();
             if (result != null && !result.isValid) {
                 new MaterialAlertDialogBuilder(this)
-                        .setTitle("Syntax Error Details")
+                        .setTitle(R.string.auto_str_0434)
                         .setMessage(result.errorMessage)
                         .setPositiveButton(R.string.common_word_ok, null)
                         .show();

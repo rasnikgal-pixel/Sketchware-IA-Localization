@@ -1749,7 +1749,7 @@ public class ChatActivity extends AppCompatActivity {
         try {
             startActivityForResult(intent, 1001);
         } catch (Exception e) {
-            Toast.makeText(this, "Reconhecimento de voz não suportado", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.auto_str_0330, Toast.LENGTH_SHORT).show();
         }
     }
 

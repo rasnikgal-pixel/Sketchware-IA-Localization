@@ -395,7 +395,7 @@ public class ProjectPreviewActivity extends BaseAppCompatActivity {
         loadedCommentsSlug = slug;
         commentsAdapter.setComments(null);
         binding.commentsList.setVisibility(View.GONE);
-        binding.commentsEmpty.setText("Loading comments...");
+        binding.commentsEmpty.setText(R.string.auto_str_0263);
         binding.commentsEmpty.setVisibility(View.VISIBLE);
 
         storeApi.getComments(slug, comments -> {
@@ -424,7 +424,7 @@ public class ProjectPreviewActivity extends BaseAppCompatActivity {
         loadedReviewsSlug = slug;
         reviewsAdapter.setReviews(null);
         binding.reviewsList.setVisibility(View.GONE);
-        binding.reviewsEmpty.setText("Loading reviews...");
+        binding.reviewsEmpty.setText(R.string.auto_str_0265);
         binding.reviewsEmpty.setVisibility(View.VISIBLE);
 
         storeApi.getReviews(slug, reviews -> {
@@ -439,7 +439,7 @@ public class ProjectPreviewActivity extends BaseAppCompatActivity {
         boolean hasReviews = reviews != null && !reviews.isEmpty();
         reviewsAdapter.setReviews(reviews);
         binding.reviewsList.setVisibility(hasReviews ? View.VISIBLE : View.GONE);
-        binding.reviewsEmpty.setText("No public reviews yet.");
+        binding.reviewsEmpty.setText(R.string.auto_str_0304);
         binding.reviewsEmpty.setVisibility(hasReviews ? View.GONE : View.VISIBLE);
     }
 
@@ -447,7 +447,7 @@ public class ProjectPreviewActivity extends BaseAppCompatActivity {
         boolean hasComments = comments != null && !comments.isEmpty();
         commentsAdapter.setComments(comments);
         binding.commentsList.setVisibility(hasComments ? View.VISIBLE : View.GONE);
-        binding.commentsEmpty.setText("No public comments yet.");
+        binding.commentsEmpty.setText(R.string.auto_str_0303);
         binding.commentsEmpty.setVisibility(hasComments ? View.GONE : View.VISIBLE);
     }
 

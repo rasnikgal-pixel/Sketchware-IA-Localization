@@ -123,8 +123,8 @@ public class BlockSelectorManagerFragment extends qA {
 
     private void showCreateEditDialog(int index, boolean isEdit) {
         DialogBlockConfigurationBinding dialogBinding = DialogBlockConfigurationBinding.inflate(LayoutInflater.from(requireContext()));
-        dialogBinding.tilPalettesPath.setHint("Selector name");
-        dialogBinding.tilBlocksPath.setHint("Selector title (ex: Select View:)");
+        dialogBinding.tilPalettesPath.setHint(R.string.auto_str_0400);
+        dialogBinding.tilBlocksPath.setHint(R.string.auto_str_0401);
 
         if (isEdit) {
             dialogBinding.palettesPath.setText(selectors.get(index).getName());
@@ -179,7 +179,7 @@ public class BlockSelectorManagerFragment extends qA {
     private void showActionsDialog(int index) {
         DialogSelectorActionsBinding dialogBinding = DialogSelectorActionsBinding.inflate(LayoutInflater.from(requireContext()));
         AlertDialog dialog = new MaterialAlertDialogBuilder(requireActivity()).create();
-        dialog.setTitle("Actions");
+        dialog.setTitle(R.string.auto_str_0008);
         dialog.setView(dialogBinding.getRoot());
 
         dialogBinding.edit.setOnClickListener(v -> {
@@ -207,7 +207,7 @@ public class BlockSelectorManagerFragment extends qA {
 
     private void showConfirmationDialog(String message, ConfirmListener onConfirm, CancelListener onCancel) {
         MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(requireActivity());
-        dialog.setTitle("Attention");
+        dialog.setTitle(R.string.auto_str_0052);
         dialog.setMessage(message);
         dialog.setPositiveButton("Yes", (v, which) -> onConfirm.onConfirm(v));
         dialog.setNegativeButton("Cancel", (v, which) -> onCancel.onCancel(v));
@@ -232,7 +232,7 @@ public class BlockSelectorManagerFragment extends qA {
 
     private void showImportSelectorDialog() {
         FilePickerOptions options = new FilePickerOptions();
-        options.setTitle("Select .json selector file");
+        options.setTitle(R.string.auto_str_0370);
         options.setExtensions(new String[]{"json"});
 
         FilePickerCallback callback = new FilePickerCallback() {

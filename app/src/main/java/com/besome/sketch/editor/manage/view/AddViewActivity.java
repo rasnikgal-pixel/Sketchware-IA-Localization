@@ -193,7 +193,7 @@ public class AddViewActivity extends BaseAppCompatActivity {
         binding = ManageScreenActivityAddTempBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.toolbar.setTitle("Create new");
+        binding.toolbar.setTitle(R.string.auto_str_0108);
         binding.toolbar.setNavigationOnClickListener(v -> finish());
 
         Intent intent1 = getIntent();
