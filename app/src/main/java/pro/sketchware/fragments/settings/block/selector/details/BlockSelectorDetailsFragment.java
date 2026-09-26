@@ -1,5 +1,7 @@
 package pro.sketchware.fragments.settings.block.selector.details;
 
+import pro.sketchware.R;
+
 import static pro.sketchware.utility.GsonUtils.getGson;
 
 import android.content.DialogInterface;

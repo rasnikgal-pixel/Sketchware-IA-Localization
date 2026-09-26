@@ -1,5 +1,7 @@
 package mod.hey.studios.project.stringfog;
 
+import pro.sketchware.R;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;

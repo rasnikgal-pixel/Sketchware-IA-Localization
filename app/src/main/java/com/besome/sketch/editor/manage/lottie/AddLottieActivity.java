@@ -142,7 +142,7 @@ public class AddLottieActivity extends BaseDialogActivity implements View.OnClic
         ed_input = findViewById(R.id.ed_input);
         ed_input_edittext = ed_input.getEditText();
         ed_input_edittext.setPrivateImeOptions("defaultInputmode=english;");
-        ed_input.setHint(R.string.auto_str_0174);
+        ed_input.setHint(getString(R.string.auto_str_0174));
         O = new PB(this, ed_input.getTextInputLayout(), uq.b, getReservedLottieNames());
         O.a(1);
         chk_collection.setText(xB.b().a(getApplicationContext(), R.string.design_manager_title_add_to_collection));

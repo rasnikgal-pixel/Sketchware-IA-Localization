@@ -214,7 +214,7 @@ public class AddCustomComponentActivity extends BaseAppCompatActivity implements
     private void showFilePickerDialog() {
         FilePickerOptions options = new FilePickerOptions();
         options.setExtensions(new String[]{"json"});
-        options.setTitle(R.string.auto_str_0394);
+        options.setTitle(getString(R.string.auto_str_0394));
 
         FilePickerCallback callback = new FilePickerCallback() {
             @Override

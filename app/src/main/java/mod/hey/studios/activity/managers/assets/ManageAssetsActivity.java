@@ -166,7 +166,7 @@ public class ManageAssetsActivity extends BaseAppCompatActivity {
         FilePickerOptions options = new FilePickerOptions();
         options.setSelectionMode(SelectionMode.BOTH);
         options.setMultipleSelection(true);
-        options.setTitle(R.string.auto_str_0386);
+        options.setTitle(getString(R.string.auto_str_0386));
 
         FilePickerCallback callback = new FilePickerCallback() {
             @Override

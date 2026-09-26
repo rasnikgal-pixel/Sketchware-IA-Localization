@@ -231,7 +231,7 @@ public class ManageNativelibsActivity extends BaseAppCompatActivity implements V
 
     private void setupDialog() {
         FilePickerOptions options = new FilePickerOptions();
-        options.setTitle(R.string.auto_str_0228);
+        options.setTitle(getString(R.string.auto_str_0228));
         options.setMultipleSelection(true);
         options.setExtensions(new String[]{"so"});
         FilePickerCallback callback = new FilePickerCallback() {

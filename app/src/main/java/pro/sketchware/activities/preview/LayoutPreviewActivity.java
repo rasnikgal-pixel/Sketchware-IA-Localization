@@ -1,5 +1,7 @@
 package pro.sketchware.activities.preview;
 
+import pro.sketchware.R;
+
 import android.os.Bundle;
 
 import com.besome.sketch.beans.ViewBean;

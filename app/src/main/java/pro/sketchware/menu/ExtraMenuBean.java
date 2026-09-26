@@ -902,11 +902,11 @@ public class ExtraMenuBean {
                 mOptions.setSelectionMode(SelectionMode.BOTH);
                 String path = null;
                 if (menuName.equals("Assets")) {
-                        mOptions.setTitle(R.string.auto_str_0383);
+                        mOptions.setTitle(getString(R.string.auto_str_0383));
                         path = String.format(ASSETS_PATH, sc_id);
                         markedPath.add(0, path + ss.getArgValue().toString());
                 } else if (menuName.equals("NativeLib")) {
-                        mOptions.setTitle(R.string.auto_str_0382);
+                        mOptions.setTitle(getString(R.string.auto_str_0382));
                         path = String.format(NATIVE_PATH, sc_id);
                         markedPath.add(0, path + ss.getArgValue().toString());
                 }

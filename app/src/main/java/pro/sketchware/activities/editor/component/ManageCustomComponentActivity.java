@@ -180,7 +180,7 @@ public class ManageCustomComponentActivity extends BaseAppCompatActivity {
 
     private void showFilePickerDialog() {
         FilePickerOptions options = new FilePickerOptions();
-        options.setTitle(R.string.auto_str_0370);
+        options.setTitle(getString(R.string.auto_str_0370));
         options.setExtensions(new String[]{"json"});
 
         FilePickerCallback callback = new FilePickerCallback() {

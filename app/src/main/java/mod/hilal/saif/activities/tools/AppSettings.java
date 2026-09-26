@@ -94,7 +94,7 @@ public class AppSettings extends BaseAppCompatActivity {
 
     private void setupPreferences(ViewGroup content) {
         LibraryCategoryView managersCategory = new LibraryCategoryView(this);
-        managersCategory.setTitle(R.string.auto_str_0270);
+        managersCategory.setTitle(getString(R.string.auto_str_0270));
 
         managersCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_block, "Block manager", "Manage your own blocks to use in Logic Editor", new ActivityLauncher(new Intent(getApplicationContext(), BlocksManager.class))), true);
         managersCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_pull_down, "Block selector menu manager", "Manage your own block selector menus", openSettingsActivity(SettingsActivity.BLOCK_SELECTOR_MANAGER_FRAGMENT)), true);
@@ -104,7 +104,7 @@ public class AppSettings extends BaseAppCompatActivity {
         managersCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_article, Helper.getResString(R.string.design_drawer_menu_title_logcat_reader), Helper.getResString(R.string.design_drawer_menu_subtitle_logcat_reader), new ActivityLauncher(new Intent(getApplicationContext(), LogReaderActivity.class))), false);
 
         LibraryCategoryView generalCategory = new LibraryCategoryView(this);
-        generalCategory.setTitle(R.string.auto_str_0217);
+        generalCategory.setTitle(getString(R.string.auto_str_0217));
 
         generalCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_settings_applications, "App settings", "Change general app settings", new ActivityLauncher(new Intent(getApplicationContext(), ConfigActivity.class))), true);
         generalCategory.addLibraryItem(createPreference(R.drawable.ic_mtrl_palette, Helper.getResString(R.string.settings_appearance), Helper.getResString(R.string.settings_appearance_description), openSettingsActivity(SettingsActivity.SETTINGS_APPEARANCE_FRAGMENT)), true);
@@ -158,7 +158,7 @@ public class AppSettings extends BaseAppCompatActivity {
         FilePickerOptions options = new FilePickerOptions();
         options.setSelectionMode(SelectionMode.BOTH);
         options.setMultipleSelection(true);
-        options.setTitle(R.string.auto_str_0387);
+        options.setTitle(getString(R.string.auto_str_0387));
         options.setInitialDirectory(getFilesDir().getParentFile().getAbsolutePath());
 
         FilePickerCallback callback = new FilePickerCallback() {

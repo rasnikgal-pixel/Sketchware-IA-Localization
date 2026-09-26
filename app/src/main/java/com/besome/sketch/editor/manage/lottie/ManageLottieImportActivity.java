@@ -171,7 +171,7 @@ public class ManageLottieImportActivity extends BaseAppCompatActivity implements
         ed_input_edittext = ed_input.getEditText();
         ed_input_edittext.setText(selectedCollections.get(0).resName);
         ed_input_edittext.setPrivateImeOptions("defaultInputmode=english;");
-        ed_input.setHint(R.string.auto_str_0174);
+        ed_input.setHint(getString(R.string.auto_str_0174));
         nameValidator = new QB(getApplicationContext(), ed_input.getTextInputLayout(), uq.b, getReservedProjectLottieNames(), getReservedSelectedCollectionNames());
         chk_samename = findViewById(R.id.chk_samename);
         chk_samename.setOnCheckedChangeListener((buttonView, isChecked) -> {

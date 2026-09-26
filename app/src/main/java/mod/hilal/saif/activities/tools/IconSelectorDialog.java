@@ -1,5 +1,7 @@
 package mod.hilal.saif.activities.tools;
 
+import pro.sketchware.R;
+
 import android.app.Activity;
 import android.content.res.Resources;
 import android.view.LayoutInflater;

@@ -251,7 +251,7 @@ import pro.sketchware.utility.TranslationFunction;
         FilePickerOptions options = new FilePickerOptions();
         options.setMultipleSelection(true);
         options.setExtensions(new String[]{"java", "kt"});
-        options.setTitle(R.string.auto_str_0374);
+        options.setTitle(getString(R.string.auto_str_0374));
 
         FilePickerCallback callback = new FilePickerCallback() {
             @Override
