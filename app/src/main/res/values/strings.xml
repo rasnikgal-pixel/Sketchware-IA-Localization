@@ -3584,7 +3584,7 @@ Please try again later"</string>
     <string name="auto_menu2_028">Components ASD</string>
     <string name="auto_menu2_029">Continue</string>
     <string name="auto_menu2_030">Copy</string>
-    <string name="auto_menu2_031">Couldn't get </string>
+    <string name="auto_menu2_031">Couldn\'t get </string>
     <string name="auto_menu2_032">Create</string>
     <string name="auto_menu2_033">Create keystore</string>
     <string name="auto_menu2_034">Create new palette</string>
@@ -3596,8 +3596,8 @@ Please try again later"</string>
     <string name="auto_menu2_040">Delete selected local libraries</string>
     <string name="auto_menu2_041">Design Drawer</string>
     <string name="auto_menu2_042">Dismiss</string>
-    <string name="auto_menu2_043">Don't copy</string>
-    <string name="auto_menu2_044">Don't show anymore</string>
+    <string name="auto_menu2_043">Don\'t copy</string>
+    <string name="auto_menu2_044">Don\'t show anymore</string>
     <string name="auto_menu2_045">Download</string>
     <string name="auto_menu2_046">Edit</string>
     <string name="auto_menu2_047">Edit </string>
