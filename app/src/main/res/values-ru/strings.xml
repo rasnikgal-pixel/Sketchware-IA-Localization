@@ -3365,7 +3365,7 @@ url type (http://sketchware.io)"</string>
     <string name="link_donation_url">https://buy.stripe.com/6oU3cw0po1l90Ik52s0co00</string>
 
 
-    <string name="link_github_commits_url">&lt;![CDATA[https://api.github.com/repos/FabioSilva11/Sketchware-IA/commits?per_page=%1$s&amp;page=%2$s]]&gt;</string>
+    <string name="link_github_commits_url"><![CDATA[https://api.github.com/repos/FabioSilva11/Sketchware-IA/commits?per_page=%1$s&page=%2$s]]></string>
 
     <string name="link_github_contributors_url">https://api.github.com/repos/FabioSilva11/Sketchware-IA/contributors?per_page=100</string>
 
