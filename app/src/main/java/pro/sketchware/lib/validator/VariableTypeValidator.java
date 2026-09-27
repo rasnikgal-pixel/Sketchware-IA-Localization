@@ -28,33 +28,33 @@ public class VariableTypeValidator extends MB {
         String reconsInput = String.join(" ", words);
 
         if (!variableType.equals(reconsInput)) {
-            b.setError(context.getString(R.string.auto_error_extra_spaces2));
+            b.setError(a.getString(R.string.auto_error_extra_spaces2));
             d = false;
             return;
         }
 
         if (!TextUtils.isEmpty(charSequence)) {
             if (!Character.isLetter(charSequence.charAt(0))) {
-                b.setError(context.getString(R.string.auto_error_type_start_letter));
+                b.setError(a.getString(R.string.auto_error_type_start_letter));
                 d = false;
                 return;
             }
         }
 
         if (!isValidAngleBracket(variableType)) {
-            b.setError(context.getString(R.string.auto_error_angle_bracket));
+            b.setError(a.getString(R.string.auto_error_angle_bracket));
             d = false;
             return;
         }
 
         if (!isValidBoxBracket(variableType)) {
-            b.setError(context.getString(R.string.auto_error_box_bracket));
+            b.setError(a.getString(R.string.auto_error_box_bracket));
             d = false;
             return;
         }
 
         if (!PATTERN_TYPE.matcher(variableType).matches()) {
-            b.setError(context.getString(R.string.auto_error_invalid_var_type));
+            b.setError(a.getString(R.string.auto_error_invalid_var_type));
             d = false;
             return;
         }

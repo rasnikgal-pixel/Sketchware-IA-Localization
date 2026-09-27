@@ -70,7 +70,7 @@ public class DefaultExtraMenuBean {
             Matcher matcher2 = Pattern.compile("^(\\w+)[\\s]+(\\w+)").matcher(s);
             while (matcher2.find()) {
                 if (menuName.equals(matcher2.group(1))) {
-                    title = getString(R.string.auto_extra_menu_select_a) + matcher2.group(1) + getString(R.string.auto_extra_menu_select_var_suffix);
+                    title = logicEditor.getString(R.string.auto_extra_menu_select_a) + matcher2.group(1) + logicEditor.getString(R.string.auto_extra_menu_select_var_suffix);
                     menus.add(matcher2.group(2));
                 }
             }
@@ -79,24 +79,24 @@ public class DefaultExtraMenuBean {
             String variableType = CustomVariableUtil.getVariableType(variable);
             String variableName = CustomVariableUtil.getVariableName(variable);
             if (menuName.equals(variableType)) {
-                title = getString(R.string.auto_extra_menu_select_a) + variableType + getString(R.string.auto_extra_menu_select_var_suffix);
+                title = logicEditor.getString(R.string.auto_extra_menu_select_a) + variableType + logicEditor.getString(R.string.auto_extra_menu_select_var_suffix);
                 menus.add(variableName);
             }
         }
         for (ComponentBean componentBean : projectDataManager.e(javaName)) {
             if (componentBean.type > 36
                     && menuName.equals(ComponentBean.getComponentTypeName(componentBean.type))) {
-                title = getString(R.string.auto_extra_menu_select_a) + ComponentBean.getComponentTypeName(componentBean.type);
+                title = logicEditor.getString(R.string.auto_extra_menu_select_a) + ComponentBean.getComponentTypeName(componentBean.type);
                 menus.add(componentBean.componentId);
             }
         }
         switch (menuName) {
             case "LayoutParam" -> {
-                title = getString(R.string.auto_extra_menu_select_layout_params);
+                title = logicEditor.getString(R.string.auto_extra_menu_select_layout_params);
                 menus.addAll(Helper.createStringList("MATCH_PARENT", "WRAP_CONTENT"));
             }
             case "Command" -> {
-                title = getString(R.string.auto_extra_menu_select_command);
+                title = logicEditor.getString(R.string.auto_extra_menu_select_command);
                 menus.addAll(
                         Helper.createStringList(
                                 "insert",
@@ -110,7 +110,7 @@ public class DefaultExtraMenuBean {
             //start
             case "menu", "layout", "anim", "drawable" -> {
                 String path = getPath(sc_id, menuName);
-                title = getString(R.string.auto_extra_menu_select_a_menu) + menuName;
+                title = logicEditor.getString(R.string.auto_extra_menu_select_a_menu) + menuName;
                 if (menuName.equals("layout")) {
                     for (String name : jC.b(sc_id).e()) {
                         menus.add(name.substring(0, name.indexOf(".xml")));
@@ -122,7 +122,7 @@ public class DefaultExtraMenuBean {
             }
             case "image" -> {
                 String path = getPath(sc_id, "drawable-xhdpi");
-                title = getString(R.string.auto_extra_menu_select_image);
+                title = logicEditor.getString(R.string.auto_extra_menu_select_image);
                 for (String drawable_xhdpi : FileUtil.listFiles(path, "")) {
                     if (drawable_xhdpi.contains(".png") || drawable_xhdpi.contains(".jpg")) {
                         menus.add(
@@ -133,73 +133,73 @@ public class DefaultExtraMenuBean {
                 }
             }
             case "til_box_mode" -> {
-                title = getString(R.string.auto_extra_menu_select_box_mode);
+                title = logicEditor.getString(R.string.auto_extra_menu_select_box_mode);
                 menus.addAll(Arrays.asList(uq.TIL_BOX_MODE));
             }
             case "fabsize" -> {
-                title = getString(R.string.auto_extra_menu_select_fab_size);
+                title = logicEditor.getString(R.string.auto_extra_menu_select_fab_size);
                 menus.addAll(Arrays.asList(uq.FAB_SIZE));
             }
             case "fabvisible" -> {
-                title = getString(R.string.auto_extra_menu_select_fab_visibility);
+                title = logicEditor.getString(R.string.auto_extra_menu_select_fab_visibility);
                 menus.addAll(Arrays.asList(uq.FAB_VISIBLE));
             }
             case "menuaction" -> {
-                title = getString(R.string.auto_extra_menu_select_menu_action);
+                title = logicEditor.getString(R.string.auto_extra_menu_select_menu_action);
                 menus.addAll(Arrays.asList(uq.MENU_ACTION));
             }
             case "porterduff" -> {
-                title = getString(R.string.auto_extra_menu_select_porterduff_mode);
+                title = logicEditor.getString(R.string.auto_extra_menu_select_porterduff_mode);
                 menus.addAll(Arrays.asList(uq.PORTER_DUFF));
             }
             case "transcriptmode" -> {
-                title = getString(R.string.auto_extra_menu_select_transcript_mode);
+                title = logicEditor.getString(R.string.auto_extra_menu_select_transcript_mode);
                 menus.addAll(Arrays.asList(uq.TRANSCRIPT_MODE));
             }
             // idk, but it seems this isn't used anywhere, yet it was included in the menu file.
             case "listscrollparam" -> {
-                title = getString(R.string.auto_extra_menu_select_scroll_param);
+                title = logicEditor.getString(R.string.auto_extra_menu_select_scroll_param);
                 menus.addAll(Arrays.asList(uq.LIST_SCROLL_STATES));
             }
             // same with listscrollparam
             case "recyclerscrollparam", "pagerscrollparam" -> {
-                title = getString(R.string.auto_extra_menu_select_scroll_param);
+                title = logicEditor.getString(R.string.auto_extra_menu_select_scroll_param);
                 menus.addAll(Arrays.asList(uq.RECYCLER_SCROLL_STATES));
             }
             case "gridstretchmode" -> {
-                title = getString(R.string.auto_extra_menu_select_stretch_mode);
+                title = logicEditor.getString(R.string.auto_extra_menu_select_stretch_mode);
                 menus.addAll(Arrays.asList(uq.GRID_STRETCH_MODE));
             }
             case "gravity_v" -> {
-                title = getString(R.string.auto_extra_menu_select_gravity_vertical);
+                title = logicEditor.getString(R.string.auto_extra_menu_select_gravity_vertical);
                 menus.addAll(Arrays.asList(uq.GRAVITY_VERTICAL));
             }
             case "gravity_h" -> {
-                title = getString(R.string.auto_extra_menu_select_gravity_horizontal);
+                title = logicEditor.getString(R.string.auto_extra_menu_select_gravity_horizontal);
                 menus.addAll(Arrays.asList(uq.GRAVITY_HORIZONTAL));
             }
             case "gravity_t" -> {
-                title = getString(R.string.auto_extra_menu_select_gravity_toast);
+                title = logicEditor.getString(R.string.auto_extra_menu_select_gravity_toast);
                 menus.addAll(Arrays.asList(uq.GRAVITY_TOAST));
             }
             case "patternviewmode" -> {
-                title = getString(R.string.auto_extra_menu_select_patternview_mode);
+                title = logicEditor.getString(R.string.auto_extra_menu_select_patternview_mode);
                 menus.addAll(Arrays.asList(uq.PATTERNVIEW_MODE));
             }
             case "styleprogress" -> {
-                title = getString(R.string.auto_extra_menu_select_progress_style);
+                title = logicEditor.getString(R.string.auto_extra_menu_select_progress_style);
                 menus.addAll(Arrays.asList(uq.PROGRESS_STYLE));
             }
             case "cv_theme" -> {
-                title = getString(R.string.auto_extra_menu_select_theme);
+                title = logicEditor.getString(R.string.auto_extra_menu_select_theme);
                 menus.addAll(Arrays.asList(uq.CODEVIEW_THEME));
             }
             case "cv_language" -> {
-                title = getString(R.string.auto_extra_menu_select_language);
+                title = logicEditor.getString(R.string.auto_extra_menu_select_language);
                 menus.addAll(Arrays.asList(uq.CODEVIEW_LANGUAGE));
             }
             case "import" -> {
-                title = getString(R.string.auto_extra_menu_select_language);
+                title = logicEditor.getString(R.string.auto_extra_menu_select_language);
                 menus.addAll(Arrays.asList(uq.IMPORT_CLASS_PATH));
             }
             //end
