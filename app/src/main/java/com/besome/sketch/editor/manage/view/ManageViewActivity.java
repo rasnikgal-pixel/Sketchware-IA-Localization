@@ -43,6 +43,7 @@ import a.a.a.xw;
 import pro.sketchware.R;
 import pro.sketchware.utility.AdManager;
 import pro.sketchware.utility.TranslationFunction;
+import pro.sketchware.utility.SketchwareUtil;
 
 public class ManageViewActivity extends BaseAppCompatActivity implements OnClickListener, ViewPager.OnPageChangeListener {
     private static final int TAB_COUNT = 2;
@@ -267,6 +268,16 @@ public class ManageViewActivity extends BaseAppCompatActivity implements OnClick
         super.onCreate(savedInstanceState);
         if (!super.isStoragePermissionGranted()) {
             finish();
+        }
+
+        // Проверяем AppCompat ДО загрузки layout
+        String checkScId = savedInstanceState == null
+                ? getIntent().getStringExtra("sc_id")
+                : savedInstanceState.getString("sc_id");
+        if (checkScId != null && !jC.c(checkScId).c().isEnabled()) {
+            pro.sketchware.utility.SketchwareUtil.toast(getString(R.string.auto_appcompat_disabled));
+            finish();
+            return;
         }
 
         setContentView(R.layout.manage_view);
