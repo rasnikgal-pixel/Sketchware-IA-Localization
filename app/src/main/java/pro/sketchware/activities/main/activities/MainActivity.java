@@ -267,8 +267,8 @@ public class MainActivity extends BasePermissionAppCompatActivity {
                                 new MaterialAlertDialogBuilder(MainActivity.this)
                                         .setTitle(R.string.auto_str_0480)
                                         .setMessage(BackupRestoreManager.getRestoreIntegratedLocalLibrariesMessage(false, -1, -1, null))
-                                        .setPositiveButton("Copy", (dialog, which) -> manager.doRestore(path, true))
-                                        .setNegativeButton("Don't copy", (dialog, which) -> manager.doRestore(path, false))
+                                        .setPositiveButton(R.string.auto_button_copy2, (dialog, which) -> manager.doRestore(path, true))
+                                        .setNegativeButton(R.string.auto_button_dont_copy2, (dialog, which) -> manager.doRestore(path, false))
                                         .setNeutralButton(R.string.common_word_cancel, null)
                                         .show();
                             } else {
@@ -585,7 +585,7 @@ public class MainActivity extends BasePermissionAppCompatActivity {
                     FileUtil.requestAllFilesAccessPermission(this);
                     v.dismiss();
                 });
-                dialog.setNegativeButton("Skip", null);
+                dialog.setNegativeButton(R.string.auto_button_skip, null);
                 dialog.setNeutralButton("Don't show anymore", (v, which) -> {
                     try {
                         if (!optOutFile.createNewFile())

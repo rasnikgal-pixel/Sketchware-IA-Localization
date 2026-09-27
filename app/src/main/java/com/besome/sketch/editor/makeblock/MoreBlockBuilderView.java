@@ -110,7 +110,7 @@ public class MoreBlockBuilderView extends LinearLayout {
                 } else {
                     customVariableInvalid = !s.isEmpty();
                 }
-                binding.tiParameter.setError("Invalid format");
+                binding.tiParameter.setError(getString(R.string.auto_error_invalid_format));
                 binding.tiParameter.setErrorEnabled(customVariableInvalid);
             }
         });

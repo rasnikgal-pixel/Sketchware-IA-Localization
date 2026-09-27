@@ -127,28 +127,28 @@ public class CodeEditorLayout extends LinearLayout implements TextWatcher {
         PopupMenu popup = new PopupMenu(context, v);
         Menu menu = popup.getMenu();
 
-        menu.add("Font size")
+        menu.add(getString(R.string.auto_code_editor_font_size))
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
 
-        menu.add("Word wrap")
+        menu.add(getString(R.string.auto_code_editor_word_wrap))
                 .setCheckable(true)
                 .setChecked(word_wrap)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
 
-        menu.add("Complete brackets")
+        menu.add(getString(R.string.auto_code_editor_complete_brackets))
                 .setCheckable(true)
                 .setChecked(complete_brackets)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
 
-        menu.add("Dark theme")
+        menu.add(getString(R.string.auto_code_editor_dark_theme))
                 .setCheckable(true)
                 .setChecked(dark_theme)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
 
-        menu.add("Pretty print")
+        menu.add(getString(R.string.auto_code_editor_pretty_print))
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
 
-        menu.add("Exit confirmation")
+        menu.add(getString(R.string.auto_code_editor_exit_confirm))
                 .setCheckable(true)
                 .setChecked(exit_confirmation_dialog)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);

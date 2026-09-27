@@ -27,7 +27,7 @@ public class VariableModifierValidator extends MB {
         String reconsInput = String.join(" ", words);
 
         if (!input.equals(reconsInput)) {
-            b.setError("Extra spaces between words or at the end are not allowed.");
+            b.setError(getString(R.string.auto_error_extra_spaces));
             d = false;
             return;
         }
@@ -36,18 +36,18 @@ public class VariableModifierValidator extends MB {
 
         for (String word : words) {
             if (!PATTERN_MODIFIER.matcher(word).matches()) {
-                b.setError("Invalid modifier: " + word);
+                b.setError(getString(R.string.auto_error_invalid_modifier) + word);
                 d = false;
                 return;
             }
             if (!usedModifiers.add(word)) {
-                b.setError("Duplicate modifier: " + word);
+                b.setError(getString(R.string.auto_error_duplicate_modifier) + word);
                 d = false;
                 return;
             }
             if (isAccessModifier(word)) {
                 if (hasAccessModifier) {
-                    b.setError("Access modifier can only set one of public / protected / private");
+                    b.setError(getString(R.string.auto_error_access_modifier));
                     d = false;
                     return;
                 }

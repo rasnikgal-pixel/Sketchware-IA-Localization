@@ -352,7 +352,7 @@ public class BlocksManager extends BaseAppCompatActivity {
                     .setTitle(R.string.auto_str_0332)
                     .setMessage(getString(R.string.auto_hardcoded_empty_recycle_bin) +
                             "Blocks inside will be deleted PERMANENTLY, you CANNOT recover them!")
-                    .setPositiveButton("Empty", (dialog, which) -> emptyRecyclebin())
+                    .setPositiveButton(R.string.auto_button_empty, (dialog, which) -> emptyRecyclebin())
                     .setNegativeButton(R.string.common_word_cancel, null)
                     .show();
             return true;
@@ -599,7 +599,7 @@ public class BlocksManager extends BaseAppCompatActivity {
                             new MaterialAlertDialogBuilder(BlocksManager.this)
                                     .setTitle(Objects.requireNonNull(pallet_listmap.get(pos).get("name")).toString())
                                     .setMessage(R.string.auto_str_0336)
-                                    .setPositiveButton("Remove permanently", (dialog, which) -> {
+                                    .setPositiveButton(R.string.auto_button_remove_permanently, (dialog, which) -> {
                                         palettes.remove(pos);
                                         notifyItemRemoved(pos);
                                         FileUtil.writeFile(pallet_dir, getGson().toJson(pallet_listmap));

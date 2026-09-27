@@ -131,7 +131,7 @@ public class BlockSelectorDetailsFragment extends qA {
 
         MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(requireActivity());
         dialog.setTitle(R.string.auto_str_0292);
-        dialog.setPositiveButton("Create", (v, which) -> {
+        dialog.setPositiveButton(R.string.common_word_create, (v, which) -> {
             String newItem = Helper.getText(dialogBinding.activityNameInput);
             if (newItem != null && !newItem.isEmpty()) {
                 if (!isEdit) {
@@ -144,7 +144,7 @@ public class BlockSelectorDetailsFragment extends qA {
             }
             v.dismiss();
         });
-        dialog.setNegativeButton("Cancel", null);
+        dialog.setNegativeButton(R.string.common_word_cancel, null);
         dialog.setView(dialogBinding.getRoot());
         dialog.show();
     }
@@ -184,8 +184,8 @@ public class BlockSelectorDetailsFragment extends qA {
         MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(requireActivity());
         dialog.setTitle(R.string.auto_str_0052);
         dialog.setMessage(message);
-        dialog.setPositiveButton("Yes", (v, which) -> onConfirm.onClick(v));
-        dialog.setNegativeButton("Cancel", (v, which) -> onCancel.onClick(v));
+        dialog.setPositiveButton(R.string.auto_button_yes, (v, which) -> onConfirm.onClick(v));
+        dialog.setNegativeButton(R.string.common_word_cancel, (v, which) -> onCancel.onClick(v));
 
         dialog.show();
     }

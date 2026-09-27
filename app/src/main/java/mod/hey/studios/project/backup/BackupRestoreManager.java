@@ -115,7 +115,7 @@ public class BackupRestoreManager {
         checkboxContainer.addView(includeUsedCustomBlocks);
 
         dialog.setView(checkboxContainer);
-        dialog.setPositiveButton("Back up", (v, which) -> {
+        dialog.setPositiveButton(R.string.auto_button_backup, (v, which) -> {
             v.dismiss();
             doBackup(sc_id, project_name);
         });
@@ -155,8 +155,8 @@ public class BackupRestoreManager {
                                 .setTitle(R.string.auto_str_0480)
                                 .setMessage(getRestoreIntegratedLocalLibrariesMessage(restoringMultipleBackups, i, files.size(),
                                         FileUtil.getFileNameNoExtension(backupFilePath)))
-                                .setPositiveButton("Copy", (dialog, which) -> doRestore(backupFilePath, true))
-                                .setNegativeButton("Don't copy", (dialog, which) -> doRestore(backupFilePath, false))
+                                .setPositiveButton(R.string.auto_button_copy, (dialog, which) -> doRestore(backupFilePath, true))
+                                .setNegativeButton(R.string.auto_button_dont_copy, (dialog, which) -> doRestore(backupFilePath, false))
                                 .setNeutralButton(R.string.common_word_cancel, null)
                                 .show();
 

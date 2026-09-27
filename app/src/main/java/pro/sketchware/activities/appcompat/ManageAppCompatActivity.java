@@ -58,6 +58,17 @@ public class ManageAppCompatActivity extends BaseAppCompatActivity {
         enableEdgeToEdgeNoContrast();
 
         super.onCreate(savedInstanceState);
+
+        // Проверяем, включён ли AppCompat, ДО загрузки layout
+        String checkScId = savedInstanceState == null
+                ? getIntent().getStringExtra("sc_id")
+                : savedInstanceState.getString("sc_id");
+        if (checkScId != null && !jC.c(checkScId).c().isEnabled()) {
+            SketchwareUtil.toast(getString(R.string.auto_appcompat_disabled));
+            finish();
+            return;
+        }
+
         binding = ManageAppCompatBinding.inflate(getLayoutInflater());
 
         setContentView(binding.getRoot());
@@ -99,8 +110,8 @@ public class ManageAppCompatActivity extends BaseAppCompatActivity {
         adapter.setOnItemClickListener(
                 item -> {
                     PopupMenu popupMenu = new PopupMenu(this, item.first);
-                    popupMenu.getMenu().add(Menu.NONE, 0, Menu.NONE, "Edit");
-                    popupMenu.getMenu().add(Menu.NONE, 1, Menu.NONE, "Delete");
+                    popupMenu.getMenu().add(Menu.NONE, 0, Menu.NONE, getString(R.string.auto_manage_appcompat_edit));
+                    popupMenu.getMenu().add(Menu.NONE, 1, Menu.NONE, getString(R.string.auto_manage_appcompat_delete));
                     popupMenu.setOnMenuItemClickListener(
                             itemMenu -> {
                                 int position = adapter.getCurrentList().indexOf(item.second);
@@ -158,7 +169,7 @@ public class ManageAppCompatActivity extends BaseAppCompatActivity {
                     appCompats.add("NavigationDrawer");
                 }
                 if (appCompats.isEmpty()) {
-                    setNote("No options are found.", "No AppCompat options are currently available in this activity.");
+                    setNote(getString(R.string.auto_manage_appcompat_no_options), getString(R.string.auto_manage_appcompat_no_options_desc));
                 } else {
                     for (int i = 0; i < appCompats.size(); i++) {
                         TabLayout.Tab tab = binding.tabLayout.newTab();
@@ -175,7 +186,7 @@ public class ManageAppCompatActivity extends BaseAppCompatActivity {
                         getString(R.string.auto_appcompat_disabled), getString(R.string.auto_appcompat_disabled_desc));
             }
         } else {
-            setNote("Not available.", "You're not currently in the Activity layout.");
+            setNote(getString(R.string.auto_manage_appcompat_not_available), getString(R.string.auto_manage_appcompat_not_activity));
         }
     }
 
@@ -201,7 +212,7 @@ public class ManageAppCompatActivity extends BaseAppCompatActivity {
                 MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(this);
                 dialog.setTitle(R.string.common_word_reset);
                 dialog.setMessage(
-                        "Are you sure you want to reset appcompat attributes for " + filename + "?");
+                        getString(R.string.auto_manage_appcompat_reset_confirm) + filename + "?");
                 dialog.setPositiveButton(
                         R.string.common_word_yes,
                         (d, w) -> {
@@ -253,7 +264,7 @@ public class ManageAppCompatActivity extends BaseAppCompatActivity {
 
     private void dialog(String type, int position) {
         MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(this);
-        dialog.setTitle(type.equals("create") ? "Add new attribute" : "Edit attribute");
+        dialog.setTitle(type.equals("create") ? getString(R.string.auto_manage_appcompat_add_attr) : getString(R.string.auto_manage_appcompat_edit_attr));
         CustomDialogAttributeBinding attributeBinding =
                 CustomDialogAttributeBinding.inflate(getLayoutInflater());
         dialog.setView(attributeBinding.getRoot());

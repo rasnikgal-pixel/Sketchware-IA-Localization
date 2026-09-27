@@ -139,12 +139,12 @@ public class ManagePermissionActivity extends BaseAppCompatActivity {
         new MaterialAlertDialogBuilder(this)
                 .setTitle(R.string.auto_str_0345)
                 .setMessage(R.string.auto_str_0047)
-                .setPositiveButton("Reset", (dialog, which) -> {
+                .setPositiveButton(R.string.auto_button_reset, (dialog, which) -> {
                     FileUtil.writeFile(new FilePathUtil().getPathPermission(numProj), "[]");
                     frc = new FileResConfig(numProj);
                     loadAndSortData();
                 })
-                .setNegativeButton("Cancel", null)
+                .setNegativeButton(R.string.common_word_cancel, null)
                 .show();
     }
 

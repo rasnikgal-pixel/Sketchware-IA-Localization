@@ -134,7 +134,7 @@ public class LogReaderActivity extends BaseAppCompatActivity {
                 .setMessage(R.string.auto_str_0213)
                 .setIcon(R.drawable.ic_mtrl_filter)
                 .setView(view)
-                .setPositiveButton("Apply", (dialog, which) -> {
+                .setPositiveButton(R.string.auto_button_apply, (dialog, which) -> {
                     pkgFilter = Helper.getText(dialogBinding.easyEdInput);
                     pkgFilterList = new ArrayList<>(Arrays.asList(pkgFilter.split(",")));
                     binding.searchInput.setText(Helper.getText(binding.searchInput));
@@ -144,7 +144,7 @@ public class LogReaderActivity extends BaseAppCompatActivity {
                     pkgFilterList.clear();
                     dialogBinding.easyEdInput.setText("");
                 })
-                .setNegativeButton("Cancel", null)
+                .setNegativeButton(R.string.common_word_cancel, null)
                 .create();
 
         builder.show();

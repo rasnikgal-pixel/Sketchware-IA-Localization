@@ -306,7 +306,7 @@ public class PropertyAttributesItem extends LinearLayout implements View.OnClick
                         submitList(new ArrayList<>(value.keySet()));
                         view.dismiss();
                     });
-                    dialog.setNegativeButton("No", (view, which) -> view.dismiss());
+                    dialog.setNegativeButton(R.string.auto_button_no, (view, which) -> view.dismiss());
                     dialog.show();
                     return true;
                 });
@@ -343,7 +343,7 @@ public class PropertyAttributesItem extends LinearLayout implements View.OnClick
                         view.dismiss();
                     });
 
-                    dialog.setNegativeButton("No", (view, which) -> view.dismiss());
+                    dialog.setNegativeButton(R.string.auto_button_no, (view, which) -> view.dismiss());
                     dialog.show();
                     return true;
                 });

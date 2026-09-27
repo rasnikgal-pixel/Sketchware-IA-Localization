@@ -364,7 +364,7 @@ public class BlocksManagerDetailsActivity extends BaseAppCompatActivity {
                     new MaterialAlertDialogBuilder(this)
                             .setTitle(R.string.auto_str_0133)
                             .setMessage(R.string.auto_str_0043)
-                            .setPositiveButton("Recycle bin", (dialog, which) -> _moveToRecycleBin(position))
+                            .setPositiveButton(R.string.auto_button_recycle_bin, (dialog, which) -> _moveToRecycleBin(position))
                             .setNegativeButton(R.string.common_word_cancel, null)
                             .setNeutralButton("Delete permanently", (dialog, which) -> _deleteBlock(position))
                             .show();
@@ -425,7 +425,7 @@ public class BlocksManagerDetailsActivity extends BaseAppCompatActivity {
             AtomicInteger restoreToChoice = new AtomicInteger(-1);
             builder.setTitle(R.string.auto_str_0348)
                     .setSingleChoiceItems(paletteNames.toArray(new String[0]), -1, (dialog, which) -> restoreToChoice.set(which))
-                    .setPositiveButton("Restore", (dialog, which) -> {
+                    .setPositiveButton(R.string.auto_button_restore, (dialog, which) -> {
                         if (restoreToChoice.get() != -1) {
                             all_blocks_list.get(position).put("palette", String.valueOf(restoreToChoice.get() + 9));
                             Collections.swap(all_blocks_list, position, all_blocks_list.size() - 1);
@@ -437,7 +437,7 @@ public class BlocksManagerDetailsActivity extends BaseAppCompatActivity {
             AtomicInteger moveToChoice = new AtomicInteger(palette - 9);
             builder.setTitle(R.string.auto_str_0282)
                     .setSingleChoiceItems(paletteNames.toArray(new String[0]), palette - 9, (dialog, which) -> moveToChoice.set(which))
-                    .setPositiveButton("Move", (dialog, which) -> {
+                    .setPositiveButton(R.string.auto_button_move, (dialog, which) -> {
                         all_blocks_list.get(position).put("palette", String.valueOf(moveToChoice.get() + 9));
                         Collections.swap(all_blocks_list, position, all_blocks_list.size() - 1);
                         FileUtil.writeFile(blocks_path, getGson().toJson(all_blocks_list));
@@ -469,7 +469,7 @@ public class BlocksManagerDetailsActivity extends BaseAppCompatActivity {
                             toAdd.remove((Integer) which);
                         }
                     })
-                    .setPositiveButton("Import", (dialog, which) -> {
+                    .setPositiveButton(R.string.auto_button_import, (dialog, which) -> {
                         for (int i = 0; i < blocks.size(); i++) {
                             if (toAdd.contains(i)) {
                                 HashMap<String, Object> map = blocks.get(i);
@@ -481,7 +481,7 @@ public class BlocksManagerDetailsActivity extends BaseAppCompatActivity {
                         _refreshLists();
                         SketchwareUtil.toast("Imported successfully");
                     })
-                    .setNegativeButton("Reverse", (dialog, which) -> {
+                    .setNegativeButton(R.string.auto_button_reverse, (dialog, which) -> {
                         for (int i = 0; i < blocks.size(); i++) {
                             if (!toAdd.contains(i)) {
                                 HashMap<String, Object> map = blocks.get(i);

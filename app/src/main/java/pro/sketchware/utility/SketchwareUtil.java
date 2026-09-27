@@ -157,7 +157,7 @@ public class SketchwareUtil {
         dialog.setIcon(R.drawable.break_warning_96_red);
         dialog.setTitle(context.getString(R.string.auto_hardcoded_couldnt_get) + componentLabel);
         dialog.setMessage(context.getString(R.string.auto_hardcoded_failed_parse) + componentLabel + context.getString(R.string.auto_hardcoded_from_file) + json + context.getString(R.string.auto_hardcoded_fix_renaming) + json.getName() + context.getString(R.string.auto_hardcoded_bak_if_not) + componentLabel + context.getString(R.string.auto_hardcoded_will_be_used));
-        dialog.setPositiveButton("Rename", (v, which) -> {
+        dialog.setPositiveButton(R.string.auto_button_rename2, (v, which) -> {
             FileUtil.renameFile(json.getAbsolutePath(), json.getAbsolutePath() + ".bak");
             afterRenameLogic.accept(null);
             v.dismiss();
@@ -171,7 +171,7 @@ public class SketchwareUtil {
         builder.setTitle(Helper.getResString(R.string.common_error_an_error_occurred));
         builder.setIcon(R.drawable.ic_mtrl_warning);
         builder.setMessage(errorMessage);
-        builder.setPositiveButton("Okay", null);
+        builder.setPositiveButton(R.string.auto_button_okay, null);
         builder.show();
     }
 

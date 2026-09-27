@@ -158,7 +158,7 @@ public class EventsManagerCreatorFragment extends qA {
             return;
         }
         if (!OldResourceIdMapper.isValidIconId(Helper.getText(binding.eventsCreatorIcon))) {
-            binding.eventsCreatorIconTil.setError("Invalid icon ID");
+            binding.eventsCreatorIconTil.setError(getString(R.string.auto_error_invalid_icon_id));
             binding.eventsCreatorIcon.requestFocus();
             return;
         }

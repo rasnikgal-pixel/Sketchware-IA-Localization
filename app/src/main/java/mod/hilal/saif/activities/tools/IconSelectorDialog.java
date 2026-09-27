@@ -57,7 +57,7 @@ public class IconSelectorDialog {
         builder = new MaterialAlertDialogBuilder(activity)
                 .setTitle(R.string.auto_str_0388)
                 .setView(dialogBinding.getRoot())
-                .setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss())
+                .setNegativeButton(R.string.common_word_cancel, (dialog, which) -> dialog.dismiss())
                 .create();
         builder.show();
     }

@@ -93,28 +93,28 @@ public class GetKeyStoreCredentialsDialog {
         boolean isValid = true;
 
         if (TextUtils.isEmpty(binding.etAlias.getText())) {
-            binding.tilAlias.setError("Alias can't be empty");
+            binding.tilAlias.setError(getString(R.string.auto_error_alias_empty));
             isValid = false;
         } else {
             binding.tilAlias.setError(null);
         }
 
         if (TextUtils.isEmpty(binding.etKeystorePassword.getText())) {
-            binding.tilKeystorePassword.setError("Keystore password can't be empty");
+            binding.tilKeystorePassword.setError(getString(R.string.auto_error_keystore_pwd_empty));
             isValid = false;
         } else {
             binding.tilKeystorePassword.setError(null);
         }
 
         if (TextUtils.isEmpty(binding.etPassword.getText())) {
-            binding.tilPassword.setError("Alias password can't be empty");
+            binding.tilPassword.setError(getString(R.string.auto_error_alias_pwd_empty));
             isValid = false;
         } else {
             binding.tilPassword.setError(null);
         }
 
         if (TextUtils.isEmpty(binding.etSigningAlgorithm.getText())) {
-            binding.tilSigningAlgorithm.setError("Algorithm can't be empty");
+            binding.tilSigningAlgorithm.setError(getString(R.string.auto_error_algorithm_empty));
             isValid = false;
         } else {
             binding.tilSigningAlgorithm.setError(null);

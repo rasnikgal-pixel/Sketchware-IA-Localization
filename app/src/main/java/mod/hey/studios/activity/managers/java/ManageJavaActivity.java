@@ -182,8 +182,8 @@ import pro.sketchware.utility.TranslationFunction;
                 .setView(dialogBinding.getRoot())
                 .setTitle(R.string.auto_str_0108)
                 .setMessage(R.string.auto_str_0204)
-                .setNegativeButton("Cancel", (dialogInterface, i) -> dialogInterface.dismiss())
-                .setPositiveButton("Create", null)
+                .setNegativeButton(R.string.common_word_cancel, (dialogInterface, i) -> dialogInterface.dismiss())
+                .setPositiveButton(R.string.common_word_create, null)
                 .create();
 
         dialog.setOnShowListener(dialogInterface -> {

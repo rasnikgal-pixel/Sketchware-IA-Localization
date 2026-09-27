@@ -101,7 +101,7 @@ public class StringsAdapter extends RecyclerView.Adapter<StringsAdapter.ViewHold
             }
 
             dialog.setTitle(R.string.auto_str_0159);
-            dialog.setPositiveButton("Save", (d, which) -> {
+            dialog.setPositiveButton(R.string.auto_button_save2, (d, which) -> {
                 String keyInput = Objects.requireNonNull(dialogBinding.stringKeyInput.getText()).toString();
                 String valueInput = Objects.requireNonNull(dialogBinding.stringValueInput.getText()).toString();
                 if (keyInput.isEmpty() || valueInput.isEmpty()) {

@@ -150,7 +150,7 @@ public class EventsManagerFragment extends qA {
         var dialog = new MaterialAlertDialogBuilder(requireContext())
                 .setTitle(existingListener == null ? "New Listener" : "Edit Listener")
                 .setView(listenerBinding.getRoot())
-                .setPositiveButton("Save", (di, i) -> {
+                .setPositiveButton(R.string.auto_button_save2, (di, i) -> {
                     String listenerName = Helper.getText(listenerBinding.listenerName);
                     if (!listenerName.isEmpty()) {
                         HashMap<String, Object> hashMap = existingListener != null ? existingListener : new HashMap<>();
@@ -171,7 +171,7 @@ public class EventsManagerFragment extends qA {
                         SketchwareUtil.toastError("Invalid name!");
                     }
                 })
-                .setNegativeButton("Cancel", (di, i) -> di.dismiss()).create();
+                .setNegativeButton(R.string.common_word_cancel, (di, i) -> di.dismiss()).create();
         dialog.show();
     }
 
@@ -328,12 +328,12 @@ public class EventsManagerFragment extends qA {
                                     new MaterialAlertDialogBuilder(context)
                                             .setTitle(R.string.auto_str_0135)
                                             .setMessage(R.string.auto_str_0045)
-                                            .setPositiveButton("Yes", (di, i) -> {
+                                            .setPositiveButton(R.string.auto_button_yes, (di, i) -> {
                                                 deleteRelatedEvents(name);
                                                 deleteItem(position);
                                                 di.dismiss();
                                             })
-                                            .setNegativeButton("No", (di, i) -> di.dismiss())
+                                            .setNegativeButton(R.string.auto_button_no2, (di, i) -> di.dismiss())
                                             .show();
                                     break;
                             }

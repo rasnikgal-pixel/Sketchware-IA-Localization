@@ -209,7 +209,7 @@ public class EventsManagerDetailsFragment extends qA {
                 new MaterialAlertDialogBuilder(requireContext())
                         .setTitle((String) dataArray.get(position).get("name"))
                         .setMessage(R.string.auto_str_0138)
-                        .setPositiveButton("Delete", (dialog, i) -> deleteItem(position))
+                        .setPositiveButton(R.string.auto_button_delete2, (dialog, i) -> deleteItem(position))
                         .setNeutralButton("Edit", (dialog, i) -> {
                             Bundle args = new Bundle();
                             args.putString("lis_name", listName);
@@ -227,7 +227,7 @@ public class EventsManagerDetailsFragment extends qA {
                             fragment.setArguments(args);
                             openFragment(fragment);
                         })
-                        .setNegativeButton("Cancel", (di, i) -> di.dismiss())
+                        .setNegativeButton(R.string.common_word_cancel, (di, i) -> di.dismiss())
                         .show();
                 return true;
             });

@@ -40,7 +40,7 @@ public class Material3LibraryActivity extends BaseAppCompatActivity {
                     .setIcon(R.drawable.ic_mtrl_warning)
                     .setTitle(R.string.auto_str_0037)
                     .setMessage(R.string.auto_str_0321)
-                    .setPositiveButton("OK", (dialog, which) -> finish())
+                    .setPositiveButton(R.string.common_word_ok, (dialog, which) -> finish())
                     .setCancelable(false)
                     .show();
         }

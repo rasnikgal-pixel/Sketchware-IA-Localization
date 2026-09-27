@@ -23,10 +23,10 @@ public class VersionNamePostfixValidator extends MB {
             b.setError(null);
             d = true;
         } else if (se.contains(" ")) {
-            b.setError("Spaces aren't allowed to prevent crashes");
+            b.setError(getString(R.string.auto_error_spaces_not_allowed));
             d = false;
         } else {
-            b.setError("Only use letters (a-zA-Z), numbers and Special characters (_)");
+            b.setError(getString(R.string.auto_error_only_letters));
             d = false;
         }
     }

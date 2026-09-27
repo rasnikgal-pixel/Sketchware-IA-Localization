@@ -135,11 +135,11 @@ public class AndroidStudioProjectSettingsDialog {
             return false;
         }
         if (minSdk > targetSdk) {
-            binding.tilTargetSdkVersion.setError("Target SDK must be at least Minimum SDK");
+            binding.tilTargetSdkVersion.setError(getString(R.string.auto_error_target_sdk_min));
             return false;
         }
         if (targetSdk > compileSdk) {
-            binding.tilCompileSdkVersion.setError("Compile SDK must be at least Target SDK");
+            binding.tilCompileSdkVersion.setError(getString(R.string.auto_error_compile_sdk_target));
             return false;
         }
         return true;
@@ -153,7 +153,7 @@ public class AndroidStudioProjectSettingsDialog {
             }
         } catch (NumberFormatException ignored) {
         }
-        layout.setError("Enter a valid SDK version");
+        layout.setError(getString(R.string.auto_error_valid_sdk));
         return -1;
     }
 
