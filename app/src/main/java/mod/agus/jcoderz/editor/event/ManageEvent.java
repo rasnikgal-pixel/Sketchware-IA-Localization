@@ -1,5 +1,7 @@
 package mod.agus.jcoderz.editor.event;
 
+import pro.sketchware.SketchApplication;
+
 import java.util.ArrayList;
 
 import a.a.a.Gx;
@@ -355,18 +357,18 @@ public class ManageEvent {
         return switch (eventName) {
             case "onScrolled", "onRecyclerScrolled" -> "onScroll";
             case "onFailureLink" -> "onFailure";
-            case "onSaveInstanceState" -> getString(R.string.auto_event_save_instance);
-            case "onCreateOptionsMenu" -> getString(R.string.auto_event_create_options);
+            case "onSaveInstanceState" -> SketchApplication.getContext().getString(R.string.auto_event_save_instance);
+            case "onCreateOptionsMenu" -> SketchApplication.getContext().getString(R.string.auto_event_create_options);
             case "onVerificationCompleted" -> "onVerificationCompleted";
             case "onRecyclerScrollChanged", "onScrollChanged" -> "onScrollStateChanged";
-            case "onCreateContextMenu" -> getString(R.string.auto_event_create_context);
-            case "onRestoreInstanceState" -> getString(R.string.auto_event_restore_instance);
-            case "onContextItemSelected" -> getString(R.string.auto_event_context_selected);
+            case "onCreateContextMenu" -> SketchApplication.getContext().getString(R.string.auto_event_create_context);
+            case "onRestoreInstanceState" -> SketchApplication.getContext().getString(R.string.auto_event_restore_instance);
+            case "onContextItemSelected" -> SketchApplication.getContext().getString(R.string.auto_event_context_selected);
             case "onSuccessLink" -> "onSuccess";
             case "onAccountPickerCancelled" -> "onAccountCancelled";
             case "onFragmentAdded" -> "Return Fragment";
             case "onPageChanged" -> "onPageScrollStateChanged";
-            case "onOptionsItemSelected" -> getString(R.string.auto_event_options_selected);
+            case "onOptionsItemSelected" -> SketchApplication.getContext().getString(R.string.auto_event_options_selected);
             case "onBannerAdClicked" -> "onAdClicked";
             case "onBannerAdLoaded" -> "onAdLoaded";
             case "onTabAdded" -> "Return Title";

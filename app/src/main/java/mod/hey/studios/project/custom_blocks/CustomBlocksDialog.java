@@ -234,19 +234,19 @@ public class CustomBlocksDialog {
 
     private boolean validateInput(DialogPaletteBinding binding, String name, String color) {
         if (name.isEmpty()) {
-            binding.name.setError(getString(R.string.auto_error_name_empty));
+            binding.name.setError(binding.getRoot().getContext().getString(R.string.auto_error_name_empty));
             binding.name.requestFocus();
             return false;
         }
         if (color.isEmpty()) {
-            binding.color.setError(getString(R.string.auto_error_color_empty));
+            binding.color.setError(binding.getRoot().getContext().getString(R.string.auto_error_color_empty));
             binding.color.requestFocus();
             return false;
         }
         try {
             Color.parseColor(color);
         } catch (IllegalArgumentException e) {
-            binding.color.setError(getString(R.string.auto_error_invalid_hex_color));
+            binding.color.setError(binding.getRoot().getContext().getString(R.string.auto_error_invalid_hex_color));
             binding.color.requestFocus();
             return false;
         }

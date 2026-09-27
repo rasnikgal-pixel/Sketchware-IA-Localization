@@ -1,5 +1,7 @@
 package mod.hey.studios.project;
 
+import pro.sketchware.R;
+
 import static com.besome.sketch.Config.VAR_DEFAULT_MIN_SDK_VERSION;
 import static com.besome.sketch.Config.VAR_DEFAULT_TARGET_SDK_VERSION;
 

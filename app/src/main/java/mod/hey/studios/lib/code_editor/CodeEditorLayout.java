@@ -127,28 +127,28 @@ public class CodeEditorLayout extends LinearLayout implements TextWatcher {
         PopupMenu popup = new PopupMenu(context, v);
         Menu menu = popup.getMenu();
 
-        menu.add(getString(R.string.auto_code_editor_font_size))
+        menu.add(context.getString(R.string.auto_code_editor_font_size))
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
 
-        menu.add(getString(R.string.auto_code_editor_word_wrap))
+        menu.add(context.getString(R.string.auto_code_editor_word_wrap))
                 .setCheckable(true)
                 .setChecked(word_wrap)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
 
-        menu.add(getString(R.string.auto_code_editor_complete_brackets))
+        menu.add(context.getString(R.string.auto_code_editor_complete_brackets))
                 .setCheckable(true)
                 .setChecked(complete_brackets)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
 
-        menu.add(getString(R.string.auto_code_editor_dark_theme))
+        menu.add(context.getString(R.string.auto_code_editor_dark_theme))
                 .setCheckable(true)
                 .setChecked(dark_theme)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
 
-        menu.add(getString(R.string.auto_code_editor_pretty_print))
+        menu.add(context.getString(R.string.auto_code_editor_pretty_print))
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
 
-        menu.add(getString(R.string.auto_code_editor_exit_confirm))
+        menu.add(context.getString(R.string.auto_code_editor_exit_confirm))
                 .setCheckable(true)
                 .setChecked(exit_confirmation_dialog)
                 .setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
