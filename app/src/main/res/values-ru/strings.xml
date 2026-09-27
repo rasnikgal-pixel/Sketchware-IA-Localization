@@ -4328,9 +4328,6 @@ url type (http://sketchware.io)"</string>
     <string name="auto_settings_sign_apk">Подписать APK тестовым ключом</string>
     <string name="auto_settings_sign_apk_desc">Подпишите существующий APK тестовым ключом и схемами подписи до V4</string>
     <string name="auto_settings_autosave">Автосохранение и вибрация</string>
-
-    <string name="design_manager_lottie_description_guide_add_animation">Добавьте анимацию Lottie, чтобы оживить интерфейс</string>
-    <string name="design_manager_lottie_title_apply_same_naming">Примените одинаковое имя файла</string>
     <string name="ok">ОК</string>
 
 
