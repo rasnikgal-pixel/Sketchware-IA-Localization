@@ -1,5 +1,7 @@
 package pro.sketchware.lib.validator;
 
+import pro.sketchware.R;
+
 import android.content.Context;
 
 import com.google.android.material.textfield.TextInputLayout;
@@ -23,10 +25,10 @@ public class VersionNamePostfixValidator extends MB {
             b.setError(null);
             d = true;
         } else if (se.contains(" ")) {
-            b.setError(getString(R.string.auto_error_spaces_not_allowed));
+            b.setError(getContext().getString(R.string.auto_error_spaces_not_allowed));
             d = false;
         } else {
-            b.setError(getString(R.string.auto_error_only_letters));
+            b.setError(getContext().getString(R.string.auto_error_only_letters));
             d = false;
         }
     }
