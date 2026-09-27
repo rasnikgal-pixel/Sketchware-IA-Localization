@@ -405,7 +405,7 @@ public class ExtraPaletteBlock {
                 StringsEditorManager stringsEditorManager = new StringsEditorManager();
                 stringsEditorManager.convertXmlStringsToListMap(FileUtil.readFileIfExist(filePath), StringsListMap);
 
-                logicEditor.b(getContext().getString(R.string.auto_open_resources_editor), "openResourcesEditor");
+                logicEditor.b(logicEditor.getString(R.string.auto_open_resources_editor), "openResourcesEditor");
 
                 logicEditor.a("s", "getResString");
                 logicEditor.a("Saved Res Strings :", getTitleBgColor());
@@ -419,16 +419,16 @@ public class ExtraPaletteBlock {
                 }
                 return;
             case 0:
-                logicEditor.b(getContext().getString(R.string.auto_var_add), "variableAdd");
-                logicEditor.b(getContext().getString(R.string.auto_var_add_custom), "variableAddNew", clickListener);
-                logicEditor.b(getContext().getString(R.string.auto_var_remove), "variableRemove", clickListener);
+                logicEditor.b(logicEditor.getString(R.string.auto_var_add), "variableAdd");
+                logicEditor.b(logicEditor.getString(R.string.auto_var_add_custom), "variableAddNew", clickListener);
+                logicEditor.b(logicEditor.getString(R.string.auto_var_remove), "variableRemove", clickListener);
                 variables();
                 return;
 
             case 1:
-                logicEditor.b(getContext().getString(R.string.auto_list_add), "listAdd");
-                logicEditor.b(getContext().getString(R.string.auto_list_add_custom), "listAddCustom", clickListener);
-                logicEditor.b(getContext().getString(R.string.auto_list_remove), "listRemove", clickListener);
+                logicEditor.b(logicEditor.getString(R.string.auto_list_add), "listAdd");
+                logicEditor.b(logicEditor.getString(R.string.auto_list_add_custom), "listAddCustom", clickListener);
+                logicEditor.b(logicEditor.getString(R.string.auto_list_remove), "listRemove", clickListener);
                 list();
                 return;
 
@@ -944,7 +944,7 @@ public class ExtraPaletteBlock {
             return;
 
             case 7:
-                logicEditor.b(getContext().getString(R.string.auto_component_add), "componentAdd");
+                logicEditor.b(logicEditor.getString(R.string.auto_component_add), "componentAdd");
                 logicEditor.a(" ", "changeStatebarColour");
                 logicEditor.a(" ", "LightStatusBar");
                 logicEditor.a(" ", "showKeyboard");
@@ -1230,7 +1230,7 @@ public class ExtraPaletteBlock {
                 return;
 
             case 8:
-                logicEditor.b(getContext().getString(R.string.common_word_create), "blockAdd");
+                logicEditor.b(logicEditor.getString(R.string.common_word_create), "blockAdd");
                 logicEditor.b("Import From Collection", "blockImport");
                 if (ConfigActivity.isSettingEnabled(ConfigActivity.SETTING_SHOW_BUILT_IN_BLOCKS)) {
                     logicEditor.a(" ", "customToast");

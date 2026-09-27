@@ -1,5 +1,7 @@
 package pro.sketchware.menu;
 
+import pro.sketchware.R;
+
 import android.net.Uri;
 import android.util.Pair;
 

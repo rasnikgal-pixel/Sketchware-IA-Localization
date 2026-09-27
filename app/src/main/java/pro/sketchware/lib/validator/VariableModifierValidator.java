@@ -29,7 +29,7 @@ public class VariableModifierValidator extends MB {
         String reconsInput = String.join(" ", words);
 
         if (!input.equals(reconsInput)) {
-            b.setError(getContext().getString(R.string.auto_error_extra_spaces));
+            b.setError(context.getString(R.string.auto_error_extra_spaces));
             d = false;
             return;
         }
@@ -38,18 +38,18 @@ public class VariableModifierValidator extends MB {
 
         for (String word : words) {
             if (!PATTERN_MODIFIER.matcher(word).matches()) {
-                b.setError(getContext().getString(R.string.auto_error_invalid_modifier) + word);
+                b.setError(context.getString(R.string.auto_error_invalid_modifier) + word);
                 d = false;
                 return;
             }
             if (!usedModifiers.add(word)) {
-                b.setError(getContext().getString(R.string.auto_error_duplicate_modifier) + word);
+                b.setError(context.getString(R.string.auto_error_duplicate_modifier) + word);
                 d = false;
                 return;
             }
             if (isAccessModifier(word)) {
                 if (hasAccessModifier) {
-                    b.setError(getContext().getString(R.string.auto_error_access_modifier));
+                    b.setError(context.getString(R.string.auto_error_access_modifier));
                     d = false;
                     return;
                 }
