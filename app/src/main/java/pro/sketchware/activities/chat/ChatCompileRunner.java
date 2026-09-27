@@ -65,7 +65,7 @@ final class ChatCompileRunner implements BuildProgressReceiver {
         }
         try {
             yq workspace = new yq(context, scId);
-            onProgress("Deleting temporary files...", 1);
+            onProgress(getString(R.string.auto_build_deleting_temp)", 1);
             FileUtil.deleteFile(workspace.projectMyscPath);
 
             workspace.c(context);
@@ -86,7 +86,7 @@ final class ChatCompileRunner implements BuildProgressReceiver {
                 }
             }
 
-            onProgress("Generating source code...", 2);
+            onProgress(getString(R.string.auto_build_gen_source)", 2);
             kC resourceManager = jC.d(scId);
             resourceManager.b(workspace.resDirectoryPath + File.separator + "drawable-xhdpi");
             resourceManager = jC.d(scId);
@@ -105,11 +105,11 @@ final class ChatCompileRunner implements BuildProgressReceiver {
             workspace.e();
 
             builder.maybeExtractAapt2();
-            onProgress("Extracting built-in libraries...", 3);
+            onProgress(getString(R.string.auto_build_extract_libs)", 3);
             BuiltInLibraries.extractCompileAssets(this);
-            onProgress("AAPT2 is running...", 8);
+            onProgress(getString(R.string.auto_build_aapt2)", 8);
             builder.compileResources();
-            onProgress("Generating view binding...", 11);
+            onProgress(getString(R.string.auto_build_viewbinding)", 11);
             builder.generateViewBinding();
             KotlinCompilerBridge.compileKotlinCodeIfPossible(this, builder);
             onProgress("Java is compiling...", 13);
@@ -118,11 +118,11 @@ final class ChatCompileRunner implements BuildProgressReceiver {
             new ProguardHandler(scId).start(this, builder);
             onProgress(builder.getDxRunningText(), 17);
             builder.createDexFilesFromClasses();
-            onProgress("Merging DEX files...", 18);
+            onProgress(getString(R.string.auto_build_merge_dex)", 18);
             builder.getDexFilesReady();
-            onProgress("Building APK...", 19);
+            onProgress(getString(R.string.auto_build_apk)", 19);
             builder.buildApk();
-            onProgress("Signing APK...", 20);
+            onProgress(getString(R.string.auto_build_sign_apk)", 20);
             builder.signDebugApk();
             finish(true, "Build finished: " + workspace.finalToInstallApkPath, workspace.finalToInstallApkPath);
         } catch (MissingFileException e) {

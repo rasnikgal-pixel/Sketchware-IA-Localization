@@ -3701,4 +3701,17 @@ Please try again later"</string>
     <string name="auto_settings_sign_apk">Sign an APK file with testkey</string>
     <string name="auto_settings_sign_apk_desc">Sign an already existing APK file with testkey and signature schemes up to V4</string>
     <string name="auto_settings_autosave">Auto-save and vibrations</string>
+    <string name="auto_build_deleting_temp">Deleting temporary files...</string>
+    <string name="auto_build_gen_source">Generating source code...</string>
+    <string name="auto_build_extract_libs">Extracting built-in libraries...</string>
+    <string name="auto_build_aapt2">AAPT2 is running...</string>
+    <string name="auto_build_viewbinding">Generating view binding...</string>
+    <string name="auto_build_merge_dex">Merging DEX files...</string>
+    <string name="auto_build_apk">Building APK...</string>
+    <string name="auto_build_sign_apk">Signing APK...</string>
+    <string name="auto_build_extract_aapt">Extracting AAPT/AAPT2 binaries...</string>
+    <string name="auto_build_merge_libs_dex">Merging libraries\' DEX files...</string>
+    <string name="auto_build_bundle">Building app bundle...</string>
+    <string name="auto_build_sign_bundle">Signing app bundle...</string>
+    <string name="auto_build_lottie">Processing Lottie files...</string>
 </resources>

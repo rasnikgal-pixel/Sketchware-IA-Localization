@@ -4328,4 +4328,17 @@ url type (http://sketchware.io)"</string>
     <string name="auto_settings_sign_apk">Подписать APK тестовым ключом</string>
     <string name="auto_settings_sign_apk_desc">Подпишите существующий APK тестовым ключом и схемами подписи до V4</string>
     <string name="auto_settings_autosave">Автосохранение и вибрация</string>
+    <string name="auto_build_deleting_temp">Удаление временных файлов...</string>
+    <string name="auto_build_gen_source">Генерация исходного кода...</string>
+    <string name="auto_build_extract_libs">Извлечение встроенных библиотек...</string>
+    <string name="auto_build_aapt2">AAPT2 работает...</string>
+    <string name="auto_build_viewbinding">Генерация привязки views...</string>
+    <string name="auto_build_merge_dex">Объединение DEX-файлов...</string>
+    <string name="auto_build_apk">Сборка APK...</string>
+    <string name="auto_build_sign_apk">Подписание APK...</string>
+    <string name="auto_build_extract_aapt">Извлечение бинарников AAPT/AAPT2...</string>
+    <string name="auto_build_merge_libs_dex">Объединение DEX-файлов библиотек...</string>
+    <string name="auto_build_bundle">Сборка app bundle...</string>
+    <string name="auto_build_sign_bundle">Подписание app bundle...</string>
+    <string name="auto_build_lottie">Обработка Lottie-файлов...</string>
 </resources>

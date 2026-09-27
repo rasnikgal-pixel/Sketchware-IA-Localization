@@ -329,7 +329,7 @@ public class AddLottieCollectionActivity extends BaseDialogActivity implements V
         public void b() throws By {
             var activity = this.activity.get();
             try {
-                publishProgress("Processing Lottie files...");
+                publishProgress(getString(R.string.auto_build_lottie));
                 if (!activity.editing) {
                     var lottie = new ProjectResourceBean(ProjectResourceBean.PROJECT_RES_TYPE_FILE,
                             Helper.getText(activity.ed_input_edittext).trim(), activity.lottieFilePath);

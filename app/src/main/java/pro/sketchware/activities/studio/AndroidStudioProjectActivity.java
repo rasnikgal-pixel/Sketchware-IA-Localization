@@ -1843,7 +1843,7 @@ public class AndroidStudioProjectActivity extends BaseAppCompatActivity {
             appendBuildOutput(line);
         };
 
-        receiver.onProgress("Deleting temporary files...", 1);
+        receiver.onProgress(getString(R.string.auto_build_deleting_temp)", 1);
         workspace.f();
         workspace.e();
         ensureStudioBuildDirectories(workspace);
@@ -1856,13 +1856,13 @@ public class AndroidStudioProjectActivity extends BaseAppCompatActivity {
         receiver.onProgress("Preparing AAPT2...", 2);
         builder.maybeExtractAapt2();
 
-        receiver.onProgress("Extracting built-in libraries...", 3);
+        receiver.onProgress(getString(R.string.auto_build_extract_libs)", 3);
         BuiltInLibraries.extractCompileAssets(receiver);
 
-        receiver.onProgress("AAPT2 is running...", 8);
+        receiver.onProgress(getString(R.string.auto_build_aapt2)", 8);
         builder.compileResources();
 
-        receiver.onProgress("Generating view binding...", 11);
+        receiver.onProgress(getString(R.string.auto_build_viewbinding)", 11);
         builder.generateViewBinding();
 
         KotlinCompilerBridge.compileKotlinCodeIfPossible(receiver, builder);
@@ -1873,13 +1873,13 @@ public class AndroidStudioProjectActivity extends BaseAppCompatActivity {
         receiver.onProgress(builder.getDxRunningText(), 17);
         builder.createDexFilesFromClasses();
 
-        receiver.onProgress("Merging DEX files...", 18);
+        receiver.onProgress(getString(R.string.auto_build_merge_dex)", 18);
         builder.getDexFilesReady();
 
-        receiver.onProgress("Building APK...", 19);
+        receiver.onProgress(getString(R.string.auto_build_apk)", 19);
         builder.buildApk();
 
-        receiver.onProgress("Signing APK...", 20);
+        receiver.onProgress(getString(R.string.auto_build_sign_apk)", 20);
         builder.signDebugApk();
 
         return new File(workspace.finalToInstallApkPath);
