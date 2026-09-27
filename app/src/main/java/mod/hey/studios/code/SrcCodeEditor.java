@@ -403,13 +403,13 @@ public class SrcCodeEditor extends BaseAppCompatActivity {
             if (isFileInLayoutFolder() && getIntent().hasExtra("sc_id")) {
                 toolbarMenu.add(Menu.NONE, Menu.NONE, Menu.NONE, "Layout Preview");
             }
-            toolbarMenu.add(Menu.NONE, Menu.NONE, Menu.NONE, "Find & Replace");
-            toolbarMenu.add(Menu.NONE, Menu.NONE, Menu.NONE, "Word wrap").setCheckable(true).setChecked(local_pref.getBoolean("act_ww", false));
-            toolbarMenu.add(Menu.NONE, Menu.NONE, Menu.NONE, "Pretty print");
-            toolbarMenu.add(Menu.NONE, Menu.NONE, Menu.NONE, "Select language");
-            toolbarMenu.add(Menu.NONE, Menu.NONE, Menu.NONE, "Select theme");
-            toolbarMenu.add(Menu.NONE, Menu.NONE, Menu.NONE, "Auto complete").setCheckable(true).setChecked(local_pref.getBoolean("act_ac", true));
-            toolbarMenu.add(Menu.NONE, Menu.NONE, Menu.NONE, "Auto complete symbol pair").setCheckable(true).setChecked(local_pref.getBoolean("act_acsp", true));
+            toolbarMenu.add(Menu.NONE, Menu.NONE, Menu.NONE, getString(R.string.auto_editor_find_replace));
+            toolbarMenu.add(Menu.NONE, Menu.NONE, Menu.NONE, getString(R.string.auto_editor_word_wrap)).setCheckable(true).setChecked(local_pref.getBoolean("act_ww", false));
+            toolbarMenu.add(Menu.NONE, Menu.NONE, Menu.NONE, getString(R.string.auto_editor_pretty_print));
+            toolbarMenu.add(Menu.NONE, Menu.NONE, Menu.NONE, getString(R.string.auto_editor_select_language));
+            toolbarMenu.add(Menu.NONE, Menu.NONE, Menu.NONE, getString(R.string.auto_editor_select_theme));
+            toolbarMenu.add(Menu.NONE, Menu.NONE, Menu.NONE, getString(R.string.auto_editor_auto_complete)).setCheckable(true).setChecked(local_pref.getBoolean("act_ac", true));
+            toolbarMenu.add(Menu.NONE, Menu.NONE, Menu.NONE, getString(R.string.auto_editor_auto_complete_pair)).setCheckable(true).setChecked(local_pref.getBoolean("act_acsp", true));
 
             binding.toolbar.setOnMenuItemClickListener(item -> {
                 String title1 = item.getTitle().toString();

@@ -405,7 +405,7 @@ public class ExtraPaletteBlock {
                 StringsEditorManager stringsEditorManager = new StringsEditorManager();
                 stringsEditorManager.convertXmlStringsToListMap(FileUtil.readFileIfExist(filePath), StringsListMap);
 
-                logicEditor.b("Open Resources editor", "openResourcesEditor");
+                logicEditor.b(getString(R.string.auto_open_resources_editor), "openResourcesEditor");
 
                 logicEditor.a("s", "getResString");
                 logicEditor.a("Saved Res Strings :", getTitleBgColor());
@@ -419,16 +419,16 @@ public class ExtraPaletteBlock {
                 }
                 return;
             case 0:
-                logicEditor.b("Add variable", "variableAdd");
-                logicEditor.b("Add custom variable", "variableAddNew", clickListener);
-                logicEditor.b("Remove variable", "variableRemove", clickListener);
+                logicEditor.b(getString(R.string.auto_var_add), "variableAdd");
+                logicEditor.b(getString(R.string.auto_var_add_custom), "variableAddNew", clickListener);
+                logicEditor.b(getString(R.string.auto_var_remove), "variableRemove", clickListener);
                 variables();
                 return;
 
             case 1:
-                logicEditor.b("Add list", "listAdd");
-                logicEditor.b("Add custom List", "listAddCustom", clickListener);
-                logicEditor.b("Remove list", "listRemove", clickListener);
+                logicEditor.b(getString(R.string.auto_list_add), "listAdd");
+                logicEditor.b(getString(R.string.auto_list_add_custom), "listAddCustom", clickListener);
+                logicEditor.b(getString(R.string.auto_list_remove), "listRemove", clickListener);
                 list();
                 return;
 
@@ -944,7 +944,7 @@ public class ExtraPaletteBlock {
             return;
 
             case 7:
-                logicEditor.b("Add component", "componentAdd");
+                logicEditor.b(getString(R.string.auto_component_add), "componentAdd");
                 logicEditor.a(" ", "changeStatebarColour");
                 logicEditor.a(" ", "LightStatusBar");
                 logicEditor.a(" ", "showKeyboard");

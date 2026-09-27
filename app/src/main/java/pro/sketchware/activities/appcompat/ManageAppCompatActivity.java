@@ -172,7 +172,7 @@ public class ManageAppCompatActivity extends BaseAppCompatActivity {
                 }
             } else {
                 setNote(
-                        "AppCompat is disabled.", "Please enable AppCompat in the Library Manager to use it.");
+                        getString(R.string.auto_appcompat_disabled), getString(R.string.auto_appcompat_disabled_desc));
             }
         } else {
             setNote("Not available.", "You're not currently in the Activity layout.");

@@ -169,10 +169,10 @@ public class AddViewActivity extends BaseAppCompatActivity {
 
     private void initializeItems() {
         featureItems = new ArrayList<>();
-        featureItems.add(new FeatureItem(0, R.drawable.ic_statusbar_color_48dp, "StatusBar", featureStatusBar));
-        featureItems.add(new FeatureItem(1, R.drawable.ic_toolbar_color_48dp, "Toolbar", featureToolbar));
-        featureItems.add(new FeatureItem(2, R.drawable.ic_drawer_color_48dp, "Drawer", featureDrawer));
-        featureItems.add(new FeatureItem(3, R.drawable.fab_color, "FAB", featureFab));
+        featureItems.add(new FeatureItem(0, R.drawable.ic_statusbar_color_48dp, getString(R.string.auto_designer_statusbar), featureStatusBar));
+        featureItems.add(new FeatureItem(1, R.drawable.ic_toolbar_color_48dp, getString(R.string.auto_designer_toolbar), featureToolbar));
+        featureItems.add(new FeatureItem(2, R.drawable.ic_drawer_color_48dp, getString(R.string.auto_designer_drawer), featureDrawer));
+        featureItems.add(new FeatureItem(3, R.drawable.fab_color, getString(R.string.auto_designer_fab), featureFab));
         featuresAdapter.notifyDataSetChanged();
     }
 

@@ -355,18 +355,18 @@ public class ManageEvent {
         return switch (eventName) {
             case "onScrolled", "onRecyclerScrolled" -> "onScroll";
             case "onFailureLink" -> "onFailure";
-            case "onSaveInstanceState" -> "On activity save instance state";
-            case "onCreateOptionsMenu" -> "On create options menu";
+            case "onSaveInstanceState" -> getString(R.string.auto_event_save_instance);
+            case "onCreateOptionsMenu" -> getString(R.string.auto_event_create_options);
             case "onVerificationCompleted" -> "onVerificationCompleted";
             case "onRecyclerScrollChanged", "onScrollChanged" -> "onScrollStateChanged";
-            case "onCreateContextMenu" -> "On create context menu";
-            case "onRestoreInstanceState" -> "On activity restore instance state";
-            case "onContextItemSelected" -> "On context menu selected";
+            case "onCreateContextMenu" -> getString(R.string.auto_event_create_context);
+            case "onRestoreInstanceState" -> getString(R.string.auto_event_restore_instance);
+            case "onContextItemSelected" -> getString(R.string.auto_event_context_selected);
             case "onSuccessLink" -> "onSuccess";
             case "onAccountPickerCancelled" -> "onAccountCancelled";
             case "onFragmentAdded" -> "Return Fragment";
             case "onPageChanged" -> "onPageScrollStateChanged";
-            case "onOptionsItemSelected" -> "On options menu selected";
+            case "onOptionsItemSelected" -> getString(R.string.auto_event_options_selected);
             case "onBannerAdClicked" -> "onAdClicked";
             case "onBannerAdLoaded" -> "onAdLoaded";
             case "onTabAdded" -> "Return Title";

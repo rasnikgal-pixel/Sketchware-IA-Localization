@@ -101,9 +101,9 @@ public class AndroidManifestInjectionDetails extends BaseAppCompatActivity {
 
     private void setToolbar() {
         String str = switch (type) {
-            case "all" -> "Attributes for all activities";
-            case "application" -> "Application Attributes";
-            case "permission" -> "Application Permissions";
+            case "all" -> getString(R.string.auto_manifest_attrs_all);
+            case "application" -> getString(R.string.auto_manifest_app_attrs);
+            case "permission" -> getString(R.string.auto_manifest_app_perms);
             default -> activityName;
         };
         binding.toolbar.setTitle(str);
