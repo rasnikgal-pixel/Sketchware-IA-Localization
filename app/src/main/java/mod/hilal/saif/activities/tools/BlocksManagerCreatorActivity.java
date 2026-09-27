@@ -367,7 +367,7 @@ public class BlocksManagerCreatorActivity extends BaseAppCompatActivity {
         if (typeObject instanceof String typeString) {
 
             if (typeString.equals(" ")) {
-                binding.type.setText("regular");
+                binding.type.setText(getString(R.string.auto_hardcoded_regular));
             } else {
                 binding.type.setText(typeString);
             }
@@ -472,7 +472,7 @@ public class BlocksManagerCreatorActivity extends BaseAppCompatActivity {
             if (matcher.find()) {
                 int position = matcher.end();
                 //Unable to resolve this error because the Rs class still undecompiled.
-                block.setText("Error: '%m' must be followed by '.param' at position " + position);
+                block.setText(getString(R.string.auto_hardcoded_error_percent_m) + position);
             } else {
                 block.setText(e.toString());
             }

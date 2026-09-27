@@ -191,7 +191,7 @@ public class ManageAssetsActivity extends BaseAppCompatActivity {
         var inputText = dialogBinding.inputText;
 
         var dialog = new MaterialAlertDialogBuilder(this)
-                .setTitle("Rename " + assetsAdapter.getFileName(position))
+                .setTitle(getString(R.string.auto_hardcoded_rename) + assetsAdapter.getFileName(position))
                 .setView(dialogBinding.getRoot())
                 .setNegativeButton("Cancel", (dialogInterface, i) -> dialogInterface.dismiss())
                 .setPositiveButton("Rename", (dialogInterface, i) -> {
@@ -214,9 +214,8 @@ public class ManageAssetsActivity extends BaseAppCompatActivity {
 
     private void showDeleteDialog(int position) {
         new MaterialAlertDialogBuilder(this)
-                .setTitle("Delete " + assetsAdapter.getFileName(position) + "?")
-                .setMessage("Are you sure you want to delete this " + (assetsAdapter.isFolder(position) ? "folder" : "file") + "? "
-                        + "This action cannot be undone.")
+                .setTitle(getString(R.string.auto_hardcoded_delete) + assetsAdapter.getFileName(position) + "?")
+                .setMessage(getString(R.string.auto_hardcoded_are_you_sure_delete_this2) + (assetsAdapter.isFolder(position) ? getString(R.string.auto_hardcoded_folder) : getString(R.string.auto_hardcoded_file)) + "? " + getString(R.string.auto_hardcoded_action_cannot_be_undone))
                 .setPositiveButton(R.string.common_word_delete, (dialog, which) -> {
                     FileUtil.deleteFile(assetsAdapter.getItem(position));
                     refresh();

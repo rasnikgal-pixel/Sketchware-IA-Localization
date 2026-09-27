@@ -37,7 +37,7 @@ public class CollectErrorActivity extends BaseAppCompatActivity {
 
             var dialog = new MaterialAlertDialogBuilder(this)
                     .setTitle(R.string.common_error_an_error_occurred)
-                    .setMessage("An error occurred while running Sketchware Pro. " +
+                    .setMessage(getString(R.string.auto_hardcoded_error_running) +
                             "Do you want to report this error log so that we can fix it? " +
                             "No personal information will be included.")
                     .setPositiveButton(R.string.auto_menu2_030, null)
@@ -59,7 +59,7 @@ public class CollectErrorActivity extends BaseAppCompatActivity {
                     info = getPackageManager().getPackageInfo(getPackageName(), 0);
                 } catch (PackageManager.NameNotFoundException e) {
                     messageView.setTextIsSelectable(true);
-                    messageView.setText("Somehow couldn't get package info. Stack trace:\n" + Log.getStackTraceString(e));
+                    messageView.setText(getString(R.string.auto_hardcoded_couldnt_get_package) + Log.getStackTraceString(e));
                     return;
                 }
 

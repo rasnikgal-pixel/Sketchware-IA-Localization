@@ -389,7 +389,7 @@ public class AndroidManifestInjection extends BaseAppCompatActivity {
             } catch (Exception e) {
                 runOnUiThread(() -> {
                     if (!isFinishing()) {
-                        manifestInput.setText("Error loading default manifest: " + e.getMessage());
+                        manifestInput.setText(getString(R.string.auto_hardcoded_error_loading_manifest) + e.getMessage());
                         SketchwareUtil.toast("Error loading default manifest");
                     }
                 });

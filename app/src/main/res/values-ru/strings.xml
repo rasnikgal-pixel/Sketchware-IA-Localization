@@ -4348,4 +4348,51 @@ url type (http://sketchware.io)"</string>
     <string name="auto_build_sign_bundle">Подпись app bundle...</string>
     <string name="auto_build_lottie">Обработка Lottie-файлов...</string>
 
+    <string name="auto_hardcoded_main_activity_cannot_be_deleted">Главную активность нельзя удалить</string>
+    <string name="auto_hardcoded_device_no_crop">Ваше устройство не поддерживает обрезку!</string>
+    <string name="auto_hardcoded_directory_missing">Каталог, важный для сборки, отсутствует. </string>
+    <string name="auto_hardcoded_file_missing">Файл, необходимый для сборки, отсутствует. </string>
+    <string name="auto_hardcoded_excluir">Удалить </string>
+    <string name="auto_hardcoded_edit">Редактировать </string>
+    <string name="auto_hardcoded_are_you_sure_delete">Вы уверены, что хотите удалить </string>
+    <string name="auto_hardcoded_export_aab_path">Сгенерированный подписанный AAB-файл можно найти по адресу:
+</string>
+    <string name="auto_hardcoded_error_running">Произошла ошибка при запуске Sketchware Pro. </string>
+    <string name="auto_hardcoded_couldnt_get_package">Не удалось получить информацию о пакете. Трассировка стека:
+</string>
+    <string name="auto_hardcoded_library_already_used">Эта библиотека "</string>
+    <string name="auto_hardcoded_library_already_used2">" уже используется в вашем проекте, её удаление может сломать проект.
+Хотите продолжить удаление?</string>
+    <string name="auto_hardcoded_enter_name_new">Введите имя для нового </string>
+    <string name="auto_hardcoded_folder">каталога</string>
+    <string name="auto_hardcoded_file">файла</string>
+    <string name="auto_hardcoded_delete">Удалить </string>
+    <string name="auto_hardcoded_rename">Переименовать </string>
+    <string name="auto_hardcoded_are_you_sure_delete_this">Вы уверены, что хотите удалить этот </string>
+    <string name="auto_hardcoded_this_will_remove_manifest">Это также удалит его из AndroidManifest. </string>
+    <string name="auto_hardcoded_action_cannot_be_undone">Это действие нельзя отменить.</string>
+    <string name="auto_hardcoded_select_backups">Выберите резервные копии для восстановления (</string>
+    <string name="auto_hardcoded_or"> или </string>
+    <string name="auto_hardcoded_error_loading_manifest">Ошибка загрузки манифеста по умолчанию: </string>
+    <string name="auto_hardcoded_apk_already_exists">APK с именем </string>
+    <string name="auto_hardcoded_apk_already_exists2"> уже существует в /sketchware/signed_apk/. Перезаписать?</string>
+    <string name="auto_hardcoded_blocks">Блоки: </string>
+    <string name="auto_hardcoded_empty_recycle_bin">Вы уверены, что хотите очистить корзину? </string>
+    <string name="auto_hardcoded_regular">обычный</string>
+    <string name="auto_hardcoded_error_percent_m">Ошибка: \'%m\' должно сопровождаться \'.param\' на позиции </string>
+    <string name="auto_hardcoded_swb_backup_naming">Это определяет, как будут называться файлы резервных копий SWB.
+</string>
+    <string name="auto_hardcoded_we_messed_up">Мы что-то напутали, извините за неудобства!
+</string>
+    <string name="auto_hardcoded_released_on">Выпущено: </string>
+    <string name="auto_hardcoded_reference">Ссылка: </string>
+    <string name="auto_hardcoded_cancel_current_run">Отменить текущий запуск</string>
+    <string name="auto_hardcoded_are_you_sure_delete_this2">Вы уверены, что хотите удалить этот </string>
+    <string name="auto_hardcoded_android11_permission">Начиная с Android 11, Sketchware Pro требуется новое разрешение, чтобы сборка проектов не занимала вечность. Не волнуйтесь, мы не можем делать с хранилищем больше, чем с уже предоставленными разрешениями.</string>
+    <string name="auto_hardcoded_couldnt_get">Не удалось получить </string>
+    <string name="auto_hardcoded_failed_parse">Не удалось разобрать </string>
+    <string name="auto_hardcoded_from_file"> из файла </string>
+    <string name="auto_hardcoded_fix_renaming">. Исправить, переименовав старый файл в </string>
+    <string name="auto_hardcoded_bak_if_not">.bak? Если нет, то </string>
+    <string name="auto_hardcoded_will_be_used"> не будет использоваться.</string>
 </resources>

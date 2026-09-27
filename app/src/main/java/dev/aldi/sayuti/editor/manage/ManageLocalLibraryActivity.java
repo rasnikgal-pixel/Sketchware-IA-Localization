@@ -448,7 +448,7 @@ public class ManageLocalLibraryActivity extends BaseAppCompatActivity {
             if (library.isSelected() && isUsedLibrary(library.getName())) {
                 new MaterialAlertDialogBuilder(ManageLocalLibraryActivity.this)
                         .setTitle(R.string.auto_str_0480)
-                        .setMessage("This library \"" + library.getName() + "\" already used in your project, removing it may break your project\rDo you want to continue removing it?")
+                        .setMessage(getString(R.string.auto_hardcoded_library_already_used) + library.getName() + getString(R.string.auto_hardcoded_library_already_used2))
                         .setPositiveButton(Helper.getResString(R.string.common_word_yes), (dialog, which) -> dialog.dismiss())
                         .setNegativeButton(Helper.getResString(R.string.common_word_cancel), (dialog, which) -> {
                             toggleLocalLibrary(card, library, onLocalLibrarySelectedStateChangedListener);

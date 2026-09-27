@@ -269,7 +269,7 @@ public class ConfigActivity extends BaseAppCompatActivity {
                 AlertDialog dialog = new MaterialAlertDialogBuilder(requireContext())
                         .setView(binding.getRoot())
                         .setTitle(R.string.auto_str_0058)
-                        .setMessage("This defines how SWB backup files get named.\n" +
+                        .setMessage(getString(R.string.auto_hardcoded_swb_backup_naming) +
                                 "Available variables:\n" +
                                 " - $projectName - Project name\n" +
                                 " - $versionCode - App version code\n" +

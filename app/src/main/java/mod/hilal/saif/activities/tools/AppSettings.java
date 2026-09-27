@@ -170,8 +170,8 @@ public class AppSettings extends BaseAppCompatActivity {
                             .setTitle(R.string.auto_str_0385)
                             .setSingleChoiceItems(new String[]{"Delete"}, -1, (actionDialog, which) -> {
                                 new MaterialAlertDialogBuilder(AppSettings.this)
-                                        .setTitle("Delete " + (isDirectory ? "folder" : "file") + "?")
-                                        .setMessage("Are you sure you want to delete this " + (isDirectory ? "folder" : "file") + " permanently? This cannot be undone.")
+                                        .setTitle(getString(R.string.auto_hardcoded_delete) + (isDirectory ? getString(R.string.auto_hardcoded_folder) : getString(R.string.auto_hardcoded_file)) + "?")
+                                        .setMessage(getString(R.string.auto_hardcoded_are_you_sure_delete_this) + (isDirectory ? getString(R.string.auto_hardcoded_folder) : getString(R.string.auto_hardcoded_file)) + getString(R.string.auto_hardcoded_action_cannot_be_undone))
                                         .setPositiveButton(R.string.common_word_delete, (deleteConfirmationDialog, pressedButton) -> {
                                             for (File file : files) {
                                                 FileUtil.deleteFile(file.getAbsolutePath());
@@ -251,7 +251,7 @@ public class AppSettings extends BaseAppCompatActivity {
                 MaterialAlertDialogBuilder confirmOverwrite = new MaterialAlertDialogBuilder(this);
                 confirmOverwrite.setIcon(R.drawable.color_save_as_new_96);
                 confirmOverwrite.setTitle(R.string.auto_str_0203);
-                confirmOverwrite.setMessage("An APK named " + output_apk_file_name + " already exists at /sketchware/signed_apk/.  Overwrite it?");
+                confirmOverwrite.setMessage(getString(R.string.auto_hardcoded_apk_already_exists) + output_apk_file_name + getString(R.string.auto_hardcoded_apk_already_exists2));
 
                 confirmOverwrite.setNegativeButton(Helper.getResString(R.string.common_word_cancel), null);
                 confirmOverwrite.setPositiveButton("Overwrite", (view, which1) -> {

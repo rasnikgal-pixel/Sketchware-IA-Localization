@@ -906,7 +906,7 @@ public class ManageCollectionActivity extends BaseAppCompatActivity implements V
 
                     MoreBlockCollectionBean bean = (MoreBlockCollectionBean) currentCollectionTypeItems.get(lastSelectedItemPosition);
                     new MaterialAlertDialogBuilder(ManageCollectionActivity.this)
-                            .setTitle("Excluir " + bean.name + "?")
+                            .setTitle(getString(R.string.auto_hardcoded_excluir) + bean.name + "?")
                             .setPositiveButton(R.string.common_word_delete, (dialog, which) -> {
                                 Pp.h().a(bean.name, false);
                                 Pp.h().e();

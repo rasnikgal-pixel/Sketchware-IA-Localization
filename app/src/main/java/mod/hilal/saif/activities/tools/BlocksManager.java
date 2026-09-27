@@ -315,7 +315,7 @@ public class BlocksManager extends BaseAppCompatActivity {
         }
 
         binding.paletteRecycler.setAdapter(new PaletteAdapter(pallet_listmap));
-        binding.recycleSub.setText("Blocks: " + (long) getN(-1));
+        binding.recycleSub.setText(getString(R.string.auto_hardcoded_blocks) + (long) getN(-1));
         refreshCount();
     }
 
@@ -350,7 +350,7 @@ public class BlocksManager extends BaseAppCompatActivity {
         view.setOnLongClickListener(v -> {
             new MaterialAlertDialogBuilder(this)
                     .setTitle(R.string.auto_str_0332)
-                    .setMessage("Are you sure you want to empty the recycle bin? " +
+                    .setMessage(getString(R.string.auto_hardcoded_empty_recycle_bin) +
                             "Blocks inside will be deleted PERMANENTLY, you CANNOT recover them!")
                     .setPositiveButton("Empty", (dialog, which) -> emptyRecyclebin())
                     .setNegativeButton(R.string.common_word_cancel, null)
@@ -571,10 +571,10 @@ public class BlocksManager extends BaseAppCompatActivity {
 
             holder.itemView.setVisibility(View.VISIBLE);
             holder.itemBinding.title.setText(Objects.requireNonNull(pallet_listmap.get(position).get("name")).toString());
-            holder.itemBinding.sub.setText("Blocks: " + (long) getN(position + 9));
+            holder.itemBinding.sub.setText(getString(R.string.auto_hardcoded_blocks) + (long) getN(position + 9));
             holder.itemBinding.color.setBackgroundColor(backgroundColor);
             holder.itemBinding.dragHandler.setVisibility(View.VISIBLE);
-            binding.recycleSub.setText("Blocks: " + (long) getN(-1));
+            binding.recycleSub.setText(getString(R.string.auto_hardcoded_blocks) + (long) getN(-1));
 
             holder.itemBinding.backgroundCard.setOnLongClickListener(v -> {
                 final String edit = "Edit";

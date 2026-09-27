@@ -194,7 +194,7 @@ public class ManageResourceActivity extends BaseAppCompatActivity {
         var dialog = new MaterialAlertDialogBuilder(this)
                 .setView(dialogBinding.getRoot())
                 .setTitle(isFolder ? "Create a new folder" : "Create a new file")
-                .setMessage("Enter a name for the new " + (isFolder ? "folder" : "file"))
+                .setMessage(getString(R.string.auto_hardcoded_enter_name_new) + (isFolder ? getString(R.string.auto_hardcoded_folder) : getString(R.string.auto_hardcoded_file)))
                 .setNegativeButton("Cancel", (dialogInterface, i) -> dialogInterface.dismiss())
                 .setPositiveButton("Create", null)
                 .create();
@@ -315,9 +315,8 @@ public class ManageResourceActivity extends BaseAppCompatActivity {
 
     private void showDeleteDialog(int position) {
         new MaterialAlertDialogBuilder(this)
-                .setTitle("Delete " + Uri.fromFile(new File(adapter.getItem(position))).getLastPathSegment() + "?")
-                .setMessage("Are you sure you want to delete this " + (FileUtil.isDirectory(adapter.getItem(position)) ? "folder" : "file") + "? "
-                        + "This action cannot be undone.")
+                .setTitle(getString(R.string.auto_hardcoded_delete) + Uri.fromFile(new File(adapter.getItem(position))).getLastPathSegment() + "?")
+                .setMessage(getString(R.string.auto_hardcoded_are_you_sure_delete_this2) + (FileUtil.isDirectory(adapter.getItem(position)) ? getString(R.string.auto_hardcoded_folder) : getString(R.string.auto_hardcoded_file)) + "? " + getString(R.string.auto_hardcoded_action_cannot_be_undone))
                 .setPositiveButton(R.string.common_word_delete, (dialog, which) -> {
                     FileUtil.deleteFile(frc.listFileResource.get(position));
                     handleAdapter(temp);

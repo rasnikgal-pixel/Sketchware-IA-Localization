@@ -923,7 +923,7 @@ public class PropertyInputItem extends RelativeLayout implements View.OnClickLis
                         var builder =
                                 new MaterialAlertDialogBuilder(getContext())
                                         .setTitle(R.string.auto_str_0132)
-                                        .setMessage("Are you sure you want to delete " + attr + "?")
+                                        .setMessage(context.getString(R.string.auto_hardcoded_are_you_sure_delete) + attr + "?")
                                         .setPositiveButton(
                                                 R.string.common_word_yes,
                                                 (d, w) -> {

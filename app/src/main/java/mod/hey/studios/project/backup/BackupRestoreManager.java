@@ -138,7 +138,7 @@ public class BackupRestoreManager {
         FilePickerOptions options = new FilePickerOptions();
         options.setMultipleSelection(true);
         options.setExtensions(new String[]{BackupFactory.EXTENSION, BackupFactory.ANDROID_STUDIO_EXTENSION});
-        options.setTitle("Select backups to restore (" + BackupFactory.EXTENSION + " or " + BackupFactory.ANDROID_STUDIO_EXTENSION + ")");
+        options.setTitle(getString(R.string.auto_hardcoded_select_backups) + BackupFactory.EXTENSION + getString(R.string.auto_hardcoded_or) + BackupFactory.ANDROID_STUDIO_EXTENSION + ")");
 
         FilePickerCallback callback = new FilePickerCallback() {
             @Override
