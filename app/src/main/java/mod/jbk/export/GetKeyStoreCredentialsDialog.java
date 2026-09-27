@@ -20,12 +20,14 @@ import pro.sketchware.utility.TranslationFunction;
 
 public class GetKeyStoreCredentialsDialog {
 
+    private final Activity activity;
     private final MaterialAlertDialogBuilder dialog;
     private final DialogKeystoreCredentialsBinding binding;
     private CredentialsReceiver receiver;
     private SigningMode mode;
 
     public GetKeyStoreCredentialsDialog(Activity activity, int iconResourceId, String title, String noticeText) {
+        this.activity = activity;
         dialog = new MaterialAlertDialogBuilder(activity);
         dialog.setIcon(iconResourceId);
         dialog.setTitle(title);

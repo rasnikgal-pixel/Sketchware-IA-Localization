@@ -137,11 +137,11 @@ public class AndroidStudioProjectSettingsDialog {
             return false;
         }
         if (minSdk > targetSdk) {
-            binding.tilTargetSdkVersion.setError(getString(R.string.auto_error_target_sdk_min));
+            binding.tilTargetSdkVersion.setError(activity.getString(R.string.auto_error_target_sdk_min));
             return false;
         }
         if (targetSdk > compileSdk) {
-            binding.tilCompileSdkVersion.setError(getString(R.string.auto_error_compile_sdk_target));
+            binding.tilCompileSdkVersion.setError(activity.getString(R.string.auto_error_compile_sdk_target));
             return false;
         }
         return true;
@@ -155,7 +155,7 @@ public class AndroidStudioProjectSettingsDialog {
             }
         } catch (NumberFormatException ignored) {
         }
-        layout.setError(getString(R.string.auto_error_valid_sdk));
+        layout.setError(activity.getString(R.string.auto_error_valid_sdk));
         return -1;
     }
 
