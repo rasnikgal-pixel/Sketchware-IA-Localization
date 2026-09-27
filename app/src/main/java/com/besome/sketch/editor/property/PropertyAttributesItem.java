@@ -298,7 +298,7 @@ public class PropertyAttributesItem extends LinearLayout implements View.OnClick
                 itemView.setOnLongClickListener(v -> {
                     MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(getContext());
                     dialog.setTitle(R.string.auto_str_0132);
-                    dialog.setMessage(context.getString(R.string.auto_hardcoded_are_you_sure_delete) + attr + "?");
+                    dialog.setMessage(getContext().getString(R.string.auto_hardcoded_are_you_sure_delete) + attr + "?");
                     dialog.setPositiveButton(R.string.auto_menu2_097, (view, which) -> {
                         value.remove(attr);
                         if (valueChangeListener != null)
@@ -334,7 +334,7 @@ public class PropertyAttributesItem extends LinearLayout implements View.OnClick
                 itemView.setOnLongClickListener(v -> {
                     MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(getContext());
                     dialog.setTitle(R.string.auto_str_0132);
-                    dialog.setMessage(context.getString(R.string.auto_hardcoded_are_you_sure_delete) + attr + "?");
+                    dialog.setMessage(getContext().getString(R.string.auto_hardcoded_are_you_sure_delete) + attr + "?");
                     dialog.setPositiveButton(R.string.auto_menu2_097, (view, which) -> {
                         value.remove(attr);
                         if (valueChangeListener != null)

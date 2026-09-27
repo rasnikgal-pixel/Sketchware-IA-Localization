@@ -1761,7 +1761,7 @@ public class DesignActivity extends BaseAppCompatActivity implements View.OnClic
                     MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(activity);
                     if (isMissingDirectory) {
                         dialog.setTitle(R.string.auto_str_0278);
-                        dialog.setMessage(getString(R.string.auto_hardcoded_directory_missing) +
+                        dialog.setMessage(activity.getString(R.string.auto_hardcoded_directory_missing) +
                                 "Sketchware Pro can try creating " + e.getMissingFile().getAbsolutePath() +
                                 " if you'd like to.");
                         dialog.setNeutralButton(R.string.auto_menu2_032, (v, which) -> {
@@ -1772,7 +1772,7 @@ public class DesignActivity extends BaseAppCompatActivity implements View.OnClic
                         });
                     } else {
                         dialog.setTitle(R.string.auto_str_0279);
-                        dialog.setMessage(getString(R.string.auto_hardcoded_file_missing) +
+                        dialog.setMessage(activity.getString(R.string.auto_hardcoded_file_missing) +
                                 "Put the correct file back to " + e.getMissingFile().getAbsolutePath() +
                                 " and try building again.");
                     }

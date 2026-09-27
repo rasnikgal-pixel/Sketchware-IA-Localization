@@ -1,5 +1,7 @@
 package pro.sketchware.activities.about.adapters;
 
+import pro.sketchware.R;
+
 import static pro.sketchware.utility.UI.advancedCorners;
 import static pro.sketchware.utility.UI.animateLayoutChanges;
 import static pro.sketchware.utility.UI.shadAnim;
@@ -52,7 +54,7 @@ public class ChangeLogAdapter extends RecyclerView.Adapter<ChangeLogAdapter.View
                 holder.binding.tvTitle.setText(titleText);
                 holder.binding.tvTitle.setVisibility(View.VISIBLE);
             } else {
-                holder.binding.tvTitle.setText(getString(R.string.auto_hardcoded_we_messed_up) +
+                holder.binding.tvTitle.setText(holder.itemView.getContext().getString(R.string.auto_hardcoded_we_messed_up) +
                         "(Details: Invalid data type of \"title\")");
                 holder.binding.tvTitle.setVisibility(View.VISIBLE);
             }
@@ -76,7 +78,7 @@ public class ChangeLogAdapter extends RecyclerView.Adapter<ChangeLogAdapter.View
         if (releaseDate > 0) {
             holder.binding.tvReleaseNote.setVisibility(View.VISIBLE);
             SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
-            holder.binding.tvReleaseNote.setText(getString(R.string.auto_hardcoded_released_on) + formatter.format(new Date(releaseDate)));
+            holder.binding.tvReleaseNote.setText(holder.itemView.getContext().getString(R.string.auto_hardcoded_released_on) + formatter.format(new Date(releaseDate)));
         } else {
             holder.binding.tvReleaseNote.setVisibility(View.GONE);
         }
@@ -86,7 +88,7 @@ public class ChangeLogAdapter extends RecyclerView.Adapter<ChangeLogAdapter.View
             holder.binding.tvSubTitle.setText(description);
             Linkify.addLinks(holder.binding.tvSubTitle, Linkify.WEB_URLS);
         } else {
-            holder.binding.tvSubTitle.setText(getString(R.string.auto_hardcoded_we_messed_up) +
+            holder.binding.tvSubTitle.setText(holder.itemView.getContext().getString(R.string.auto_hardcoded_we_messed_up) +
                     "(Details: Invalid data type of \"description\")");
         }
 

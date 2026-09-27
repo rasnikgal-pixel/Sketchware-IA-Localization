@@ -155,8 +155,8 @@ public class SketchwareUtil {
     public static void showFailedToParseJsonDialog(Activity context, File json, String componentLabel, Consumer<Void> afterRenameLogic) {
         MaterialAlertDialogBuilder dialog = new MaterialAlertDialogBuilder(context);
         dialog.setIcon(R.drawable.break_warning_96_red);
-        dialog.setTitle(getString(R.string.auto_hardcoded_couldnt_get) + componentLabel);
-        dialog.setMessage(getString(R.string.auto_hardcoded_failed_parse) + componentLabel + getString(R.string.auto_hardcoded_from_file) + json + getString(R.string.auto_hardcoded_fix_renaming) + json.getName() + getString(R.string.auto_hardcoded_bak_if_not) + componentLabel + getString(R.string.auto_hardcoded_will_be_used));
+        dialog.setTitle(context.getString(R.string.auto_hardcoded_couldnt_get) + componentLabel);
+        dialog.setMessage(context.getString(R.string.auto_hardcoded_failed_parse) + componentLabel + context.getString(R.string.auto_hardcoded_from_file) + json + context.getString(R.string.auto_hardcoded_fix_renaming) + json.getName() + context.getString(R.string.auto_hardcoded_bak_if_not) + componentLabel + context.getString(R.string.auto_hardcoded_will_be_used));
         dialog.setPositiveButton("Rename", (v, which) -> {
             FileUtil.renameFile(json.getAbsolutePath(), json.getAbsolutePath() + ".bak");
             afterRenameLogic.accept(null);
