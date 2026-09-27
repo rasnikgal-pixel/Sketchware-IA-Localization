@@ -419,7 +419,7 @@ public class AddLottieActivity extends BaseDialogActivity implements View.OnClic
         public void b() throws By {
             var activity = this.activity.get();
             try {
-                publishProgress(getString(R.string.auto_build_lottie));
+                publishProgress("Processing Lottie files...");
                 String lottieDir = activity.dir_path;
                 new oB().f(lottieDir);
                 

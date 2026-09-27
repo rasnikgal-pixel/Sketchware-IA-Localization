@@ -660,7 +660,7 @@ public class ExportProjectActivity extends BaseAppCompatActivity {
             String sc_id = activity.get().sc_id;
 
             try {
-                publishProgress(getString(R.string.auto_build_deleting_temp));
+                publishProgress("Deleting temporary files...");
                 FileUtil.deleteFile(project_metadata.projectMyscPath);
 
                 publishProgress(Helper.getResString(R.string.design_run_title_ready_to_build));
@@ -730,7 +730,7 @@ public class ExportProjectActivity extends BaseAppCompatActivity {
                 }
 
                 /* Check AAPT/AAPT2 */
-                publishProgress(getString(R.string.auto_build_extract_aapt));
+                publishProgress("Extracting AAPT/AAPT2 binaries...");
                 builder.maybeExtractAapt2();
                 if (canceled) {
                     cancel(true);
@@ -738,7 +738,7 @@ public class ExportProjectActivity extends BaseAppCompatActivity {
                 }
 
                 /* Check built-in libraries */
-                publishProgress(getString(R.string.auto_build_extract_libs));
+                publishProgress("Extracting built-in libraries...");
                 BuiltInLibraries.extractCompileAssets(this);
                 if (canceled) {
                     cancel(true);
@@ -747,7 +747,7 @@ public class ExportProjectActivity extends BaseAppCompatActivity {
 
                 builder.buildBuiltInLibraryInformation();
 
-                publishProgress(getString(R.string.auto_build_aapt2));
+                publishProgress("AAPT2 is running...");
                 builder.compileResources();
                 if (canceled) {
                     cancel(true);
@@ -792,7 +792,7 @@ public class ExportProjectActivity extends BaseAppCompatActivity {
                 }
 
                 /* Merge DEX file(s) with libraries' dexes */
-                publishProgress(getString(R.string.auto_build_merge_libs_dex));
+                publishProgress("Merging libraries' DEX files...");
                 builder.getDexFilesReady();
                 if (canceled) {
                     cancel(true);
@@ -803,11 +803,11 @@ public class ExportProjectActivity extends BaseAppCompatActivity {
                     AppBundleCompiler compiler = new AppBundleCompiler(builder);
                     publishProgress("Creating app module...");
                     compiler.createModuleMainArchive();
-                    publishProgress(getString(R.string.auto_build_bundle));
+                    publishProgress("Building app bundle...");
                     compiler.buildBundle();
 
                     /* Sign the generated .aab file */
-                    publishProgress(getString(R.string.auto_build_sign_bundle));
+                    publishProgress("Signing app bundle...");
 
                     String createdBundlePath = AppBundleCompiler.getDefaultAppBundleOutputFile(project_metadata).getAbsolutePath();
                     String signedAppBundleDirectoryPath = FileUtil.getExternalStorageDir()
@@ -839,7 +839,7 @@ public class ExportProjectActivity extends BaseAppCompatActivity {
                         FileUtil.copyFile(createdBundlePath, getCorrectResultFilename(outputPath));
                     }
                 } else {
-                    publishProgress(getString(R.string.auto_build_apk));
+                    publishProgress("Building APK...");
                     builder.buildApk();
                     if (canceled) {
                         cancel(true);
@@ -853,7 +853,7 @@ public class ExportProjectActivity extends BaseAppCompatActivity {
                         return;
                     }
 
-                    publishProgress(getString(R.string.auto_build_sign_apk));
+                    publishProgress("Signing APK...");
                     String outputLocation = getCorrectResultFilename(builder.yq.releaseApkPath);
                     if (signWithTestkey) {
                         TestkeySignBridge.signWithTestkey(builder.yq.unsignedAlignedApkPath, outputLocation);

@@ -1641,7 +1641,7 @@ public class DesignActivity extends BaseAppCompatActivity implements View.OnClic
             try {
                 var q = activity.q;
                 var sc_id = DesignActivity.sc_id;
-                onProgress(getString(R.string.auto_build_deleting_temp)", 1);
+                onProgress("Deleting temporary files...", 1);
                 FileUtil.deleteFile(q.projectMyscPath);
 
                 q.c(activity.getApplicationContext());
@@ -1662,7 +1662,7 @@ public class DesignActivity extends BaseAppCompatActivity implements View.OnClic
                     }
                 }
 
-                onProgress(getString(R.string.auto_build_gen_source)", 2);
+                onProgress("Generating source code...", 2);
                 kC kC = jC.d(sc_id);
                 kC.b(q.resDirectoryPath + File.separator + "drawable-xhdpi");
                 kC = jC.d(sc_id);
@@ -1686,19 +1686,19 @@ public class DesignActivity extends BaseAppCompatActivity implements View.OnClic
                     return;
                 }
 
-                onProgress(getString(R.string.auto_build_extract_libs)", 3);
+                onProgress("Extracting built-in libraries...", 3);
                 BuiltInLibraries.extractCompileAssets(this);
                 if (canceled) {
                     return;
                 }
 
-                onProgress(getString(R.string.auto_build_aapt2)", 8);
+                onProgress("AAPT2 is running...", 8);
                 builder.compileResources();
                 if (canceled) {
                     return;
                 }
 
-                onProgress(getString(R.string.auto_build_viewbinding)", 11);
+                onProgress("Generating view binding...", 11);
                 builder.generateViewBinding();
                 if (canceled) {
                     return;
@@ -1733,19 +1733,19 @@ public class DesignActivity extends BaseAppCompatActivity implements View.OnClic
                     return;
                 }
 
-                onProgress(getString(R.string.auto_build_merge_dex)", 18);
+                onProgress("Merging DEX files...", 18);
                 builder.getDexFilesReady();
                 if (canceled) {
                     return;
                 }
 
-                onProgress(getString(R.string.auto_build_apk)", 19);
+                onProgress("Building APK...", 19);
                 builder.buildApk();
                 if (canceled) {
                     return;
                 }
 
-                onProgress(getString(R.string.auto_build_sign_apk)", 20);
+                onProgress("Signing APK...", 20);
                 builder.signDebugApk();
                 if (canceled) {
                     return;
