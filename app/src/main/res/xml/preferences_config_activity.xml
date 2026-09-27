@@ -1,56 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <SwitchPreferenceCompat
         app:iconSpaceReserved="false"
         app:key="built-in-blocks"
-        app:summary="@string/auto_settings_autosave_summary"
-        app:title="@string/auto_settings_autosave_title" />
+        app:summary="@string/auto_pref_builtin_blocks_summary"
+        app:title="@string/auto_pref_builtin_blocks_title" />
 
     <SwitchPreferenceCompat
         app:iconSpaceReserved="false"
         app:key="always-show-blocks"
-        app:summary="@string/auto_settings_autosave_summary"
-        app:title="@string/auto_settings_autosave_title" />
+        app:summary="@string/auto_pref_var_blocks_summary"
+        app:title="@string/auto_pref_var_blocks_title" />
 
     <SwitchPreferenceCompat
         app:iconSpaceReserved="false"
         app:key="show-every-single-block"
-        app:summary="@string/auto_settings_autosave_summary"
-        app:title="@string/auto_settings_autosave_title" />
+        app:summary="@string/auto_pref_all_blocks_summary"
+        app:title="@string/auto_pref_all_blocks_title" />
 
     <Preference
         app:iconSpaceReserved="false"
         app:key="backup-dir"
-        app:summary="@string/auto_settings_autosave_summary"
-        app:title="@string/auto_settings_autosave_title" />
+        app:summary="@string/auto_pref_backup_dir_summary"
+        app:title="@string/auto_pref_backup_dir_title" />
 
     <SwitchPreferenceCompat
         app:iconSpaceReserved="false"
         app:key="root-auto-install-projects"
-        app:summary="@string/auto_settings_autosave_summary"
-        app:title="@string/auto_settings_autosave_title" />
+        app:summary="@string/auto_pref_root_install_summary"
+        app:title="@string/auto_pref_root_install_title" />
 
     <SwitchPreferenceCompat
         app:iconSpaceReserved="false"
         app:key="root-auto-open-after-installing"
-        app:summary="@string/auto_settings_autosave_summary"
-        app:title="@string/auto_settings_autosave_title" />
+        app:summary="@string/auto_pref_root_launch_summary"
+        app:title="@string/auto_pref_root_launch_title" />
 
     <SwitchPreferenceCompat
         app:iconSpaceReserved="false"
         app:key="use-new-version-control"
-        app:summary="@string/auto_settings_autosave_summary"
-        app:title="@string/auto_settings_autosave_title" />
+        app:summary="@string/auto_pref_version_control_summary"
+        app:title="@string/auto_pref_version_control_title" />
 
     <SwitchPreferenceCompat
         app:iconSpaceReserved="false"
         app:key="use-asd-highlighter"
-        app:summary="@string/auto_settings_autosave_summary"
-        app:title="@string/auto_settings_autosave_title" />
+        app:summary="@string/auto_pref_highlight_summary"
+        app:title="@string/auto_pref_highlight_title" />
 
     <Preference
         app:iconSpaceReserved="false"
         app:key="backup-filename"
-        app:summary="Default is &quot;$projectName v$versionName ($pkgName, $versionCode) $time(yyyy-MM-dd'T'HHmmss)&quot;"
-        app:title="@string/auto_settings_autosave_title" />
+        app:summary="@string/auto_pref_backup_filename_summary"
+        app:title="@string/auto_pref_backup_filename_title" />
+
 </PreferenceScreen>
